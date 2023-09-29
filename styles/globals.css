@@ -2,26 +2,366 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: 'Right Serif';
+  src: url('/fonts/PP-Right-Serif-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: 'Right Serif';
+  src: url('/fonts/PP-Right-Serif-Medium.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Right Grotesk';
+  src: url('/fonts/PP-Right-GroteskText-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Right Grotesk';
+  src: url('/fonts/PP-Right-GroteskText-Regular-Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Right Grotesk Spatial';
+  src: url('/fonts/PP-Right-GroteskText-Spatial-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply font-light overflow-x-hidden relative;
+  background: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-background);
+}
+
+.spatial {
+  font-family: 'Right Grotesk Spatial', 'Right Grotesk', system-ui;
+}
+
+.text-themeInversePrimary {
+  color: var(--md-sys-color-inverse-primary);
+}
+
+.bg-themeInversePrimary {
+  background: var(--md-sys-color-inverse-primary);
+}
+
+.text-themeInverseOnSurface {
+  color: var(--md-sys-color-inverse-on-surface);
+}
+
+.bg-themeInverseOnSurface {
+  background: var(--md-sys-color-inverse-on-surface);
+}
+
+.text-themeInverseSurface {
+  color: var(--md-sys-color-inverse-surface);
+}
+
+.bg-themeInverseSurface {
+  background: var(--md-sys-color-inverse-surface);
+}
+
+.text-themeShadow {
+  color: var(--md-sys-color-shadow);
+}
+
+.bg-themeShadow {
+  background: var(--md-sys-color-shadow);
+}
+
+.text-themeScrim {
+  color: var(--md-sys-color-scrim);
+}
+
+.bg-themeScrim {
+  background: var(--md-sys-color-scrim);
+}
+
+.text-themeBackground {
+ color: var(--md-sys-color-background);
+}
+
+.bg-themeBackground {
+  background: var(--md-sys-color-background);
+ }
+
+.text-themeOnBackground {
+  color: var(--md-sys-color-on-background);
+}
+
+.bg-themeOnBackground {
+  background: var(--md-sys-color-on-background);
+}
+
+.text-themeSurface {
+  color: var(--md-sys-color-surface);
+}
+
+.bg-themeSurface {
+  background: var(--md-sys-color-surface);
+}
+
+.text-themeOnSurface{
+  color: var(--md-sys-color-on-surface);
+}
+
+.bg-themeOnSurface {
+  background: var(--md-sys-color-on-surface);
+}
+
+.text-themeSurfaceVariant {
+  color: var(--md-sys-color-surface-variant);
+}
+
+.bg-themeSurfaceVariant {
+  background: var(--md-sys-color-surface-variant);
+}
+
+.text-themeOnSurfaceVariant {
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.bg-themeOnSurfaceVariant {
+  background: var(--md-sys-color-on-surface-variant);
+}
+
+.text-themeOutline{
+  color: var(--md-sys-color-outline);
+}
+
+.bg-themeOutline {
+  background: var(--md-sys-color-outline);
+}
+
+.border-themeOutline {
+  border-color: var(--md-sys-color-outline);
+}
+
+.text-themeOutlineVariant {
+  color: var(--md-sys-color-outline-variant);
+}
+
+.bg-themeOutlineVariant {
+  background: var(--md-sys-color-outline-variant);
+}
+
+.border-themeOutlineVariant {
+  border-color: var(--md-sys-color-outline-variant);
+}
+
+.text-themePrimary {
+color: var(--md-sys-color-primary);
+}
+
+.bg-themePrimary {
+  background: var(--md-sys-color-primary);
+}
+
+.text-themeOnPrimary {
+  color: var(--md-sys-color-on-primary);
+}
+
+.bg-themeOnPrimary {
+  background: var(--md-sys-color-on-primary);
+}
+
+.text-themePrimaryContainer {
+  color: var(--md-sys-color-primary-container);
+}
+
+.bg-themePrimaryContainer {
+  background: var(--md-sys-color-primary-container);
+}
+
+.text-themeOnPrimaryContainer {
+  color: var(--md-sys-color-on-primary-container);
+}
+
+.bg-themeOnPrimaryContainer {
+  background: var(--md-sys-color-on-primary-container);
+}
+
+.text-themeSecondary {
+  color: var(--md-sys-color-secondary);
+}
+
+.bg-themeSecondary {
+  background: var(--md-sys-color-secondary);
+}
+
+.text-themeOnSecondary {
+  color: var(--md-sys-color-on-secondary);
+}
+
+.bg-themeOnSecondary {
+  background: var(--md-sys-color-on-secondary);
+}
+
+.text-themeSecondaryContainer {
+  color: var(--md-sys-color-secondary-container);
+}
+
+.bg-themeSecondaryContainer {
+  background: var(--md-sys-color-secondary-container);
+}
+
+.text-themeOnSecondaryContainer {
+  color: var(--md-sys-color-on-secondary-container);
+}
+
+.bg-themeOnSecondaryContainer {
+  background: var(--md-sys-color-on-secondary-container);
+}
+
+.text-themeTertiary {
+  color: var(--md-sys-color-tertiary);
+}
+
+.bg-themeTertiary {
+  background: var(--md-sys-color-tertiary);
+}
+
+.text-themeOnTertiary {
+  color: var(--md-sys-color-on-tertiary);
+}
+
+.bg-themeOnTertiary {
+  background: var(--md-sys-color-on-tertiary);
+}
+
+.text-themeTertiaryContainer {
+  color: var(--md-sys-color-tertiatry-container);
+}
+
+.bg-themeTertiaryContainer {
+  background: var(--md-sys-color-tertiatry-container);
+}
+
+.text-themeOnTertiaryContainer {
+  color: var(--md-sys-color-on-tertiatry-container);
+}
+
+.bg-themeOnTertiaryContainer {
+  background: var(--md-sys-color-on-tertiatry-container);
+}
+
+.text-themeError {
+  color: var(--md-sys-color-error);
+}
+
+.bg-themeError {
+  background: var(--md-sys-color-error);
+}
+
+.text-themeOnError {
+  color: var(--md-sys-color-on-error);
+}
+
+.bg-themeOnError {
+  background: var(--md-sys-color-on-error);
+}
+
+.text-themeErrorContainer {
+  color: var(--md-sys-color-error-container);
+}
+
+.bg-themeErrorContainer {
+  background: var(--md-sys-color-error-container);
+}
+
+.text-themeOnErrorContainer {
+  color: var(--md-sys-color-on-error-container);
+}
+
+.bg-themeOnErrorContainer {
+  background: var(--md-sys-color-on-error-container);
+}
+
+h1,h2,h3,h4,h5,h6 {
+  @apply font-serif font-light;
+}
+
+.thumbs {
+  @apply flex items-center justify-center;
+}
+
+.thumb {
+  @apply !border-2 !border-current text-themeSurfaceVariant opacity-50 rounded-xl transition hover:opacity-75 !w-32;
+}
+
+.thumb img {
+  @apply rounded-lg;
+}
+
+.thumb.selected {
+  @apply !border-current text-themePrimary border-white opacity-100;
+}
+
+.link-shadow {
+  --color: var(--md-sys-color-inverse-on-surface);
+  @apply text-themePrimary px-1;
+  box-shadow: 0px 0px 0px transparent;
+  &:hover, &:focus {
+    box-shadow: 0px 0px 0px 4px var(--color);
+    background: var(--color);
+  }
+}
+
+.carousel-status {
+  @apply absolute top-1 left-1/2 -translate-x-1/2 text-center;
+  text-shadow: none !important;
+  color: var(----md-sys-color-on-surface) !important;
+}
+
+.control-dots {
+  @apply !-bottom-2;
+}
+
+@layer components {
+
+  .shadow-button {
+    --tw-shadow: var(--button-shadow);
+    --tw-shadow-colored: var(--button-shadow);
+  }
+
+  .shadow, .shadow-button {
+    box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
+  }
+
+  .button-class {
+    @apply focus-visible:ring-2 focus-visible:ring-blue-300 dark:focus-visible:ring-blue-600 focus-visible:outline-none border-transparent focus-visible:border-blue-500 leading-none touch-none select-none disabled:opacity-50 disabled:cursor-not-allowed w-auto flex-none
+    border relative transform-gpu
+    before:hidden dark:before:block before:absolute before:-inset-[1.5px] before:rounded-lg before:border-[.5px] before:border-black/80
+    after:block after:absolute after:-inset-[1px] after:rounded-md after:bg-gradient-to-t after:from-black/5 dark:after:from-black/[0.15] after:opacity-50 hover:after:opacity-100 after:transition-opacity shadow-button
+  }
+  
+  .button {
+    @apply inline-flex space-x-2 flex-none items-center justify-center cursor-pointer leading-none transition-all font-semibold px-5 py-2.5 text-sm opacity-100 rounded-md text-themeOnBackground bg-themeSurfaceVariant hover:scale-105 button-class
+  }
+
+  .buttonPrimary {
+    @apply text-themeOnPrimary bg-themePrimary;
+  }
+
+  .buttonLg {
+    @apply text-lg px-6 py-2.5 rounded-xl;
+  }
+
+  .theme-item {
+    @apply inline-flex items-center justify-center transition mx-2 h-6 w-6 rounded-full ring hover:scale-110 ring-white ring-opacity-10 bg-themeInverseSurface text-themeInverseOnSurface text-2xl
+  }
+
+  .noise-bg {
+    background: url('/grain.svg');
+  }
 }
