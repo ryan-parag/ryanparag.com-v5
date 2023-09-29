@@ -103,7 +103,7 @@ export const Chargebacks911 = () => {
           start="2016"
           end="2019"
         />
-        <p className="leading-relaxed mb-4">Chargebacks911® provides solutions for businesses dealing with falsely protested credit card charges by intelligently managing payment disputes. I was hired as the first designer on Chargebacks911's product team, juggling between a role as the designer on the marketing team and the sole designer on our application development team (30+ developers).</p>
+        <p className="leading-relaxed mb-4">Chargebacks911® provides solutions for businesses dealing with falsely protested credit card charges by intelligently managing payment disputes. I was hired as the first designer on Chargebacks911&apos;s product team, juggling between a role as the designer on the marketing team and the sole designer on our application development team (30+ developers).</p>
       </div>
     </Container>
   )
