@@ -11,8 +11,8 @@ const Intro = () => {
           </div>
         </div>
       </div>
-      <h1 className="text-4xl lg:text-5xl mb-2 md:mb-4">Hello, I'm Ryan.👋</h1>
-      <p className="text-base sm:text-lg lg:text-2xl leading-loose mb-8">I'm a product designer and <Randomizer/>.</p>
+      <h1 className="text-4xl lg:text-5xl mb-2 md:mb-4">Hello, I&apos;m Ryan.👋</h1>
+      <p className="text-base sm:text-lg lg:text-2xl leading-loose mb-8">I&apos;m a product designer and <Randomizer/>.</p>
       <button className="button buttonLg buttonPrimary">More Info</button>
       <div className="h-px bg-themeOutline w-20 my-16"/>
     </div>

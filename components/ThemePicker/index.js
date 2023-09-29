@@ -11,6 +11,7 @@ const ThemePicker = ({ currentColor, setCurrentColor, themeColors }) => {
             onClick={() => setCurrentColor(item)}
             className={`theme-item`}
             style={{ background: item }}
+            key={i}
           >
             {
               currentColor === item && (
