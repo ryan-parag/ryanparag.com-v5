@@ -90,7 +90,7 @@ const Theme = () => {
   return(
     <div className="my-8">
       <h2 className="spatial text-sm mb-4">Current theme</h2>
-      <p>I wanted to take a different approach to theming my portfolio for v5 and thought using <a href="https://github.com/material-foundation/material-color-utilities" className="text-link--icon" target="_blank">Google's Material 3 dynamic color functions</a> could be a fun way to drive more personalized theming on the site. Check out your current theme below:</p>
+      <p>I wanted to take a different approach to theming my portfolio for v5 and thought using <a href="https://github.com/material-foundation/material-color-utilities" className="text-link--icon" target="_blank">Google&apos;s Material 3 dynamic color functions</a> could be a fun way to drive more personalized theming on the site. Check out your current theme below:</p>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
         {
           tokens.map((item, i) => (

@@ -10,7 +10,7 @@ const CTA = () => {
           </div>
         </div>
         <h3>Want a closer look into my work?</h3>
-        <p>Let's chat if you&apos;d like a more in-depth view into my design process and the past projects I&apos;ve worked on.</p>
+        <p>Let&apos;s chat if you&apos;d like a more in-depth view into my design process and the past projects I&apos;ve worked on.</p>
         <a href="mailto:parag.ryan@gmail.com" className="button buttonLg buttonPrimary mt-2">Send me an email!</a>
       </article>
     </section>
