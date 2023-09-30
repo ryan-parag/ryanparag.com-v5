@@ -75,7 +75,7 @@ const Randomizer = () => {
   return(
     <span
       role="button"
-      className="transition link-shadow cursor-pointer rounded-md select-none"
+      className="link-shadow select-none"
       onClick={() => setIsRandom(randomFact())}
     >
       {isRandom.text}

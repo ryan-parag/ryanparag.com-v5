@@ -18,7 +18,11 @@ const ColorPicker = ({ setCurrentColor }) => {
         className={`relative z-10 theme-item bg-themeInverseSurface text-themeInverseOnSurface text-2xl ${open && 'scale-150 hover:scale-125'}`}
         onClick={() => setOpen(!open)}
       >
-        <svg className={`transition ${open && '-rotate-45'}`} viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" class="css-i6dzq1"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        <svg className={`transition ${open && '-rotate-45'}`} width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 5.75V18.25"></path>
+          <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M18.25 12L5.75 12"></path>
+        </svg>
+
       </button>
       {
         open && (

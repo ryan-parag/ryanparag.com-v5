@@ -19,7 +19,7 @@ const Header = ({ image, title, description}) => {
       </div>
       <div className="h-10 w-px bg-themeSurfaceVariant mx-4"/>
       <div>
-        <h3 className="text-2xl">{title}</h3>
+        <h3 className="text-2xl mb-0">{title}</h3>
         <span className="text-sm text-themeOnSurfaceVariant">{description}</span>
       </div>
     </div>
@@ -39,6 +39,7 @@ export const TrustLayer = () => {
     <Container>
       <ProjectCarousel
         company={'trustlayer'}
+        color={'#1C66DC'}
       />
       <div className="w-full mx-auto max-w-2xl">
         <Header
@@ -51,7 +52,7 @@ export const TrustLayer = () => {
           start="2021"
           end="Present"
         />
-        <p className="leading-relaxed">Insurance is really complicated 😩. And virtually every business has had to deal with the frustration of proving they have coverage and are compliant. At TrustLayer, I help design, problem-solve, and ship solutions that help businesses and enterprises automate their insurance compliance process.</p>
+        <p>Insurance is really complicated 😩. And virtually every business has had to deal with the frustration of proving they have coverage and are compliant. At TrustLayer, I help design, problem-solve, and ship solutions that help businesses and enterprises automate their insurance compliance process.</p>
       </div>
     </Container>
   )
@@ -62,6 +63,7 @@ export const Masonite = () => {
     <Container>
       <ProjectCarousel
         company={'masonite'}
+        color={'#99C221'}
       />
       <div className="w-full mx-auto max-w-2xl">
         <Header
@@ -79,8 +81,8 @@ export const Masonite = () => {
           start="2019"
           end="2020"
         />
-        <p className="leading-relaxed mb-4">Masonite is in the business of manufacturing and selling doors – whether B2B to retailers like The Home Depot and Lowe&apos;s or B2C for newer, consumer-focused business units.</p>
-        <p className="leading-relaxed">At Masonite, I helped build cross-platform design systems and products for 0-to-1 core experiences, native mobile, and growth - focusing on establishing a process of lean user research and working directly with software engineers, product management, and other stakeholders.</p>
+        <p>Masonite is in the business of manufacturing and selling doors – whether B2B to retailers like The Home Depot and Lowe&apos;s or B2C for newer, consumer-focused business units.</p>
+        <p>At Masonite, I helped build cross-platform design systems and products for 0-to-1 core experiences, native mobile, and growth - focusing on establishing a process of lean user research and working directly with software engineers, product management, and other stakeholders.</p>
       </div>
     </Container>
   )
@@ -91,6 +93,7 @@ export const Chargebacks911 = () => {
     <Container>
       <ProjectCarousel
         company={'chargebacks911'}
+        color={'#FA0000'}
       />
       <div className="w-full mx-auto max-w-2xl">
         <Header
@@ -103,7 +106,7 @@ export const Chargebacks911 = () => {
           start="2016"
           end="2019"
         />
-        <p className="leading-relaxed mb-4">Chargebacks911® provides solutions for businesses dealing with falsely protested credit card charges by intelligently managing payment disputes. I was hired as the first designer on Chargebacks911&apos;s product team, juggling between a role as the designer on the marketing team and the sole designer on our application development team (30+ developers).</p>
+        <p>Chargebacks911® provides solutions for businesses dealing with falsely protested credit card charges by intelligently managing payment disputes. I was hired as the first designer on Chargebacks911&apos;s product team, juggling between a role as the designer on the marketing team and the sole designer on our application development team (30+ developers).</p>
       </div>
     </Container>
   )

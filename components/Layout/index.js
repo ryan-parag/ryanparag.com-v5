@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
   return(
     <>
       <main
-        className={`w-full`}
+        className={`w-full pt-40`}
       >
         <ThemePicker
           currentColor={currentColor}
@@ -38,12 +38,12 @@ const Layout = ({ children }) => {
         {children}
       </main>
       <footer
-        className="bg-themeSurfaceVariant text-themeOnSurfaceVariant px-4 py-16 w-full mt-16"
+        className="bg-themeSurfaceVariant text-themeOnSurfaceVariant py-16 w-full mt-16"
         style={{
           background: 'linear-gradient(to top, var(--md-sys-color-surface-variant), transparent)'
         }}
       >
-        <div className="max-w-2xl mx-auto">
+        <div className="section">
           <div className="inline-flex items-center">
             <div className="h-8 w-8 mr-3 transform relative">
               <Logo/>

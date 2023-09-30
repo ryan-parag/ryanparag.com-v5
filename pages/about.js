@@ -1,14 +1,13 @@
 import React from 'react'
-import WorkList from '@/components/WorkList';
-import Intro from '@/components/Intro';
+import Link from 'next/link';
 import Layout from '@/components/Layout';
+import AboutContent from '@/components/AboutContent';
 
 export default function Home() {
 
   return (
     <Layout>
-      <Intro/>
-      <WorkList/>
+      <AboutContent/>
     </Layout>
   )
 }

@@ -1,19 +1,50 @@
 import Randomizer from "../Randomizer"
 import Image from "next/image"
+import { motion } from "framer-motion"
+import Link from "next/link"
 
 const Intro = () => {
   return(
-    <div className={'w-full max-w-2xl mx-auto pt-40 px-4'}>
+    <div className={'section'}>
       <div className="bg-themeSurfaceVariant h-24 w-24 p-1 rounded-full relative inline-flex items-center justify-center mb-4">
         <div className="bg-themeSurface h-full w-full p-1 rounded-full relative inline-flex items-center justify-center">
-          <div className="relative rounded-full w-full h-full overflow-hidden">
+          <motion.div
+            className="relative rounded-full w-full h-full overflow-hidden z-10 opacity-0"
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
+          >
             <Image src="/avatar.png" layout="fill" alt="Ryan's face"/>
-          </div>
+          </motion.div>
+          <motion.div
+            className="absolute opacity-0 top-0 bottom-0 left-0 right-0 bg-themePrimary blur-xl rounded-full z-0"
+            animate={{ opacity: 0.5 }}
+            transition={{ duration: 1, delay: 0.8 }}
+          />
         </div>
       </div>
-      <h1 className="text-4xl lg:text-5xl mb-2 md:mb-4">Hello, I&apos;m Ryan.👋</h1>
-      <p className="text-base sm:text-lg lg:text-2xl leading-loose mb-8">I&apos;m a product designer and <Randomizer/>.</p>
-      <button className="button buttonLg buttonPrimary">More Info</button>
+      <motion.h1
+        className="text-4xl lg:text-5xl mb-2 md:mb-4 top-4 opacity-0 relative"
+        animate={{ top: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+      >
+          Hello, I&apos;m Ryan.👋
+      </motion.h1>
+      <motion.p
+        className="text-base sm:text-lg lg:text-2xl leading-loose mb-8 top-4 opacity-0 relative"
+        animate={{ top: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.6 }}
+      >
+          I&apos;m a product designer and <Randomizer/>.
+      </motion.p>
+      <Link href="/about">
+        <motion.span
+          className="button buttonLg buttonPrimary opacity-0"
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
+        >
+          More Info
+        </motion.span>
+      </Link>
       <div className="h-px bg-themeOutline w-20 my-16"/>
     </div>
   )

@@ -1,6 +1,6 @@
 import ImageCarousel from "@/components/ImageCarousel";
 
-const ProjectCarousel = ({ company }) => {
+const ProjectCarousel = ({ company, color }) => {
 
   const trustlayer = [
     '/projects/trustlayer/future-1.png',
@@ -25,6 +25,7 @@ const ProjectCarousel = ({ company }) => {
     <ImageCarousel
       images={changeCompany(company)}
       company={company}
+      color={color}
     />
   )
 }
