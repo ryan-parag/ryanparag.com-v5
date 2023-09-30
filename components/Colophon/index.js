@@ -98,7 +98,7 @@ const Theme = () => {
               <li className="spatial text-xs mb-2">{item.name}</li>
               {
                 item.values.map((color,i) => (
-                  <li className="flex items-center py-1" key={i}>
+                  <li className="transition flex items-center py-1 text-themeOutline hover:text-themeOnBackground" key={i}>
                     <span className="h-4 w-4 rounded-full mr-2 border border-black border-opacity-10 dark:border-white dark:border-opacity-10" style={{ background: `var(--md-sys-color-${color.variable})`}}/>
                     <span className="text-xs font-mono">{color.name}</span>
                   </li>
