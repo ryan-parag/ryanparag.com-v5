@@ -1,5 +1,20 @@
 import Logo from '../Logo';
 
+const Badge = () => {
+  return(
+    <div className="inline-flex items-center">
+      <div className="h-10 w-10 mr-3 transform relative">
+        <Logo/>
+        <span className="absolute top-0 bottom-0 right-0 left-0 bg-themePrimary blur-lg opacity-50 -z-10"/>
+      </div>
+      <div className="flex flex-col items-start">
+        <span className="font-bold text-base">Ryan Parag</span>
+        <span className="text-sm opacity-70">Product Designer</span>
+      </div>
+    </div>
+  )
+}
+
 const Footer = () => {
   const links = [
     {
@@ -32,16 +47,7 @@ const Footer = () => {
 
   return(
     <div className="flex flex-col">
-      <div className="inline-flex items-center">
-        <div className="h-8 w-8 mr-3 transform relative">
-          <Logo/>
-          <span className="absolute top-0 bottom-0 right-0 left-0 bg-themePrimary blur-lg opacity-50 -z-10"/>
-        </div>
-        <div className="flex flex-col items-start">
-          <span className="font-bold text-sm">Ryan Parag</span>
-          <span className="text-xs opacity-70">Product Designer</span>
-        </div>
-      </div>
+      <Badge/>
       <div className="h-px bg-themeOutline w-20 my-8"/>
       <div className="w-full flex-1">
         <div className="spatial text-sm mb-4">Everywhere else</div>

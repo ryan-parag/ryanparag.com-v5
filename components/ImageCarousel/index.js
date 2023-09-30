@@ -18,11 +18,11 @@ const ImageCarousel = ({ images, company, color }) => {
   }, [currentColor]);
 
   return (
-    <div id={`${company}-theme`} className="max-w-4xl mx-auto my-6 sup">
+    <div id={`${company}-theme`} className="max-w-4xl mx-auto my-6">
       <Carousel showArrows={true} emulateTouch>
         {
           images.map((item, i) => (
-            <div key={i} className="bg-themeSurfaceVariant text-themeOnSurfaceVariant relative flex flex-col rounded-2xl p-2 md:p-6">
+            <div key={i} className="bg-themeSurfaceVariant text-themeOnSurfaceVariant relative flex flex-col rounded-2xl p-2 py-6 md:p-6">
               <img className="z-0 relative rounded-xl" src={item.src}/>
               <span className="w-full text-left mt-2 text-xs">{item.caption}</span>
             </div>
