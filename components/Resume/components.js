@@ -4,12 +4,16 @@ import Image from "next/image"
 export const Header = () => {
   return(
     <div className="w-full flex flex-col absolute z-10 top-0 left-0 right-0">
-      <div className="flex w-full items-center px-6 py-6 justify-between">
+      <div className="flex w-full max-w-7xl mx-auto items-center px-4 py-4 justify-center md:justify-start">
+        <span className="mx-1">Back to</span>
+        <Link href="/">
+          <span className="inline-flex items-center link-shadow mx-1">
+            Work
+          </span>
+        </Link>
+        <span className="mx-1">or</span>
         <Link href="/about">
-          <span className="inline-flex items-center link-shadow">
-            <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
-              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M13.25 8.75L9.75 12L13.25 15.25"></path>
-            </svg>
+          <span className="inline-flex items-center link-shadow mx-1">
             About
           </span>
         </Link>

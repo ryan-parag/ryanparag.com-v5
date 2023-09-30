@@ -20,7 +20,7 @@ const ResumePage = () => {
             <h1 className="text-4xl lg:text-5xl mb-2">{Data.name}</h1>
             <span className="text-lg lg:text-xl">{Data.role}</span>
           </div>
-          <div className="w-full md:w-auto mt-6 mb-3 md:mt-0 grid grid-cols-2 gap-4 md:flex">
+          <div className="w-full md:w-auto mt-6 mb-3 md:mt-0 grid grid-cols-1 md:grid-cols-2 gap-4 md:flex">
             <motion.a
               className="button buttonPrimary md:buttonLg relative top-8"
               href={`mailto:${Data.email}?subject=Hey Ryan!`}
