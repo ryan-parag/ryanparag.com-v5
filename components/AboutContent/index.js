@@ -158,7 +158,7 @@ const Site = () => {
       <div className="flex items-center">
         {
           portfolios.map((item,i) => (
-            <Pill link={item.link}>Version {item.version}</Pill>
+            <Pill key={i} link={item.link}>Version {item.version}</Pill>
           ))
         }
       </div>
@@ -209,7 +209,7 @@ const AboutContent = () => {
       <h1>About</h1>
       <h2 className="spatial text-sm mb-4">Career</h2>
       <p>
-        Currently, I'm designing at <a href="https://trustlayer.io" target="_blank" className="text-link--icon">TrustLayer</a>, working on collaborative tools where businesses can share insurance verification and begin working together with less difficulty.
+        Currently, I&apos;m designing at <a href="https://trustlayer.io" target="_blank" className="text-link--icon">TrustLayer</a>, working on collaborative tools where businesses can share insurance verification and begin working together with less difficulty.
       </p>
       <p>
         Previously, I was on the digital innovation team at <a href="https://residential.masonite.com" target="_blank" className="text-link--icon">Masonite</a> — conceptualizing a simpler home remodeling experience and designing multiple smart-home experiences for homeowners, builders, and internal teams. Before that, I was at <a href="https://chargebacks911.com" target="_blank" className="text-link--icon">Chargebacks911</a> , designing digital tools for fraud-auditing teams at banks.
