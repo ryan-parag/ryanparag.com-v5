@@ -2,7 +2,7 @@ const Data = {
   name: 'Ryan Parag',
   role: 'Product Designer',
   email: 'parag.ryan@gmail.com',
-  pdf: '/about/RyanParag-resume.pdf',
+  pdf: '/RyanParag_resume_2023.pdf',
   skills: [
     'Interface Design',
     'Interaction & UI Design',
@@ -37,28 +37,24 @@ const Data = {
       start: 'April 2021',
       end: 'Present',
       description: 'I lead design at TrustLayer, as their first design hire. I work closely with product operations, product management, and engineering to create better experiences around collecting/verifying insurance.',
-      portfolio: true
     }, {
       company: 'Masonite',
       role: 'Senior Product Designer',
       start: 'March 2019',
       end: 'April 2021',
       description: 'Designed multiple product experiences that helped flatten and simplify the home remodeling experience for homeowners and contractors in new and emerging markets. I also help build the IoT experience that helps homeowners connect a Masonite door system to their smart home through our cutting-edge cloud platform.',
-      portfolio: true
     }, {
       company: 'Chargebacks911',
       role: 'Product Designer',
       start: 'March 2016',
       end: 'March 2019',
       description: 'Lead designer working between multiple engineering, executive, and marketing teams. Led the design of two legacy applications and one new application for clients in the enterprise payments space. Worked on UX flows, design systems, rapid prototyping, user journeys, marketing assets, and live product. Increased qualified web traffic by 400% and inbound leads by 250%.',
-      portfolio: true
     }, {
       company: 'Xcenda',
       role: 'Healthcare Analyst',
       start: 'June 2013',
       end: 'March 2016',
       description: 'Analyzed data to measure pharmaceutical outcomes, investigated key business problems through quantitative analyses of pharmaceutical cost data. Helped forecast business decisions against market outcomes and parent company (AmerisourceBergen) goals. Verfied report data in relation to population demographics, cost, and insurance.',
-      portfolio: false
     }
   ],
   education: [
