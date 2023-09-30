@@ -13,11 +13,11 @@ const Position = ({ role, start, end }) => {
 
 const Header = ({ image, title, description}) => {
   return(
-    <div className="flex w-full items-center">
-      <div className="relative h-12 w-12 overflow-hidden rounded-xl border border-current text-themeSurfaceVariant">
+    <div className="flex flex-col md:flex-row w-full items-start md:items-center">
+      <div className="relative h-12 w-12 overflow-hidden rounded-xl border border-current text-themeSurfaceVariant mb-4 md:mb-0">
         <Image alt={image} src={`/projects/${image}.png`} layout="fill"/>
       </div>
-      <div className="h-10 w-px bg-themeSurfaceVariant mx-4"/>
+      <div className="hidden md:inline-block h-10 w-px bg-themeSurfaceVariant mx-4"/>
       <div>
         <h3 className="text-2xl mb-0">{title}</h3>
         <span className="text-sm text-themeOnSurfaceVariant">{description}</span>
