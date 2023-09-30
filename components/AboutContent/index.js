@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Colophon from "../Colophon"
+import Memoji from "../Memoji"
 
 const LinkSection = () => {
   return(
@@ -40,19 +41,20 @@ const AboutContent = () => {
           </span>
         </Link>
       </div>
+      <Memoji/>
       <h1>About</h1>
-      <h2 className="spatial text-sm mb-4">Career</h2>
+      <h3 className="spatial text-sm mb-4">Career</h3>
       <p>
         Currently, I&apos;m designing at <a href="https://trustlayer.io" target="_blank" className="text-link--icon">TrustLayer</a>, working on collaborative tools where businesses can share insurance verification and begin working together with less difficulty.
       </p>
       <p>
         Previously, I was on the digital innovation team at <a href="https://residential.masonite.com" target="_blank" className="text-link--icon">Masonite</a> — conceptualizing a simpler home remodeling experience and designing multiple smart-home experiences for homeowners, builders, and internal teams. Before that, I was at <a href="https://chargebacks911.com" target="_blank" className="text-link--icon">Chargebacks911</a> , designing digital tools for fraud-auditing teams at banks.
       </p>
-      <h2 className="spatial text-sm mb-4">Education</h2>
+      <h3 className="spatial text-sm mb-4">Education</h3>
       <p>
         In a previous life, I studied Healthcare Informatics and Biology. After graduating, I crunched the numbers for pricing model forecasts as a healthcare analyst - and in my after hours I cut my teeth designing as a freelancer, for a diverse group of clients <i>(global non-profits, restaurants, pre-seed startups, musicians etc.)</i>.
       </p>
-      <h2 className="spatial text-sm mb-4">Misc.</h2>
+      <h3 className="spatial text-sm mb-4">Misc.</h3>
       <p>
         I thrive in fast-paced, collaborative environments and am committed to being transparent in my work. In my free time, you can find me tinkering on a random project, finding the first window seat on a flight 🛫, biking around town 🚴‍♂️, and more 🎸 🥐 🏎!
       </p>
