@@ -13,12 +13,12 @@ const Position = ({ role, start, end }) => {
 
 const Header = ({ image, title, description}) => {
   return(
-    <div className="flex flex-col md:flex-row w-full items-start md:items-center">
-      <div className="relative h-12 w-12 overflow-hidden rounded-xl border border-current text-themeSurfaceVariant mb-4 md:mb-0">
+    <div className="flex w-full items-start md:items-center">
+      <div className="relative h-12 w-12 overflow-hidden rounded-xl border border-current text-themeSurfaceVariant">
         <Image alt={image} src={`/projects/${image}.png`} layout="fill"/>
       </div>
-      <div className="hidden md:inline-block h-10 w-px bg-themeSurfaceVariant mx-4"/>
-      <div>
+      <div className="h-10 w-px bg-themeSurfaceVariant mx-4"/>
+      <div className="flex-1">
         <h3 className="text-2xl mb-0">{title}</h3>
         <span className="text-sm text-themeOnSurfaceVariant">{description}</span>
       </div>
@@ -41,7 +41,7 @@ export const TrustLayer = () => {
         company={'trustlayer'}
         color={'#1C66DC'}
       />
-      <div className="w-full mx-auto max-w-2xl">
+      <div className="section px-0 pt-4 md:pt-0">
         <Header
           image="trustlayer"
           title="TrustLayer"
@@ -65,7 +65,7 @@ export const Masonite = () => {
         company={'masonite'}
         color={'#99C221'}
       />
-      <div className="w-full mx-auto max-w-2xl">
+      <div className="section px-0 pt-4 md:pt-0">
         <Header
           image="masonite"
           title="Masonite"
@@ -95,7 +95,7 @@ export const Chargebacks911 = () => {
         company={'chargebacks911'}
         color={'#FA0000'}
       />
-      <div className="w-full mx-auto max-w-2xl">
+      <div className="section px-0 pt-4 md:pt-0">
         <Header
           image="chargebacks911"
           title="Chargebacks911"

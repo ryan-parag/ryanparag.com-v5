@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { argbFromHex, themeFromSourceColor, applyTheme } from "@material/material-color-utilities";
 import ThemePicker from '@/components/ThemePicker';
-import Logo from '../Logo';
+import Footer from '../Footer';
 
 const Layout = ({ children }) => {
 
@@ -13,7 +13,19 @@ const Layout = ({ children }) => {
     '#EC371E'
   ]
 
-  const [currentColor, setCurrentColor] = useState(themeColors[0])
+  const updateLocalStorage = (color) => {
+    localStorage.setItem('ryanparagTheme', color);
+  }
+
+  const checkedSavedTheme = () => {
+    if (typeof window !== 'undefined' && window.localStorage) {
+      if (localStorage.getItem('ryanparagTheme') !== null) {
+        return localStorage.getItem('ryanparagTheme')
+      }
+    } else return false
+  }
+
+  const [currentColor, setCurrentColor] = useState(checkedSavedTheme() ? checkedSavedTheme : themeColors[0])
 
   const runColor = (color) => {
     const theme = themeFromSourceColor(argbFromHex(color));
@@ -23,6 +35,7 @@ const Layout = ({ children }) => {
   useEffect(() => {
     const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     applyTheme(runColor(currentColor), {target: document.getElementById('body'), dark: systemDark})
+    updateLocalStorage(currentColor)
   }, [currentColor]);
 
   return(
@@ -43,17 +56,8 @@ const Layout = ({ children }) => {
           background: 'linear-gradient(to top, var(--md-sys-color-surface-variant), transparent)'
         }}
       >
-        <div className="section">
-          <div className="inline-flex items-center">
-            <div className="h-8 w-8 mr-3 transform relative">
-              <Logo/>
-              <span className="absolute top-0 bottom-0 right-0 left-0 bg-themePrimary blur-lg opacity-50 -z-10"/>
-            </div>
-            <div className="flex flex-col items-start">
-              <span className="font-bold text-sm">Ryan Parag</span>
-              <span className="text-xs opacity-70">Product Designer</span>
-            </div>
-          </div>
+        <div className="section px-4 md:!px-0">
+          <Footer/>
         </div>
       </footer>
     </>

@@ -23,7 +23,8 @@ const ImageCarousel = ({ images, company, color }) => {
         {
           images.map((item, i) => (
             <div key={i} className="bg-themeSurfaceVariant text-themeOnSurfaceVariant relative flex flex-col rounded-2xl p-2 md:p-6">
-              <img className="z-0 relative rounded-xl" src={item}/>
+              <img className="z-0 relative rounded-xl" src={item.src}/>
+              <span className="w-full text-left mt-2 text-xs">{item.caption}</span>
             </div>
           ))
         }

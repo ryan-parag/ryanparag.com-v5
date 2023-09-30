@@ -4,7 +4,7 @@ import ColorPicker from '@/components/ColorPicker';
 const ThemePicker = ({ currentColor, setCurrentColor, themeColors }) => {
 
   return(
-    <div className="flex items-center justify-center mb-6 fixed top-6 rounded-full bg-themeSurfaceVariant z-10 left-1/2 -translate-x-1/2 py-2 px-1 border dark:border-transparent border-current text-themeBackground">
+    <div className="flex items-center justify-center mb-6 fixed top-6 rounded-full bg-themeSurfaceVariant z-20 left-1/2 -translate-x-1/2 py-2 px-1 border dark:border-transparent border-current text-themeBackground">
       {
         themeColors.map((item,i) => (
           <button

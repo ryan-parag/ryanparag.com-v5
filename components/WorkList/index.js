@@ -2,7 +2,7 @@ import { TrustLayer, Masonite, Chargebacks911 } from '@/components/Role';
 
 const Divider = () => {
   return(
-    <div className="section !px-0">
+    <div className="section px-4 md:!px-0">
       <div className="h-px bg-themeOutline w-20 my-8"/>
     </div>
   )
@@ -19,6 +19,7 @@ const WorkList = () => {
       <Masonite/>
       <Divider/>
       <Chargebacks911/>
+      <Divider/>
     </>
   )
 }

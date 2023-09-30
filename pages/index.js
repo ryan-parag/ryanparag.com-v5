@@ -2,6 +2,7 @@ import React from 'react'
 import WorkList from '@/components/WorkList';
 import Intro from '@/components/Intro';
 import Layout from '@/components/Layout';
+import CTA from '@/components/CTA';
 
 export default function Home() {
 
@@ -9,6 +10,7 @@ export default function Home() {
     <Layout>
       <Intro/>
       <WorkList/>
+      <CTA/>
     </Layout>
   )
 }
