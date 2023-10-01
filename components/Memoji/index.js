@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 
 const Memoji = () => {
@@ -29,14 +30,36 @@ const Memoji = () => {
 
   return(
     <div className="relative inline-flex">
-      <button className="transition transform relative my-6 bg-black bg-opacity-5 dark:bg-white dark:bg-opacity-10 p-1 rounded-full hover:scale-105 hover:-rotate-6" onClick={() => setIsRandom(memojiRandom())}>
-        <div className="relative rounded-full h-24 w-24 md:h-32 md:w-32 z-10">
+      <motion.button
+        className="transition transform relative my-6 bg-black bg-opacity-5 dark:bg-white dark:bg-opacity-10 p-1 rounded-full hover:scale-105 hover:-rotate-6 active:scale-95 active:rotate-3 opacity-0"
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.3, delay: 0.3, type: "spring", stiffness: 150 }}
+        onClick={() => setIsRandom(memojiRandom())}
+      >
+        <motion.div
+          className="relative transform rounded-full h-24 w-24 md:h-32 md:w-32 z-10"
+        >
           <Image layout="fill" alt="Ryan's memoji face" src={`/memoji/${isRandom}`}/>
-        </div>
-        <div className="rounded-full absolute h-24 w-24 md:h-32 md:w-32 blur-xl opacity-30 bg-themePrimary top-0 bottom-0 left-0 right-0 z-0"/>
-      </button>
-      <div className="absolute w-8 h-8 bg-themePrimary top-0 -right-4 rounded-full opacity-50"/>
-      <div className="absolute w-4 h-4 bg-themeTertiary top-12 -right-6 rounded-full opacity-50"/>
+        </motion.div>
+        <motion.div
+        className="rounded-full absolute h-24 w-24 md:h-32 md:w-32 blur-xl bg-themePrimary top-0 bottom-0 left-0 right-0 z-0 opacity-0"
+        initial={{ scale: 0 }}
+        animate={{ scale: 1, opacity: 0.3 }}
+        transition={{ duration: 0.3, delay: 0.5 }}
+      />
+      </motion.button>
+      <motion.div
+        className="transform absolute w-8 h-8 bg-themePrimary top-8 right-8 rounded-full opacity-0"
+        initial={{ scale: 0 }}
+        animate={{ scale: 1, opacity: 0.5, top: 0, right: '-16px' }}
+        transition={{ duration: 0.24, delay: 0.6, type: "spring", stiffness: 150 }}
+      />
+      <motion.div
+        className="absolute w-4 h-4 bg-themeTertiary top-12 right-12 rounded-full opacity-0"
+        initial={{ scale: 0 }}
+        animate={{ scale: 1, opacity: 0.5, top: '48px', right: '-24px' }}
+        transition={{ duration: 0.24, delay: 0.7, type: "spring", stiffness: 150 }}
+      />
     </div>
   )
 }

@@ -4,7 +4,7 @@ import Memoji from "../Memoji"
 
 const LinkSection = () => {
   return(
-    <div className="flex flex-col md:flex-row mt-4">
+    <div className="flex flex-col md:flex-row my-6">
       <a href="https://google.com" className="button w-full md:w-auto mb-3 md:mb-0 md:mr-4">
         <svg fill="currentColor" className="mr-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
         LinkedIn
@@ -50,6 +50,7 @@ const AboutContent = () => {
       <p>
         Previously, I was on the digital innovation team at <a href="https://residential.masonite.com" target="_blank" className="text-link--icon">Masonite</a> — conceptualizing a simpler home remodeling experience and designing multiple smart-home experiences for homeowners, builders, and internal teams. Before that, I was at <a href="https://chargebacks911.com" target="_blank" className="text-link--icon">Chargebacks911</a> , designing digital tools for fraud-auditing teams at banks.
       </p>
+      <LinkSection/>
       <h3 className="spatial text-sm mb-4">Education</h3>
       <p>
         In a previous life, I studied Healthcare Informatics and Biology. After graduating, I crunched the numbers for pricing model forecasts as a healthcare analyst - and in my after hours I cut my teeth designing as a freelancer, for a diverse group of clients <i>(global non-profits, restaurants, pre-seed startups, musicians etc.)</i>.
@@ -58,7 +59,6 @@ const AboutContent = () => {
       <p>
         I thrive in fast-paced, collaborative environments and am committed to being transparent in my work. In my free time, you can find me tinkering on a random project, finding the first window seat on a flight 🛫, biking around town 🚴‍♂️, and more 🎸 🥐 🏎!
       </p>
-      <LinkSection/>
       <div className="section !px-0">
         <div className="h-px bg-themeOutline w-20 my-12"/>
       </div>

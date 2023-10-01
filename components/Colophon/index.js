@@ -55,12 +55,6 @@ const Theme = () => {
       name: 'Surfaces',
       values: [
         {
-          name: 'Background',
-          variable: 'background'
-        }, {
-          name: 'On Background',
-          variable: 'on-background'
-        }, {
           name: 'Surface',
           variable: 'surface'
         }, {
@@ -72,6 +66,17 @@ const Theme = () => {
         }, {
           name: 'On Surface Variant',
           variable: 'on-surface-variant'
+        }
+      ]
+    }, {
+      name: 'Background',
+      values: [
+        {
+          name: 'Background',
+          variable: 'background'
+        }, {
+          name: 'On Background',
+          variable: 'on-background'
         }
       ]
     }, {
@@ -161,7 +166,7 @@ const Colophon = () => {
         <div className="flex items-center">
           {
             portfolios.map((item,i) => (
-              <a key={i} className="button mr-4" href={item.link}>Version {item.version}</a>
+              <a key={i} className="button mr-4" href={item.link} target="_blank">Version {item.version}</a>
             ))
           }
         </div>
