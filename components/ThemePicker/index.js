@@ -69,15 +69,26 @@ const ThemePicker = ({ currentColor, setCurrentColor, themeColors }) => {
             style={{ background: item }}
             key={i}
           >
-            {
-              currentColor === item && (
-                <motion.span
-                  className="h-0 w-0 bg-white ring-2 ring-white ring-opacity-50 rounded-full"
-                  animate={{ width: '12px', height: '12px' }}
-                  transition={{ duration: 0.1, delay: 0.1 }}
-                />
-              )
-            }
+            <AnimatePresence>
+              {
+                currentColor === item && (
+                  <motion.span
+                    className="h-0 w-0 bg-white ring-2 ring-white ring-opacity-50 rounded-full inline-flex items-center justify-center"
+                    animate={{ width: '16px', height: '16px' }}
+                    exit={{ width: 0, height: 0, opacity: 0 }}
+                    transition={{ duration: 0.1, delay: 0, type: "spring", stiffness: 200 }}
+                  >
+                    <motion.span
+                      className="h-0 w-0 rounded-full"
+                      style={{ background: item }}
+                      animate={{ width: '8px', height: '8px' }}
+                      exit={{ width: 0, height: 0, opacity: 0 }}
+                      transition={{ duration: 0.1, delay: 0.2, type: "spring", stiffness: 200 }}
+                    />
+                  </motion.span>
+                )
+              }
+            </AnimatePresence>
           </button>
         ))
       }
