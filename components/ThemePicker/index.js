@@ -1,7 +1,40 @@
+import React, { useState, useEffect} from 'react'
 import { motion } from 'framer-motion';
 import ColorPicker from '@/components/ColorPicker';
+import Logo from '../Logo';
+import Link from 'next/link';
 
 const ThemePicker = ({ currentColor, setCurrentColor, themeColors }) => {
+
+  const [isVisible, setIsVisible] = useState(false);
+  const [height, setHeight] = useState(0)
+  
+  useEffect(() => {   
+    window.addEventListener("scroll", listenToScroll);
+    return () => 
+       window.removeEventListener("scroll", listenToScroll); 
+  }, [])
+  
+  const listenToScroll = () => {
+    let heightToHideFrom = 600;
+    const winScroll = document.body.scrollTop || 
+        document.documentElement.scrollTop;
+    setHeight(winScroll);
+
+    if (winScroll > heightToHideFrom) {  
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scroll({
+      top: 0, 
+      left: 0, 
+      behavior: 'smooth'
+    });
+  }
 
   return(
     <motion.div
@@ -9,6 +42,22 @@ const ThemePicker = ({ currentColor, setCurrentColor, themeColors }) => {
       animate={{ top: '56px', opacity: 1 }}
       transition={{ duration: 0.1, delay: 0.5, type: "spring", stiffness: 150 }}
     >
+      {
+        isVisible && (
+          <motion.div
+            className="inline-flex items-center opacity-0 w-0"
+            animate={{ opacity: 1, width: 'auto' }}
+            transition={{ duration: 0.1, delay: 0.1, type: "spring", stiffness: 150 }}
+          >
+            <div className="transition h-6 w-6 ml-2 hover:scale-110 hover:rotate-3">
+              <Link href="/">
+                <Logo/>
+              </Link>
+            </div>
+            <span className="h-6 w-px ml-4 mr-2 bg-themeOutline opacity-50"/>
+          </motion.div>
+        )
+      }
       {
         themeColors.map((item,i) => (
           <button
