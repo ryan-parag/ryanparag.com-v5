@@ -154,18 +154,18 @@ export const SideProjects = () => {
           title="Side Projects"
           description="A selection of side projects I'm tinkering through."
         />
-        <div className="grid grid-cols-1 md:grid-cols-2 my-8 gap-x-4 gap-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 my-6 gap-4">
           {
             projects.map((project, i) => (
-              <div className="flex items-start" key={i}>
-                <div className="h-10 w-10 relative">
+              <div className="flex flex-row md:flex-col items-start p-4 rounded-xl bg-themeSurfaceVariant text-themeOnSurfaceVariant" key={i}>
+                <div className="h-10 w-10 md:h-12 md:w-12 relative mb-2">
                   <Image alt={project.title} src={`/projects/${project.logo}`} layout="fill"/>
                 </div>
-                <div className="h-10 w-px bg-themeSurfaceVariant mx-2"/>
+                <div className="inline-block md:hidden h-10 w-px bg-themeOutline mx-3"/>
                 <div className="flex-1 w-full flex items-start flex-col">
                   <h5 className="text-lg">{project.title}</h5>
                   <span className="text-sm mt-1 mb-3">{project.description}</span>
-                  <a href={project.link} target="_blank" className="button">View Project</a>
+                  <a href={project.link} target="_blank" className="text-link--icon">View Project</a>
                 </div>
               </div>
             ))
