@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react'
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import ColorPicker from '@/components/ColorPicker';
 import Logo from '../Logo';
 import Link from 'next/link';
@@ -42,22 +42,25 @@ const ThemePicker = ({ currentColor, setCurrentColor, themeColors }) => {
       animate={{ top: '56px', opacity: 1 }}
       transition={{ duration: 0.1, delay: 0.5, type: "spring", stiffness: 150 }}
     >
-      {
-        isVisible && (
-          <motion.div
-            className="inline-flex items-center opacity-0 w-0"
-            animate={{ opacity: 1, width: 'auto' }}
-            transition={{ duration: 0.1, delay: 0.1, type: "spring", stiffness: 150 }}
-          >
-            <div className="transition h-6 w-6 ml-2 hover:scale-110 hover:rotate-3">
-              <Link href="/">
-                <Logo/>
-              </Link>
-            </div>
-            <span className="h-6 w-px ml-4 mr-2 bg-themeOutline opacity-50"/>
-          </motion.div>
-        )
-      }
+      <AnimatePresence>
+        {
+          isVisible && (
+            <motion.div
+              className="inline-flex items-center opacity-0 w-0"
+              animate={{ opacity: 1, width: 'auto' }}
+              exit={{ opacity: 0, width: 0 }}
+              transition={{ duration: 0.1, delay: 0.1, type: "spring", stiffness: 150 }}
+            >
+              <div className="transition h-6 w-6 ml-2 hover:scale-110 hover:rotate-3">
+                <Link href="/">
+                  <Logo/>
+                </Link>
+              </div>
+              <span className="h-6 w-px ml-4 mr-2 bg-themeOutline opacity-50"/>
+            </motion.div>
+          )
+        }
+      </AnimatePresence>
       {
         themeColors.map((item,i) => (
           <button
