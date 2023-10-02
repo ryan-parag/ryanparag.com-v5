@@ -1,5 +1,6 @@
 import ProjectCarousel from "../ProjectCarousel"
 import Image from "next/image"
+import Logo from "../Logo"
 
 const Position = ({ role, start, end }) => {
   return(
@@ -14,8 +15,16 @@ const Position = ({ role, start, end }) => {
 const Header = ({ image, title, description}) => {
   return(
     <div className="flex w-full items-start md:items-center">
-      <div className="relative h-12 w-12 overflow-hidden rounded-xl border border-current text-themeSurfaceVariant">
-        <Image alt={image} src={`/projects/${image}.png`} layout="fill"/>
+      <div className="relative h-12 w-12 overflow-hidden rounded-xl">
+        {
+          image ? (
+            <Image alt={image} src={`/projects/${image}.png`} layout="fill"/>
+          )
+          :
+          (
+            <Logo/>
+          )
+        }
       </div>
       <div className="h-10 w-px bg-themeSurfaceVariant mx-4"/>
       <div className="flex-1">
@@ -107,6 +116,61 @@ export const Chargebacks911 = () => {
           end="2019"
         />
         <p>Chargebacks911® provides solutions for businesses dealing with falsely protested credit card charges by intelligently managing payment disputes. I was hired as the first designer on Chargebacks911&apos;s product team, juggling between a role as the designer on the marketing team and the sole designer on our application development team (30+ developers).</p>
+      </div>
+    </Container>
+  )
+}
+
+export const SideProjects = () => {
+
+  const projects = [
+    {
+      link: 'https://donuts.ryanparag.com/',
+      title: 'Donut Drums',
+      description: 'A simple, tappable drum kit - an homage to the great J Dilla',
+      logo: 'donuts-logo.svg',
+    }, {
+      link: 'https://slack-themes.vercel.app',
+      title: 'Slack Themes',
+      description: 'Having trouble keeping track of all of your Slack workspaces?',
+      logo: 'slack-themes-logo.svg',
+    }, {
+      link: 'https://tampabay.design',
+      title: 'TampaBay.design',
+      description: 'How to get involved in one of the many local design communities',
+      logo: 'tampa-bay-designers-logo.svg',
+    }, {
+      link: 'https://race-times.vercel.app/',
+      title: 'Race Times',
+      description: 'A directory of translated race times schedules and leaderboards',
+      logo: 'race-times-logo.svg',
+    }
+  ]
+
+  return(
+    <Container>
+      <div className="section px-0 pt-4 md:pt-0">
+        <Header
+          title="Side Projects"
+          description="A selection of side projects I'm tinkering through."
+        />
+        <div className="grid grid-cols-1 md:grid-cols-2 my-8 gap-x-4 gap-y-6">
+          {
+            projects.map((project, i) => (
+              <div className="flex items-start" key={i}>
+                <div className="h-10 w-10 relative">
+                  <Image alt={project.title} src={`/projects/${project.logo}`} layout="fill"/>
+                </div>
+                <div className="h-10 w-px bg-themeSurfaceVariant mx-2"/>
+                <div className="flex-1 w-full flex items-start flex-col">
+                  <h5 className="text-lg">{project.title}</h5>
+                  <span className="text-sm mt-1 mb-3">{project.description}</span>
+                  <a href={project.link} target="_blank" className="button">View Project</a>
+                </div>
+              </div>
+            ))
+          }
+        </div>
       </div>
     </Container>
   )

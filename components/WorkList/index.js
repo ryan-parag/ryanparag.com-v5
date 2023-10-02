@@ -1,4 +1,4 @@
-import { TrustLayer, Masonite, Chargebacks911 } from '@/components/Role';
+import { TrustLayer, Masonite, Chargebacks911, SideProjects } from '@/components/Role';
 
 const Divider = () => {
   return(
@@ -19,6 +19,8 @@ const WorkList = () => {
       <Masonite/>
       <Divider/>
       <Chargebacks911/>
+      <Divider/>
+      <SideProjects/>
       <Divider/>
     </>
   )
