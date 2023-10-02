@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { argbFromHex, themeFromSourceColor, applyTheme } from "@material/material-color-utilities";
 import ThemePicker from '@/components/ThemePicker';
 import Footer from '../Footer';
+import Head from 'next/head';
 
 const Layout = ({ children }) => {
 
@@ -40,6 +41,24 @@ const Layout = ({ children }) => {
 
   return(
     <>
+      <Head>
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+        <link rel="icon" type="image/png" href="/favicon.png"/>
+        <title>Ryan Parag</title>
+        <meta name="title" content="Ryan Parag"/>
+        <meta name="description" content="Product designer living in Tampa, FL"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://ryanparag.com/"/>
+        <meta property="og:title" content="Ryan Parag"/>
+        <meta property="og:description" content="Product designer living in Tampa, FL"/>
+        <meta property="og:image" content="/social-media.png"/>
+        <meta property="twitter:card" content="summary_large_image"/>
+        <meta property="twitter:url" content="https://ryanparag.com/"/>
+        <meta property="twitter:title" content="Ryan Parag"/>
+        <meta property="twitter:description" content="Product designer living in Tampa, FL"/>
+        <meta property="twitter:image" content="/social-media.png"/>
+        <meta name="keywords" content="ryan, parag, graphic, web, designer, product, tampa, design, trustlayer, masonite, chargebacks911"></meta>
+      </Head>
       <main
         className={`w-full pt-40`}
       >

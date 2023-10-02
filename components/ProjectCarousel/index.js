@@ -4,19 +4,19 @@ const ProjectCarousel = ({ company, color }) => {
 
   const trustlayer = [
     {
-      caption: 'this is a caption',
+      caption: 'A redesign of the flagship product, helping manage complex organizations',
       src: '/projects/trustlayer/1.png' 
     }, {
-      caption: 'this is a caption',
+      caption: 'A network of live data sources from which organizations can have a constant and real-time trace of coverage',
       src: '/projects/trustlayer/2.png' 
     }, {
-      caption: 'this is a caption',
+      caption: 'A clearer experience for tasks centered around providing insurance information',
       src: '/projects/trustlayer/3.png' 
     }, {
-      caption: 'this is a caption',
+      caption: 'An AI-powered document extraction tool',
       src: '/projects/trustlayer/4.png' 
     }, {
-      caption: 'this is a caption',
+      caption: 'An easy-to-use visual workflow builder to automate repetitive workflows',
       src: '/projects/trustlayer/5.png' 
     }
   ]

@@ -19,7 +19,7 @@ const ThemePicker = ({ currentColor, setCurrentColor, themeColors }) => {
           >
             {
               currentColor === item && (
-                <motion.div
+                <motion.span
                   className="h-0 w-0 bg-white ring-2 ring-white ring-opacity-50 rounded-full"
                   animate={{ width: '12px', height: '12px' }}
                   transition={{ duration: 0.1, delay: 0.1 }}
