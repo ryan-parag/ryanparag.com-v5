@@ -23,7 +23,7 @@ const CTA = () => {
             <Image src="/memoji.png" layout="fill" alt="Ryan's face"/>
           </div>
         </div>
-        <h3>Want a closer look into my work?</h3>
+        <h3 className="text-xl md:text-3xl">Want a closer look into my work?</h3>
         <p>Let&apos;s chat if you&apos;d like a more in-depth view into my design process and the past projects I&apos;ve worked on.</p>
           <div className="flex flex-col md:flex-row items-start md:items-center mt-2">
             <button onClick={() => copyEmail()} className="w-full md:w-auto button buttonLg buttonPrimary">Copy email address</button>
