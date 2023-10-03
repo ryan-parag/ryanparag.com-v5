@@ -1,20 +1,34 @@
+import React, { useState } from 'react'
 import Link from "next/link"
 import Colophon from "../Colophon"
 import Memoji from "../Memoji"
+import { copyTextToClipboard } from "@/utils/copy"
 
 const LinkSection = () => {
+
+  const [copied, setCopied] = useState(false)
+
+  const copyEmail = () => {
+    copyTextToClipboard()
+    setCopied(true)
+    setTimeout(() => {
+      setCopied(false)
+    }, 1000)
+  }
+
   return(
-    <div className="flex flex-col md:flex-row my-6">
-      <a href="https://google.com" className="button w-full md:w-auto mb-3 md:mb-0 md:mr-4">
+    <div className="grid grid-cols-2 gap-4 md:gap-0 md:flex flex-col md:flex-row my-6">
+      <button onClick={() => copyEmail()} className="button buttonPrimary w-full md:w-auto md:mr-4">{copied ? 'Copied' : 'Copy Email'}</button>
+      <a href="https://google.com" className="button w-full md:w-auto md:mr-4">
         <svg fill="currentColor" className="mr-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
         LinkedIn
       </a>
-      <a href="https://google.com" className="button w-full md:w-auto mb-3 md:mb-0 md:mr-4">
+      <a href="https://google.com" className="button w-full md:w-auto md:mr-4">
         <svg fill="currentColor" className="mr-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 28 28"><path fillRule="evenodd" clipRule="evenodd" d="M11.737 7.958a.75.75 0 10-.389 1.45l7.245 1.94A.75.75 0 1018.98 9.9l-7.244-1.94zM10.896 11.098a.75.75 0 00-.389 1.448l7.245 1.942a.75.75 0 00.388-1.45l-7.245-1.94zM9.136 14.767a.75.75 0 01.918-.53l4.83 1.294a.75.75 0 01-.388 1.449l-4.83-1.294a.75.75 0 01-.53-.919z"></path><path fillRule="evenodd" clipRule="evenodd" d="M16.5 23.987L6.841 21.4a2.75 2.75 0 01-1.944-3.368L8.132 5.957A2.75 2.75 0 0111.5 4.013L21.16 6.6a2.75 2.75 0 011.944 3.368l-3.236 12.074a2.75 2.75 0 01-3.368 1.944zM6.345 18.42a1.25 1.25 0 00.884 1.531l9.66 2.588a1.25 1.25 0 001.53-.883L21.655 9.58a1.25 1.25 0 00-.884-1.531L11.11 5.46a1.25 1.25 0 00-1.53.884L6.345 18.42z"></path></svg>
         Read.cv
       </a>
       <Link href="/resume">
-        <span className="button w-full mb-0 md:w-auto">
+        <span className="button w-full md:w-auto">
           <svg className="mr-1" width="20" height="20" fill="none" viewBox="0 0 24 24">
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M7.75 19.25H16.25C17.3546 19.25 18.25 18.3546 18.25 17.25V9L14 4.75H7.75C6.64543 4.75 5.75 5.64543 5.75 6.75V17.25C5.75 18.3546 6.64543 19.25 7.75 19.25Z"></path>
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M18 9.25H13.75V5"></path>

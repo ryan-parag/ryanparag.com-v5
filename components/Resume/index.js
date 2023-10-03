@@ -1,3 +1,5 @@
+import React, { useState } from 'react'
+import { copyTextToClipboard } from '@/utils/copy'
 import {  Header} from "./components"
 import Data from "./Data"
 import Logo from "@/components/Logo"
@@ -5,6 +7,17 @@ import { Certifications, Education, Experience, TagSection } from "./sections"
 import { motion } from "framer-motion"
 
 const ResumePage = () => {
+
+  const [copied, setCopied] = useState(false)
+
+  const copyEmail = () => {
+    copyTextToClipboard()
+    setCopied(true)
+    setTimeout(() => {
+      setCopied(false)
+    }, 1000)
+  }
+
   return(
     <>
       <Header/>
@@ -21,25 +34,26 @@ const ResumePage = () => {
             <span className="text-lg lg:text-xl">{Data.role}</span>
           </div>
           <div className="w-full md:w-auto mt-6 mb-3 md:mt-0 grid grid-cols-1 md:grid-cols-2 gap-4 md:flex">
-            <motion.a
+            <motion.button
               className="button buttonPrimary md:buttonLg relative top-8"
               href={`mailto:${Data.email}?subject=Hey Ryan!`}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1, top: 0 }}
-              transition={{ duration: .4, delay: 0 }}
+              transition={{ duration: 0.3, delay: 0, type: "spring", stiffness: 150 }}
+              onClick={() => copyEmail()}
             >
-              Email Me
+              {copied ? 'Copied' : 'Email Me'}
               <svg width="24" height="24" fill="none" viewBox="0 0 24 24" className="ml-1">
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4.75 7.75C4.75 6.64543 5.64543 5.75 6.75 5.75H17.25C18.3546 5.75 19.25 6.64543 19.25 7.75V16.25C19.25 17.3546 18.3546 18.25 17.25 18.25H6.75C5.64543 18.25 4.75 17.3546 4.75 16.25V7.75Z"></path>
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M5.5 6.5L12 12.25L18.5 6.5"></path>
               </svg>
-            </motion.a>
+            </motion.button>
             <motion.a
               className="button md:buttonLg opacity-0 top-8"
               href={Data.pdf}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1, top: 0 }}
-              transition={{ duration: .4, delay: .3 }}
+              transition={{ duration: 0.3, delay: 0.1, type: "spring", stiffness: 150 }}
             >
               Download PDF
               <svg width="24" height="24" fill="none" viewBox="0 0 24 24"  className="ml-1">

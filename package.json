@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@material/material-color-utilities": "^0.2.7",
+    "@radix-ui/react-toast": "^1.1.5",
     "autoprefixer": "10.4.16",
     "eslint": "8.49.0",
     "eslint-config-next": "13.5.2",
