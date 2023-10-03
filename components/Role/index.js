@@ -1,6 +1,7 @@
 import ProjectCarousel from "../ProjectCarousel"
 import Image from "next/image"
 import Logo from "../Logo"
+import { motion } from "framer-motion"
 
 const Position = ({ role, start, end }) => {
   return(
@@ -50,7 +51,13 @@ export const TrustLayer = () => {
         company={'trustlayer'}
         color={'#1C66DC'}
       />
-      <div className="section px-0 pt-4 md:pt-0">
+      <motion.div
+        className="section px-0 pt-4 md:pt-0 relative top-8"
+        initial={{ opacity: 0 }}
+        whileInView= {{ opacity: 1, top: 0 }}
+        transition={{ duration: 0.3, delay: .1, type: "spring", stiffness: 80 }}
+        viewport={{ once: true }}
+      >
         <Header
           image="trustlayer"
           title="TrustLayer"
@@ -62,7 +69,7 @@ export const TrustLayer = () => {
           end="Present"
         />
         <p>Insurance is really complicated 😩. And virtually every business has had to deal with the frustration of proving they have coverage and are compliant. At TrustLayer, I help design, problem-solve, and ship solutions that help businesses and enterprises automate their insurance compliance process.</p>
-      </div>
+      </motion.div>
     </Container>
   )
 }
@@ -74,7 +81,13 @@ export const Masonite = () => {
         company={'masonite'}
         color={'#99C221'}
       />
-      <div className="section px-0 pt-4 md:pt-0">
+      <motion.div
+        className="section px-0 pt-4 md:pt-0 relative top-8"
+        initial={{ opacity: 0 }}
+        whileInView= {{ opacity: 1, top: 0 }}
+        transition={{ duration: 0.3, delay: .1, type: "spring", stiffness: 80 }}
+        viewport={{ once: true }}
+      >
         <Header
           image="masonite"
           title="Masonite"
@@ -92,7 +105,7 @@ export const Masonite = () => {
         />
         <p>Masonite is in the business of manufacturing and selling doors – whether B2B to retailers like The Home Depot and Lowe&apos;s or B2C for newer, consumer-focused business units.</p>
         <p>At Masonite, I helped build cross-platform design systems and products for 0-to-1 core experiences, native mobile, and growth - focusing on establishing a process of lean user research and working directly with software engineers, product management, and other stakeholders.</p>
-      </div>
+      </motion.div>
     </Container>
   )
 }
@@ -104,7 +117,13 @@ export const Chargebacks911 = () => {
         company={'chargebacks911'}
         color={'#FA0000'}
       />
-      <div className="section px-0 pt-4 md:pt-0">
+      <motion.div
+        className="section px-0 pt-4 md:pt-0 relative top-8"
+        initial={{ opacity: 0 }}
+        whileInView= {{ opacity: 1, top: 0 }}
+        transition={{ duration: 0.3, delay: .1, type: "spring", stiffness: 80 }}
+        viewport={{ once: true }}
+      >
         <Header
           image="chargebacks911"
           title="Chargebacks911"
@@ -116,7 +135,7 @@ export const Chargebacks911 = () => {
           end="2019"
         />
         <p>Chargebacks911® provides solutions for businesses dealing with falsely protested credit card charges by intelligently managing payment disputes. I was hired as the first designer on Chargebacks911&apos;s product team, juggling between a role as the designer on the marketing team and the sole designer on our application development team (30+ developers).</p>
-      </div>
+      </motion.div>
     </Container>
   )
 }
@@ -157,7 +176,13 @@ export const SideProjects = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 my-6 gap-4">
           {
             projects.map((project, i) => (
-              <div className="flex flex-row md:flex-col items-start p-4 rounded-xl bg-themeSurfaceVariant text-themeOnSurfaceVariant" key={i}>
+              <motion.div
+                className="flex flex-row md:flex-col items-start p-4 rounded-xl bg-themeSurfaceVariant text-themeOnSurfaceVariant relative opacity-0 top-8" key={i}
+                initial={{ opacity: 0 }}
+                whileInView= {{ opacity: 1, top: 0 }}
+                transition={{ duration: 0.3, delay: .1 + .1*i, type: "spring", stiffness: 80 }}
+                viewport={{ once: true }}
+              >
                 <div className="h-10 w-10 md:h-12 md:w-12 relative mb-2">
                   <Image alt={project.title} src={`/projects/${project.logo}`} layout="fill"/>
                 </div>
@@ -167,7 +192,7 @@ export const SideProjects = () => {
                   <span className="text-sm mt-1 mb-3">{project.description}</span>
                   <a href={project.link} target="_blank" className="text-link--icon">View Project</a>
                 </div>
-              </div>
+              </motion.div>
             ))
           }
         </div>

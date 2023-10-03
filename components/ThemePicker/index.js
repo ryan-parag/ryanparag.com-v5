@@ -73,16 +73,22 @@ const ThemePicker = ({ currentColor, setCurrentColor, themeColors }) => {
               {
                 currentColor === item && (
                   <motion.span
-                    className="h-0 w-0 bg-white ring-2 ring-white ring-opacity-50 rounded-full inline-flex items-center justify-center"
+                    className="h-0 w-0 bg-white ring-2 ring-white ring-opacity-50 rounded-full inline-flex items-center justify-center relative"
                     animate={{ width: '16px', height: '16px' }}
                     exit={{ width: 0, height: 0, opacity: 0 }}
                     transition={{ duration: 0.1, delay: 0, type: "spring", stiffness: 200 }}
                   >
                     <motion.span
-                      className="h-0 w-0 rounded-full"
+                      className="h-0 w-0 rounded-full relative ring-2 ring-white"
                       style={{ background: item }}
                       animate={{ width: '8px', height: '8px' }}
                       exit={{ width: 0, height: 0, opacity: 0 }}
+                      transition={{ duration: 0.1, delay: 0.2, type: "spring", stiffness: 200 }}
+                    />
+                    <motion.span
+                      className="rounded-full absolute -top-2 -bottom-2 -right-2 -left-2 blur-sm z-10 opacity-0"
+                      style={{ background: item }}
+                      animate={{ opacity: 0.3 }}
                       transition={{ duration: 0.1, delay: 0.2, type: "spring", stiffness: 200 }}
                     />
                   </motion.span>
