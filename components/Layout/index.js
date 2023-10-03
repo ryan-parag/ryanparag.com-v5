@@ -9,9 +9,11 @@ const Layout = ({ children }) => {
   const themeColors = [
     '#00d1b2',
     '#E684AF',
-    '#5D0FDD',
     '#EAC234',
-    '#EC371E'
+    '#FF8A00',
+    '#EC371E',
+    '#0052CC',
+    '#5D0FDD'
   ]
 
   const updateLocalStorage = (color) => {

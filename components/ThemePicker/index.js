@@ -38,7 +38,7 @@ const ThemePicker = ({ currentColor, setCurrentColor, themeColors }) => {
 
   return(
     <motion.div
-      className="flex items-center justify-center mb-6 fixed -top-20 rounded-full bg-themeSurfaceVariant z-20 left-1/2 -translate-x-1/2 py-2 px-1 border dark:border-transparent border-current text-themeBackground opacity-0"
+      className="flex items-center justify-center mb-6 fixed -top-20 rounded-full bg-themeSurfaceVariant shadow-2xl z-20 left-1/2 -translate-x-1/2 py-2 px-1 border dark:border-transparent border-current text-themeBackground opacity-0"
       animate={{ top: '56px', opacity: 1 }}
       transition={{ duration: 0.1, delay: 0.5, type: "spring", stiffness: 150 }}
     >
