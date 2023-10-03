@@ -12,7 +12,6 @@ const Layout = ({ children }) => {
     '#EAC234',
     '#FF8A00',
     '#EC371E',
-    '#0052CC',
     '#5D0FDD'
   ]
 
