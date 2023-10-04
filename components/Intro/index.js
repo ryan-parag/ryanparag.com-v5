@@ -6,7 +6,13 @@ import Link from "next/link"
 const Intro = () => {
   return(
     <div className={'section'}>
-      <div className="bg-themeSurfaceVariant h-24 w-24 p-1 rounded-full relative inline-flex items-center justify-center mb-6">
+      <motion.div
+        className="bg-themeSurfaceVariant h-24 w-24 p-1 rounded-full relative inline-flex items-center justify-center mb-6"
+        initial={{ opacity: 0, top: '24px' }}
+        whileInView= {{ opacity: 1, top: 0 }}
+        transition={{ duration: 0.1, delay: 0.2, type: "spring", stiffness: 150 }}
+        viewport={{ once: true }}
+      >
         <div className="bg-themeSurface h-full w-full p-1 rounded-full relative inline-flex items-center justify-center">
           <motion.div
             className="relative rounded-full w-full h-full overflow-hidden z-10 opacity-0"
@@ -21,7 +27,7 @@ const Intro = () => {
             transition={{ duration: 1, delay: 0.8, type: "spring", stiffness: 150 }}
           />
         </div>
-      </div>
+      </motion.div>
       <motion.h1
         className="text-4xl lg:text-5xl mb-2 md:mb-4 top-8 opacity-0 relative"
         animate={{ top: 0, opacity: 1 }}
