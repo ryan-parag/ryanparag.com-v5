@@ -117,31 +117,35 @@ const Theme = () => {
   )
 }
 
+export const build = {
+  storage: {
+    name: 'GitHub',
+    link: 'https://github.com/ryan-parag/ryanparag.com-v5'
+  },
+  built: {
+    name: 'Next.js',
+    link: 'https://nextjs.org/'
+  },
+  deploy: {
+    name: 'Vercel',
+    link: 'https://vercel.com/'
+  },
+  style: {
+    name: 'TailwindCSS',
+    link: 'https://tailwindcss.com/'
+  },
+  animation: {
+    name: 'Framer Motion',
+    link: 'https://www.framer.com/motion/'
+  },
+  typography: {
+    name: 'Right Serif and Grotesk',
+    link: 'https://pangrampangram.com/'
+  }
+}
+
 
 const Colophon = () => {
-
-  const build = {
-    storage: {
-      name: 'GitHub',
-      link: 'https://github.com/ryan-parag/ryanparag.com-v5'
-    },
-    built: {
-      name: 'Next.js',
-      link: 'https://nextjs.org/'
-    },
-    deploy: {
-      name: 'Vercel',
-      link: 'https://vercel.com/'
-    },
-    style: {
-      name: 'TailwindCSS',
-      link: 'https://tailwindcss.com/'
-    },
-    typography: {
-      name: 'Right Serif and Grotesk',
-      link: 'https://pangrampangram.com/'
-    }
-  }
 
   const portfolios = [
     {
@@ -159,7 +163,7 @@ const Colophon = () => {
   return(
     <div>
       <h3>Colophon</h3>
-      <p>This is the 5th version of my portfolio and I designed and developed it using <a href={build.built.link} target="_blank" className="text-link--icon">{build.built.name}</a> to build, <a href={build.style.link} target="_blank" className="text-link--icon">{build.style.name}</a> for styling, <a href={build.deploy.link} target="_blank" className="text-link--icon">{build.deploy.name}</a> for deploying/hosting, and <a href={build.storage.link} target="_blank" className="text-link--icon">{build.storage.name}</a> for storage. Typography is set in <a href={build.typography.link} target="_blank" className="text-link--icon">{build.typography.name}</a>.</p>
+      <p>This is the 5th version of my portfolio and I designed and developed it using <a href={build.built.link} target="_blank" className="text-link--icon">{build.built.name}</a> to build, <a href={build.style.link} target="_blank" className="text-link--icon">{build.style.name}</a> for styling, <a href={build.animation.link} target="_blank" className="text-link--icon">{build.animation.name}</a> for animation, <a href={build.deploy.link} target="_blank" className="text-link--icon">{build.deploy.name}</a> for deploying/hosting, and <a href={build.storage.link} target="_blank" className="text-link--icon">{build.storage.name}</a> for storage. Typography is set in <a href={build.typography.link} target="_blank" className="text-link--icon">{build.typography.name}</a>.</p>
       <Theme/>
       <div>
         <h2 className="spatial text-sm mb-4">Previous portfolios:</h2>

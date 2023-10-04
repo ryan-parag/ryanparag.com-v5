@@ -68,11 +68,15 @@ const Layout = ({ children }) => {
         transition={{ duration: 0.5, delay: 0.5, type: "spring", stiffness: 100 }}
         viewport={{ once: true }}
       >
-        <div
-          className="h-96 absolute -top-40 -rotate-6 -left-24 -right-24 dark:opacity-20 opacity-40 pointer-events-none blur-2xl z-0"
+        <motion.div
+          className="h-96 absolute -top-40 -left-24 -right-24 dark:opacity-20 opacity-40 pointer-events-none blur-2xl z-0"
           style={{
             background: 'linear-gradient(to bottom, var(--md-sys-color-primary), transparent)'
           }}
+          initial={{ rotate: 0 }}
+          whileInView= {{ rotate: '-8deg' }}
+          transition={{ duration: 0.5, delay: 0.5, type: "spring", stiffness: 150 }}
+          viewport={{ once: true }}
         />
       </motion.div>
       <main
@@ -85,16 +89,20 @@ const Layout = ({ children }) => {
         />
         {children}
       </main>
-      <footer
+      <motion.footer
         className="bg-themeSurfaceVariant text-themeOnSurfaceVariant py-16 w-full mt-16"
         style={{
           background: 'linear-gradient(to top, var(--md-sys-color-surface-variant), transparent)'
         }}
+        initial={{ opacity: 0 }}
+        whileInView= {{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.1, type: "spring", stiffness: 100 }}
+        viewport={{ once: true }}
       >
         <div className="section px-4 md:!px-0">
           <Footer/>
         </div>
-      </footer>
+      </motion.footer>
     </>
   )
 }

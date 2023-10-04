@@ -1,17 +1,37 @@
 import Logo from '../Logo';
+import { motion } from 'framer-motion';
+import { build } from '../Colophon';
 
 const Badge = () => {
   return(
-    <div className="inline-flex items-center">
-      <div className="h-10 w-10 mr-3 transform relative">
-        <Logo/>
-        <span className="absolute top-0 bottom-0 right-0 left-0 bg-themePrimary blur-lg opacity-50 -z-10"/>
-      </div>
+    <motion.div
+      className="inline-flex items-center relative top-8"
+      initial={{ opacity: 0 }}
+      whileInView= {{ opacity: 1, top: 0 }}
+      transition={{ duration: 0.1, delay: .2, type: "spring", stiffness: 80 }}
+      viewport={{ once: true }}
+    >
+      <motion.div
+        className="h-10 w-10 mr-3 transform relative -left-3"
+        initial={{ opacity: 0 }}
+        whileInView= {{ opacity: 1, left: 0 }}
+        transition={{ duration: 0.2, delay: .4, type: "spring", stiffness: 80 }}
+        viewport={{ once: true }}
+      >
+        <Logo subtle/>
+        <motion.span
+          className="absolute top-0 bottom-0 right-0 left-0 bg-themePrimary blur-lg opacity-50 -z-10"
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView= {{ opacity: .5, scale: 1 }}
+          transition={{ duration: 0.2, delay: .4, type: "spring", stiffness: 80 }}
+          viewport={{ once: true }}
+        />
+      </motion.div>
       <div className="flex flex-col items-start">
         <span className="font-bold text-base">Ryan Parag</span>
         <span className="text-sm opacity-70">Product Designer</span>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
@@ -48,14 +68,26 @@ const Footer = () => {
   return(
     <div className="flex flex-col">
       <Badge/>
-      <div className="h-px bg-themeOutline w-20 my-8"/>
-      <div className="w-full flex-1">
+      <motion.div
+        className="h-px bg-themeOutline w-20 mt-8 relative top-8"
+        initial={{ opacity: 0 }}
+        whileInView= {{ opacity: 1, top: 0 }}
+        transition={{ duration: 0.1, delay: .2, type: "spring", stiffness: 80 }}
+        viewport={{ once: true }}
+      />
+      <motion.div
+        className="w-full flex-1 relative my-8 top-8"
+        initial={{ opacity: 0 }}
+        whileInView= {{ opacity: 1, top: 0 }}
+        transition={{ duration: 0.1, delay: .2, type: "spring", stiffness: 80 }}
+        viewport={{ once: true }}
+      >
         <div className="spatial text-sm mb-4">Everywhere else</div>
         <div className="w-full grid grid-cols-3 md:grid-cols-4 gap-2">
           {
             links.map((item,i) => (
               <div key={i}>
-                <a href={item.href} target="_blank" className="text-sm md:text-base inline-flex items-center hover:underline hover:text-themePrimary">
+                <a href={item.href} target="_blank" className="transition text-sm md:text-base inline-flex items-center hover:underline hover:text-themePrimary">
                   <div className="inline-flex mr-2">
                     {
                       item.icon
@@ -67,7 +99,16 @@ const Footer = () => {
             ))
           }
         </div>
-      </div>
+      </motion.div>
+      <motion.div
+        className="text-sm"
+        initial={{ opacity: 0 }}
+        whileInView= {{ opacity: 1 }}
+        transition={{ duration: 0.1, delay: .2, type: "spring", stiffness: 80 }}
+        viewport={{ once: true }}
+      >
+        Built with <a className="transition hover:underline hover:text-themePrimary" href={build.built.link} target="_blank">{build.built.name}</a>, <a className="transition hover:underline hover:text-themePrimary" href={build.style.link} target="_blank">{build.style.name}</a>, and <a className="transition hover:underline hover:text-themePrimary" href={build.animation.link} target="_blank">{build.animation.name}</a>. Website set in <a className="transition hover:underline hover:text-themePrimary" href={build.typography.link} target="_blank">{build.typography.name}</a>.
+      </motion.div>
     </div>
   )
 }

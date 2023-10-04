@@ -59,6 +59,14 @@ const Randomizer = () => {
     { text: "am not good at golf 🏌️‍♂️ - like at all"},
     { text: "I have a desk cactus named Pete 🌵"},
     { text: "I believe mint chip is the best ice cream 🍦"},
+    { text: "a bit of a macroeconomics nerd"},
+    { text: "usually kind of restless"},
+    { text: "I like flight layovers"},
+    { text: "dreamed of being an oceanographer in the 3rd grade"},
+    { text: "I'm trying to take my time and live in the present"},
+    { text: "I'm trying my best at keeping my house plants alive"},
+    { text: "I like to make things"},
+    { text: "I've been practicing eating super spicy foods since birth"}
   ]
 
   const randomFact = () => {
@@ -77,6 +85,7 @@ const Randomizer = () => {
       role="button"
       className="link-shadow select-none"
       onClick={() => setIsRandom(randomFact())}
+      title={`Cycle randomly through all ${facts.length} fun facts!`}
     >
       {isRandom.text}
     </span>

@@ -3,6 +3,7 @@ import Link from "next/link"
 import Colophon from "../Colophon"
 import Memoji from "../Memoji"
 import { copyTextToClipboard } from "@/utils/copy"
+import { motion } from 'framer-motion'
 
 const LinkSection = () => {
 
@@ -17,7 +18,13 @@ const LinkSection = () => {
   }
 
   return(
-    <div className="grid grid-cols-2 gap-4 md:gap-0 md:flex flex-col md:flex-row my-6">
+    <motion.div
+      className="grid grid-cols-2 gap-4 md:gap-0 md:flex flex-col md:flex-row my-6 top-4 relative"
+      initial={{ opacity: 0 }}
+      whileInView= {{ opacity: 1, top: 0 }}
+      transition={{ duration: 0.3, delay: .7, type: "spring", stiffness: 80 }}
+      viewport={{ once: true }}
+    >
       <button onClick={() => copyEmail()} className="button buttonPrimary w-full md:w-auto md:mr-4">{copied ? 'Copied' : 'Copy Email'}</button>
       <a href="https://google.com" className="button w-full md:w-auto md:mr-4">
         <svg fill="currentColor" className="mr-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
@@ -38,7 +45,7 @@ const LinkSection = () => {
           Resume
         </span>
       </Link>
-    </div>
+    </motion.div>
   )
 }
 
@@ -56,27 +63,59 @@ const AboutContent = () => {
         </Link>
       </div>
       <Memoji/>
-      <h1>About</h1>
-      <h3 className="spatial text-sm mb-4">Career</h3>
-      <p>
-        Currently, I&apos;m designing at <a href="https://trustlayer.io" target="_blank" className="text-link--icon">TrustLayer</a>, working on collaborative tools where businesses can share insurance verification and begin working together with less difficulty.
-      </p>
-      <p>
-        Previously, I was on the digital innovation team at <a href="https://residential.masonite.com" target="_blank" className="text-link--icon">Masonite</a> — conceptualizing a simpler home remodeling experience and designing multiple smart-home experiences for homeowners, builders, and internal teams. Before that, I was at <a href="https://chargebacks911.com" target="_blank" className="text-link--icon">Chargebacks911</a> , designing digital tools for fraud-auditing teams at banks.
-      </p>
+      <motion.section
+        className="relative top-8"
+        initial={{ opacity: 0 }}
+        whileInView= {{ opacity: 1, top: 0 }}
+        transition={{ duration: 0.3, delay: .5, type: "spring", stiffness: 80 }}
+        viewport={{ once: true }}
+      >
+        <h1>About</h1>
+        <h3 className="spatial text-sm mb-4">Career</h3>
+        <p>
+          Currently, I&apos;m designing at <a href="https://trustlayer.io" target="_blank" className="text-link--icon">TrustLayer</a>, working on collaborative tools where businesses can share insurance verification and begin working together with less difficulty.
+        </p>
+        <p>
+          Previously, I was on the digital innovation team at <a href="https://residential.masonite.com" target="_blank" className="text-link--icon">Masonite</a> — conceptualizing a simpler home remodeling experience and designing multiple smart-home experiences for homeowners, builders, and internal teams. Before that, I was at <a href="https://chargebacks911.com" target="_blank" className="text-link--icon">Chargebacks911</a> , designing digital tools for fraud-auditing teams at banks.
+        </p>
+      </motion.section>
       <LinkSection/>
-      <h3 className="spatial text-sm mb-4">Education</h3>
-      <p>
-        In a previous life, I studied Healthcare Informatics and Biology. After graduating, I crunched the numbers for pricing model forecasts as a healthcare analyst - and in my after hours I cut my teeth designing as a freelancer, for a diverse group of clients <i>(global non-profits, restaurants, pre-seed startups, musicians etc.)</i>.
-      </p>
-      <h3 className="spatial text-sm mb-4">Misc.</h3>
-      <p>
-        I thrive in fast-paced, collaborative environments and am committed to being transparent in my work. In my free time, you can find me tinkering on a random project, finding the first window seat on a flight 🛫, biking around town 🚴‍♂️, and more 🎸 🥐 🏎!
-      </p>
+      <motion.section
+        className="relative top-8"
+        initial={{ opacity: 0 }}
+        whileInView= {{ opacity: 1, top: 0 }}
+        transition={{ duration: 0.3, delay: .2, type: "spring", stiffness: 80 }}
+        viewport={{ once: true }}
+      >
+        <h3 className="spatial text-sm mb-4">Education</h3>
+        <p>
+          In a previous life, I studied Healthcare Informatics and Biology. After graduating, I crunched the numbers for pricing model forecasts as a healthcare analyst - and in my after hours I cut my teeth designing as a freelancer, for a diverse group of clients <i>(global non-profits, restaurants, pre-seed startups, musicians etc.)</i>.
+        </p>
+      </motion.section>
+      <motion.section
+        className="relative top-8"
+        initial={{ opacity: 0 }}
+        whileInView= {{ opacity: 1, top: 0 }}
+        transition={{ duration: 0.3, delay: .2, type: "spring", stiffness: 80 }}
+        viewport={{ once: true }}
+      >
+        <h3 className="spatial text-sm mb-4">Misc.</h3>
+        <p>
+          I thrive in fast-paced, collaborative environments and am committed to being transparent in my work. In my free time, you can find me tinkering on a random project, finding the first window seat on a flight 🛫, biking around town 🚴‍♂️, and more 🎸 🥐 🏎!
+        </p>
+      </motion.section>
       <div className="section !px-0">
         <div className="h-px bg-themeOutline w-20 my-12"/>
       </div>
-      <Colophon/>
+      <motion.section
+        className="relative top-8"
+        initial={{ opacity: 0 }}
+        whileInView= {{ opacity: 1, top: 0 }}
+        transition={{ duration: 0.3, delay: .2, type: "spring", stiffness: 80 }}
+        viewport={{ once: true }}
+      >
+        <Colophon/>
+      </motion.section>
       <div className="section !px-0">
         <div className="h-px bg-themeOutline w-20 my-12"/>
       </div>

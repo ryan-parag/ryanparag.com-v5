@@ -46,7 +46,7 @@ const ThemePicker = ({ currentColor, setCurrentColor, themeColors }) => {
         {
           isVisible && (
             <motion.div
-              className="inline-flex items-center opacity-0 w-0"
+              className="inline-flex items-center opacity-0 w-0 transform origin-center"
               animate={{ opacity: 1, width: 'auto' }}
               exit={{ opacity: 0, width: 0 }}
               transition={{ duration: 0.1, delay: 0.1, type: "spring", stiffness: 150 }}

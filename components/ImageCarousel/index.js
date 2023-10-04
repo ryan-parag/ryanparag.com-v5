@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import { argbFromHex, themeFromSourceColor, applyTheme } from "@material/material-color-utilities";
+import { motion } from 'framer-motion';
 
 const ImageCarousel = ({ images, company, color }) => {
 
@@ -18,7 +19,15 @@ const ImageCarousel = ({ images, company, color }) => {
   }, [currentColor]);
 
   return (
-    <div id={`${company}-theme`} className="max-w-4xl mx-auto my-6">
+    
+    <motion.div
+      id={`${company}-theme`}
+      className="max-w-4xl mx-auto my-6 relative top-8"
+      initial={{ opacity: 0 }}
+      whileInView= {{ opacity: 1, top: 0 }}
+      transition={{ duration: 0.3, delay: .2, type: "spring", stiffness: 80 }}
+      viewport={{ once: true }}
+    >
       <Carousel showArrows={true} emulateTouch>
         {
           images.map((item, i) => (
@@ -29,7 +38,7 @@ const ImageCarousel = ({ images, company, color }) => {
           ))
         }
       </Carousel>
-    </div>
+    </motion.div>
   );
 }
 

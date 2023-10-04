@@ -28,10 +28,10 @@ const CTA = () => {
         viewport={{ once: true }}
       >
         <motion.div
-          className="bg-themeSurfaceVariant inline-flex items-center justify-center rounded-full h-28 w-28 p-2 absolute -top-12 left-6"
-          initial={{ opacity: 0, scale: 0, rotate: '30deg' }}
-          whileInView= {{ opacity: 1, scale: 1, rotate: 0 }}
-          transition={{ duration: 0.3, delay: .1, type: "spring", stiffness: 80 }}
+          className="bg-themeSurfaceVariant inline-flex items-center justify-center rounded-full h-28 w-28 p-2 absolute left-6"
+          initial={{ opacity: 0, top: 0 }}
+          whileInView= {{ opacity: 1, top: '-48px' }}
+          transition={{ duration: 0.3, delay: .3, type: "spring", stiffness: 80 }}
           viewport={{ once: true }}
         >
           <div className="bg-themeSurface w-full h-full rounded-full relative">
@@ -60,6 +60,7 @@ const CTA = () => {
             initial={{ opacity: 0 }}
             whileInView= {{ opacity: 1, top: 0 }}
             transition={{ duration: 0.3, delay: .2, type: "spring", stiffness: 80 }}
+            viewport={{ once: true }}
           >
             <button onClick={() => copyEmail()} className="w-full md:w-auto button buttonLg buttonPrimary">Copy email address</button>
             <span className={`text-sm mt-4 md:mt-0 ml-0 md:ml-4`}>
@@ -67,7 +68,7 @@ const CTA = () => {
                 copied ? (
                   <motion.span
                     className="inline-flex items-center opacity-0"
-                    animate={{ opacity: 1 }}
+                    whileInView={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.2, delay: 0, type: "spring", stiffness: 200 }}
                   >
