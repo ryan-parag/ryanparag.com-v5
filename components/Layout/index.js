@@ -3,6 +3,7 @@ import { argbFromHex, themeFromSourceColor, applyTheme } from "@material/materia
 import ThemePicker from '@/components/ThemePicker';
 import Footer from '../Footer';
 import Head from 'next/head';
+import { motion } from 'framer-motion';
 
 const Layout = ({ children }) => {
 
@@ -60,6 +61,20 @@ const Layout = ({ children }) => {
         <meta property="twitter:image" content="/social-media.png"/>
         <meta name="keywords" content="ryan, parag, graphic, web, designer, product, tampa, design, trustlayer, masonite, chargebacks911"></meta>
       </Head>
+      <motion.div
+        className="transition absolute top-0 left-0 right-0 overflow-x-hidden h-96 pointer-events-none z-0"
+        initial={{ opacity: 0, height: 0 }}
+        whileInView= {{ opacity: 1, height: '384px' }}
+        transition={{ duration: 0.5, delay: 0.5, type: "spring", stiffness: 100 }}
+        viewport={{ once: true }}
+      >
+        <div
+          className="h-96 absolute -top-40 -rotate-6 -left-24 -right-24 dark:opacity-20 opacity-40 pointer-events-none blur-2xl z-0"
+          style={{
+            background: 'linear-gradient(to bottom, var(--md-sys-color-primary), transparent)'
+          }}
+        />
+      </motion.div>
       <main
         className={`w-full pt-40`}
       >

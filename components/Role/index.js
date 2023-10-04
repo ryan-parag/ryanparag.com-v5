@@ -5,18 +5,30 @@ import { motion } from "framer-motion"
 
 const Position = ({ role, start, end }) => {
   return(
-    <div className="w-full flex items-center text-xs my-6 text-themeOnSurfaceVariant spatial">
+    <motion.div className="w-full flex items-center text-xs my-6 text-themeOnSurfaceVariant spatial">
       <strong>{role}</strong>
-      <span className="mt-1 h-1 border-t border-current border-dashed w-full block flex-1 text-themeOnSurfaceVariant opacity-30 mx-3"/>
+      <motion.span
+        className="mt-1 h-1 border-t border-current border-dashed w-full block flex-1 text-themeOnSurfaceVariant mx-3"
+        initial={{ opacity: 0 }}
+        whileInView= {{ opacity: .3 }}
+        transition={{ duration: 0.3, delay: .3, type: "spring", stiffness: 80 }}
+        viewport={{ once: true }}
+      />
       <span>{start} - {end}</span>
-    </div>
+    </motion.div>
   )
 }
 
 const Header = ({ image, title, description}) => {
   return(
     <div className="flex w-full items-start md:items-center">
-      <div className="relative h-12 w-12 overflow-hidden rounded-xl">
+      <motion.div
+        className="relative h-12 w-12 overflow-hidden rounded-xl"
+        initial={{ opacity: 0, left: '-16px', rotate: '6deg' }}
+        whileInView= {{ opacity: 1, left: 0, rotate: 0 }}
+        transition={{ duration: 0.3, delay: .3, type: "spring", stiffness: 50 }}
+        viewport={{ once: true }}
+      >
         {
           image ? (
             <Image alt={image} src={`/projects/${image}.png`} layout="fill"/>
@@ -26,7 +38,7 @@ const Header = ({ image, title, description}) => {
             <Logo/>
           )
         }
-      </div>
+      </motion.div>
       <div className="h-10 w-px bg-themeSurfaceVariant mx-4"/>
       <div className="flex-1">
         <h3 className="text-2xl mb-0">{title}</h3>
