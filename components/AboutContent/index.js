@@ -22,7 +22,7 @@ const LinkSection = () => {
       className="grid grid-cols-2 gap-4 md:gap-0 md:flex flex-col md:flex-row my-6 top-4 relative"
       initial={{ opacity: 0 }}
       whileInView= {{ opacity: 1, top: 0 }}
-      transition={{ duration: 0.3, delay: .7, type: "spring", stiffness: 80 }}
+      transition={{ duration: 0.3, delay: .2, type: "spring", stiffness: 80 }}
       viewport={{ once: true }}
     >
       <button onClick={() => copyEmail()} className="button buttonPrimary w-full md:w-auto md:mr-4">{copied ? 'Copied' : 'Copy Email'}</button>

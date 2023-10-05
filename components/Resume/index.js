@@ -35,7 +35,7 @@ const ResumePage = () => {
             <span className="text-lg lg:text-xl">{Data.role}</span>
           </div>
           <motion.div
-            className="grid grid-cols-1 gap-3 w-full max-w-md mt-6 mb-3 md:mt-0 p-4 rounded-xl bg-themeSurfaceVariant text-themeOnSurfaceVariant"
+            className="grid grid-cols-1 gap-3 w-full max-w-md mt-6 mb-3 md:mt-0 rounded-xl bg-themeSurfaceVariant text-themeOnSurfaceVariant p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, top: 0 }}
             transition={{ duration: 0.3, delay: 0.5, type: "spring", stiffness: 150 }}
@@ -44,12 +44,12 @@ const ResumePage = () => {
             <div className="flex items-center">
               p*********@gmail.com
               <span className="h-4 w-px mx-2 bg-themeOnSurfaceVariant opacity-50"/>
-              <button onClick={() => copyEmail()} className="link-shadow">{copied ? 'Copied' : 'Copy email'}</button>
+              <button onClick={() => copyEmail()} className="link-shadow">{copied ? 'Copied' : 'Copy Email'}</button>
             </div>
             <div className="flex items-center">
-              {Data.pdf}
+              <span className="truncate">{Data.pdf}</span>
               <span className="h-4 w-px mx-2 bg-themeOnSurfaceVariant opacity-50"/>
-              <a className="link-shadow" href={`/${Data.pdf}`}>Download PDF</a>
+              <a className="link-shadow" href={`/${Data.pdf}`} target="_blank">Download</a>
             </div>
           </motion.div>
         </div>
