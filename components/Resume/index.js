@@ -35,14 +35,14 @@ const ResumePage = () => {
             <span className="text-lg lg:text-xl">{Data.role}</span>
           </div>
           <motion.div
-            className="grid grid-cols-1 gap-3 w-full max-w-md mt-6 mb-3 md:mt-0 rounded-xl bg-themeSurfaceVariant text-themeOnSurfaceVariant p-4"
+            className="grid grid-cols-1 gap-3 w-full max-w-none md:max-w-sm mt-6 mb-3 md:mt-0 rounded-xl bg-themeSurfaceVariant text-themeOnSurfaceVariant p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, top: 0 }}
             transition={{ duration: 0.3, delay: 0.5, type: "spring", stiffness: 150 }}
           >
             <Title flat>Contact</Title>
             <div className="flex items-center">
-              p*********@gmail.com
+              <span>p*********@gmail.com</span>
               <span className="h-4 w-px mx-2 bg-themeOnSurfaceVariant opacity-50"/>
               <button onClick={() => copyEmail()} className="link-shadow">{copied ? 'Copied' : 'Copy Email'}</button>
             </div>
