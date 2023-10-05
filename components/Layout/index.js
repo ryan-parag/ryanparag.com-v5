@@ -73,7 +73,7 @@ const Layout = ({ children }) => {
         `}
       </Script>
       <motion.div
-        className="transition absolute top-0 left-0 right-0 overflow-x-hidden h-96 pointer-events-none z-0"
+        className="transition absolute top-0 left-0 right-0 overflow-x-hidden h-96 pointer-events-none z-0 overflow-y-hidden"
         initial={{ opacity: 0, height: 0 }}
         whileInView= {{ opacity: 1, height: '384px' }}
         transition={{ duration: 0.5, delay: 0.5, type: "spring", stiffness: 100 }}
