@@ -365,7 +365,7 @@
   }
 
   .buttonLg {
-    @apply text-lg px-6 py-2.5 rounded-xl;
+    @apply text-lg px-6 py-2.5 rounded-xl after:rounded-xl before:rounded-xl;
   }
 
   .theme-item {
