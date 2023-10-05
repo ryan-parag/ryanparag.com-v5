@@ -98,7 +98,7 @@ const ThemePicker = ({ currentColor, setCurrentColor, themeColors }) => {
           </button>
         ))
       }
-      <ColorPicker setCurrentColor={setCurrentColor}/>
+      <ColorPicker currentColor={currentColor} setCurrentColor={setCurrentColor}/>
     </motion.div>
   )
 }

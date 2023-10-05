@@ -48,9 +48,9 @@ const Header = ({ image, title, description}) => {
   )
 }
 
-const Container = ({ children }) => {
+const Container = ({ children, id }) => {
   return(
-    <div className="py-8 px-4">
+    <div id={id} className="py-8 px-4">
       {children}
     </div>
   )
@@ -58,7 +58,7 @@ const Container = ({ children }) => {
 
 export const TrustLayer = () => {
   return(
-    <Container>
+    <Container id={'trustlayer'}>
       <ProjectCarousel
         company={'trustlayer'}
         color={'#1C66DC'}
@@ -88,7 +88,7 @@ export const TrustLayer = () => {
 
 export const Masonite = () => {
   return(
-    <Container>
+    <Container id={'masonite'}>
       <ProjectCarousel
         company={'masonite'}
         color={'#99C221'}
@@ -124,7 +124,7 @@ export const Masonite = () => {
 
 export const Chargebacks911 = () => {
   return(
-    <Container>
+    <Container id={'chargebacks911'}>
       <ProjectCarousel
         company={'chargebacks911'}
         color={'#FA0000'}
@@ -179,7 +179,7 @@ export const SideProjects = () => {
   ]
 
   return(
-    <Container>
+    <Container id={'ryan-side-projects'}>
       <div className="section px-0 pt-4 md:pt-0">
         <Header
           title="Side Projects"

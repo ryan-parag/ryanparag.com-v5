@@ -5,34 +5,36 @@ import Link from 'next/link';
 
 const Badge = () => {
   return(
-    <motion.div
-      className="inline-flex items-center relative top-8"
-      initial={{ opacity: 0 }}
-      whileInView= {{ opacity: 1, top: 0 }}
-      transition={{ duration: 0.1, delay: .2, type: "spring", stiffness: 80 }}
-      viewport={{ once: true }}
-    >
+    <Link href="/">
       <motion.div
-        className="h-10 w-10 mr-3 transform relative -left-3"
+        className="inline-flex items-center relative top-8 transition hover:scale-105"
         initial={{ opacity: 0 }}
-        whileInView= {{ opacity: 1, left: 0 }}
-        transition={{ duration: 0.2, delay: .4, type: "spring", stiffness: 80 }}
+        whileInView= {{ opacity: 1, top: 0 }}
+        transition={{ duration: 0.1, delay: .2, type: "spring", stiffness: 80 }}
         viewport={{ once: true }}
       >
-        <Logo subtle/>
-        <motion.span
-          className="absolute top-0 bottom-0 right-0 left-0 bg-themePrimary blur-lg opacity-50 -z-10"
-          initial={{ opacity: 0, scale: 0 }}
-          whileInView= {{ opacity: .5, scale: 1 }}
+        <motion.div
+          className="h-10 w-10 mr-3 transform relative -left-3"
+          initial={{ opacity: 0 }}
+          whileInView= {{ opacity: 1, left: 0 }}
           transition={{ duration: 0.2, delay: .4, type: "spring", stiffness: 80 }}
           viewport={{ once: true }}
-        />
+        >
+          <Logo subtle/>
+          <motion.span
+            className="absolute top-0 bottom-0 right-0 left-0 bg-themePrimary blur-lg opacity-50 -z-10"
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView= {{ opacity: .5, scale: 1 }}
+            transition={{ duration: 0.2, delay: .4, type: "spring", stiffness: 80 }}
+            viewport={{ once: true }}
+          />
+        </motion.div>
+        <div className="flex flex-col items-start">
+          <span className="font-bold text-base">Ryan Parag</span>
+          <span className="text-sm opacity-70">Product Designer</span>
+        </div>
       </motion.div>
-      <div className="flex flex-col items-start">
-        <span className="font-bold text-base">Ryan Parag</span>
-        <span className="text-sm opacity-70">Product Designer</span>
-      </div>
-    </motion.div>
+    </Link>
   )
 }
 

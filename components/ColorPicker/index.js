@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { ChromePicker } from 'react-color'
 
-const ColorPicker = ({ setCurrentColor }) => {
+const ColorPicker = ({ currentColor, setCurrentColor }) => {
 
   const [open, setOpen] = useState(false)
   const [pickerColor, setPickerColor] = useState('#ff0000')
@@ -26,10 +26,12 @@ const ColorPicker = ({ setCurrentColor }) => {
       </button>
       {
         open && (
-          <div
-            className="fixed z-1 top-0 bottom-0 left-0 right-0"
+          <button
+            className="fixed z-1 top-0 bottom-0 left-4 right-0 bg-transparent"
+            role="button"
+            onClick={() => setOpen(false)}
           >
-            <div className="relative z-10 top-10 left-3">
+            <div className="relative z-10 top-10 left-4">
               <ChromePicker
                 color={pickerColor}
                 onChange={
@@ -39,7 +41,7 @@ const ColorPicker = ({ setCurrentColor }) => {
                 }
               />
             </div>
-          </div>
+          </button>
         )
       }
     </>
