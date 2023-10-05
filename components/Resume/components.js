@@ -22,9 +22,9 @@ export const Header = () => {
   )
 }
 
-export const Title = ({ children }) => {
+export const Title = ({ children, flat }) => {
   return(
-    <h3 className="text-base spatial mb-6">{children}</h3>
+    <h3 className={`text-base spatial ${flat ? 'mb-0' : 'mb-6'}`}>{children}</h3>
   )
 }
 

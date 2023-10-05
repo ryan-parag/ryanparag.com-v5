@@ -2,7 +2,7 @@ const Data = {
   name: 'Ryan Parag',
   role: 'Product Designer',
   email: 'parag.ryan@gmail.com',
-  pdf: '/RyanParag_resume_2023.pdf',
+  pdf: 'RyanParag_resume_2023.pdf',
   skills: [
     'Interface Design',
     'Interaction & UI Design',
