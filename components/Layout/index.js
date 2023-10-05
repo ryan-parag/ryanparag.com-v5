@@ -4,6 +4,7 @@ import ThemePicker from '@/components/ThemePicker';
 import Footer from '../Footer';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+import Script from 'next/script'
 
 const Layout = ({ children }) => {
 
@@ -61,6 +62,16 @@ const Layout = ({ children }) => {
         <meta property="twitter:image" content="/social-media.png"/>
         <meta name="keywords" content="ryan, parag, graphic, web, designer, product, tampa, design, trustlayer, masonite, chargebacks911"></meta>
       </Head>
+      <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}`} />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', '${process.env.GA_TRACKING_ID}');
+        `}
+      </Script>
       <motion.div
         className="transition absolute top-0 left-0 right-0 overflow-x-hidden h-96 pointer-events-none z-0"
         initial={{ opacity: 0, height: 0 }}

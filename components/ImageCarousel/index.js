@@ -23,8 +23,8 @@ const ImageCarousel = ({ images, company, color }) => {
     <motion.div
       id={`${company}-theme`}
       className="max-w-4xl mx-auto my-6 relative top-8"
-      initial={{ opacity: 0 }}
-      whileInView= {{ opacity: 1, top: 0 }}
+      initial={{ opacity: 0, rotate: '2deg' }}
+      whileInView= {{ opacity: 1, top: 0, rotate: 0 }}
       transition={{ duration: 0.3, delay: .2, type: "spring", stiffness: 80 }}
       viewport={{ once: true }}
     >

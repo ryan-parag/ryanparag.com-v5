@@ -190,8 +190,8 @@ export const SideProjects = () => {
             projects.map((project, i) => (
               <motion.div
                 className="flex flex-row md:flex-col items-start p-4 rounded-xl bg-themeSurfaceVariant text-themeOnSurfaceVariant relative opacity-0 top-8" key={i}
-                initial={{ opacity: 0 }}
-                whileInView= {{ opacity: 1, top: 0 }}
+                initial={{ opacity: 0, rotate: '2deg' }}
+                whileInView= {{ opacity: 1, top: 0, rotate: 0 }}
                 transition={{ duration: 0.3, delay: .1 + .1*i, type: "spring", stiffness: 80 }}
                 viewport={{ once: true }}
               >
