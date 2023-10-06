@@ -29,13 +29,13 @@ const ResumePage = () => {
             <span className="absolute top-0 bottom-0 right-0 left-0 bg-themePrimary blur-lg opacity-30 -z-10"/>
           </div>
         </div>
-        <div className="col-span-12 pb-5 border-b border-black border-opacity-10 dark:border-white dark:border-opacity-10 flex flex-col md:flex-row md:justify-between md:items-center">
-          <div className="w-full">
+        <div className="col-span-12 pb-5 border-b border-black border-opacity-10 dark:border-white dark:border-opacity-10 grid grid-cols-12 gap-3">
+          <div className="w-full col-span-12 lg:col-span-7 xl:col-span-9">
             <h1 className="text-4xl lg:text-5xl mb-2">{Data.name}</h1>
             <span className="text-lg lg:text-xl">{Data.role}</span>
           </div>
           <motion.div
-            className="grid grid-cols-1 gap-3 w-full max-w-none md:max-w-sm mt-6 mb-3 md:mt-0 rounded-xl bg-themeSurfaceVariant text-themeOnSurfaceVariant p-4"
+            className="col-span-12 lg:col-span-5 xl:col-span-3 grid grid-cols-1 gap-3 w-full mt-6 mb-3 md:mt-0 rounded-xl bg-themeSurfaceVariant text-themeOnSurfaceVariant p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, top: 0 }}
             transition={{ duration: 0.3, delay: 0.5, type: "spring", stiffness: 150 }}
@@ -54,7 +54,7 @@ const ResumePage = () => {
           </motion.div>
         </div>
         <motion.div
-          className="col-span-12 lg:col-span-9 pt-8 grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:border-r border-black border-opacity-10 dark:border-white dark:border-opacity-10 lg:pr-8 opacity-0"
+          className="col-span-12 lg:col-span-7 xl:col-span-9 pt-8 grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:border-r border-black border-opacity-10 dark:border-white dark:border-opacity-10 lg:pr-8 opacity-0"
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3, delay: 0.5 }}
         >
@@ -63,7 +63,7 @@ const ResumePage = () => {
           <Certifications data={Data.certs}/>
         </motion.div>
         <motion.div
-          className="col-span-12 lg:col-span-3 pt-8 flex w-full flex-col opacity-0"
+          className="col-span-12 lg:col-span-5 xl:col-span-3 pt-8 flex w-full flex-col opacity-0"
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3, delay: 0.7 }}
         >
