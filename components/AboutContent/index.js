@@ -30,10 +30,6 @@ const LinkSection = () => {
         <svg fill="currentColor" className="mr-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
         LinkedIn
       </a>
-      <a href="https://google.com" className="button w-full md:w-auto md:mr-4">
-        <svg fill="currentColor" className="mr-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 28 28"><path fillRule="evenodd" clipRule="evenodd" d="M11.737 7.958a.75.75 0 10-.389 1.45l7.245 1.94A.75.75 0 1018.98 9.9l-7.244-1.94zM10.896 11.098a.75.75 0 00-.389 1.448l7.245 1.942a.75.75 0 00.388-1.45l-7.245-1.94zM9.136 14.767a.75.75 0 01.918-.53l4.83 1.294a.75.75 0 01-.388 1.449l-4.83-1.294a.75.75 0 01-.53-.919z"></path><path fillRule="evenodd" clipRule="evenodd" d="M16.5 23.987L6.841 21.4a2.75 2.75 0 01-1.944-3.368L8.132 5.957A2.75 2.75 0 0111.5 4.013L21.16 6.6a2.75 2.75 0 011.944 3.368l-3.236 12.074a2.75 2.75 0 01-3.368 1.944zM6.345 18.42a1.25 1.25 0 00.884 1.531l9.66 2.588a1.25 1.25 0 001.53-.883L21.655 9.58a1.25 1.25 0 00-.884-1.531L11.11 5.46a1.25 1.25 0 00-1.53.884L6.345 18.42z"></path></svg>
-        Read.cv
-      </a>
       <Link href="/resume">
         <span className="button w-full md:w-auto">
           <svg className="mr-1" width="20" height="20" fill="none" viewBox="0 0 24 24">
@@ -73,10 +69,13 @@ const AboutContent = () => {
         <h1>About</h1>
         <h3 className="spatial text-sm mb-4">Career</h3>
         <p>
-          Currently, I&apos;m designing at <a href="https://trustlayer.io" target="_blank" className="text-link--icon">TrustLayer</a>, working on collaborative tools where businesses can share insurance verification and begin working together with less difficulty.
+          Currently, I&apos;m designing at <a href="https://owenscorning.com" target="_blank" className="text-link--icon">Owens Corning</a>, where I&apos;m helping create leading software/systems for builders, contractors, homeowners, and other building materials customers (+ some cool 0-1 projects long the way).
         </p>
         <p>
-          Previously, I was on the digital innovation team at <a href="https://residential.masonite.com" target="_blank" className="text-link--icon">Masonite</a> — conceptualizing a simpler home remodeling experience and designing multiple smart-home experiences for homeowners, builders, and internal teams. Before that, I was at <a href="https://chargebacks911.com" target="_blank" className="text-link--icon">Chargebacks911</a> , designing digital tools for fraud-auditing teams at banks.
+          Previously, I was designing at <a href="https://trustlayer.io" target="_blank" className="text-link--icon">TrustLayer</a>, where I worked on collaborative tools where businesses can share insurance verification and begin working together with less difficulty through the use of automation and AI.
+        </p>
+        <p>
+          Before that, I was on the digital innovation team at <a href="https://residential.masonite.com" target="_blank" className="text-link--icon">Masonite</a> — conceptualizing a simpler home remodeling experience and designing multiple smart-home experiences for homeowners, builders, and internal teams. I got my start at <a href="https://chargebacks911.com" target="_blank" className="text-link--icon">Chargebacks911</a> , designing digital tools for fraud-auditing teams at banks.
         </p>
       </motion.section>
       <LinkSection/>

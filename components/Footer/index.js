@@ -56,7 +56,7 @@ const Footer = () => {
         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M7.75 19.25H16.25C17.3546 19.25 18.25 18.3546 18.25 17.25V9L14 4.75H7.75C6.64543 4.75 5.75 5.64543 5.75 6.75V17.25C5.75 18.3546 6.64543 19.25 7.75 19.25Z"></path>
         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M18 9.25H13.75V5"></path>
         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9.75 15.25H14.25"></path>
-        <path stroke="currentColor" stroke-Linecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9.75 12.25H14.25"></path>
+        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9.75 12.25H14.25"></path>
       </svg>
     ,
       outbound: false
@@ -80,11 +80,6 @@ const Footer = () => {
       name: 'GitHub',
       href: 'https://github.com/ryan-parag',
       icon: <svg width="20" height="20" viewBox="0 0 98 96" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" clipRule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="currentColor"/></svg>,
-      outbound: true
-    }, {
-      name: 'Read.cv',
-      href: 'https://read.cv/ryanparag',
-      icon: <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 28 28"><path fillRule="evenodd" clipRule="evenodd" d="M11.737 7.958a.75.75 0 10-.389 1.45l7.245 1.94A.75.75 0 1018.98 9.9l-7.244-1.94zM10.896 11.098a.75.75 0 00-.389 1.448l7.245 1.942a.75.75 0 00.388-1.45l-7.245-1.94zM9.136 14.767a.75.75 0 01.918-.53l4.83 1.294a.75.75 0 01-.388 1.449l-4.83-1.294a.75.75 0 01-.53-.919z"></path><path fillRule="evenodd" clipRule="evenodd" d="M16.5 23.987L6.841 21.4a2.75 2.75 0 01-1.944-3.368L8.132 5.957A2.75 2.75 0 0111.5 4.013L21.16 6.6a2.75 2.75 0 011.944 3.368l-3.236 12.074a2.75 2.75 0 01-3.368 1.944zM6.345 18.42a1.25 1.25 0 00.884 1.531l9.66 2.588a1.25 1.25 0 001.53-.883L21.655 9.58a1.25 1.25 0 00-.884-1.531L11.11 5.46a1.25 1.25 0 00-1.53.884L6.345 18.42z"></path></svg>,
       outbound: true
     }, {
       name: 'CodePen',
@@ -115,37 +110,33 @@ const Footer = () => {
         <div className="w-full grid grid-cols-3 md:grid-cols-4 gap-2">
           {
             links.map((item,i) => (
-              <>
+              <div key={i}>
                 {
                   item.outbound ? (
-                    <div key={i}>
-                      <a href={item.href} target="_blank" className="transition text-sm md:text-base inline-flex items-center hover:underline hover:text-themePrimary">
+                    <a href={item.href} target="_blank" className="transition text-sm md:text-base inline-flex items-center hover:underline hover:text-themePrimary">
+                      <div className="inline-flex mr-2">
+                        {
+                          item.icon
+                        }
+                      </div>
+                      <span>{item.name}</span>
+                    </a>
+                  )
+                  :
+                  (
+                    <Link href={item.href}>
+                      <span className="transition text-sm md:text-base inline-flex items-center hover:underline hover:text-themePrimary">
                         <div className="inline-flex mr-2">
                           {
                             item.icon
                           }
                         </div>
                         <span>{item.name}</span>
-                      </a>
-                    </div>
-                  )
-                  :
-                  (
-                    <div key={i}>
-                      <Link href={item.href}>
-                        <span className="transition text-sm md:text-base inline-flex items-center hover:underline hover:text-themePrimary">
-                          <div className="inline-flex mr-2">
-                            {
-                              item.icon
-                            }
-                          </div>
-                          <span>{item.name}</span>
-                        </span>
-                      </Link>
-                    </div>
+                      </span>
+                    </Link>
                   )
                 }
-              </>
+              </div>
             ))
           }
         </div>

@@ -1,4 +1,6 @@
-import { TrustLayer, Masonite, Chargebacks911, SideProjects } from '@/components/Role';
+import { OwensCorning, TrustLayer, Masonite, Chargebacks911, SideProjects } from '@/components/Role';
+import { useTheme } from 'next-themes'
+import { checkMode } from '@/utils/darkMode';
 
 const Divider = () => {
   return(
@@ -9,16 +11,19 @@ const Divider = () => {
 }
 
 const WorkList = () => {
+
+  const { theme, systemTheme } = useTheme();
+
   return(
     <>
       <div className="section">
         <h2 className="spatial text-xl">Selected work</h2>
       </div>
-      <TrustLayer/>
+      <TrustLayer darkMode={checkMode(theme,systemTheme)} />
       <Divider/>
-      <Masonite/>
+      <Masonite darkMode={checkMode(theme,systemTheme)} />
       <Divider/>
-      <Chargebacks911/>
+      <Chargebacks911 darkMode={checkMode(theme,systemTheme)} />
       <Divider/>
       <SideProjects/>
       <Divider/>

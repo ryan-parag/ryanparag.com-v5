@@ -3,10 +3,14 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import { argbFromHex, themeFromSourceColor, applyTheme } from "@material/material-color-utilities";
 import { motion } from 'framer-motion';
+import { useTheme } from 'next-themes';
+import { checkMode } from '@/utils/darkMode';
 
 const ImageCarousel = ({ images, company, color }) => {
 
   const [currentColor, setCurrentColor] = useState(color)
+
+  const { theme, systemTheme } = useTheme();
 
   const runColor = (color) => {
     const theme = themeFromSourceColor(argbFromHex(color));
@@ -14,8 +18,7 @@ const ImageCarousel = ({ images, company, color }) => {
   }
 
   useEffect(() => {
-    const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    applyTheme(runColor(currentColor), {target: document.getElementById(`${company}-theme`), dark: systemDark})
+    applyTheme(runColor(currentColor), {target: document.getElementById(`${company}-theme`), dark: checkMode(theme,systemTheme)})
   }, [currentColor]);
 
   return (

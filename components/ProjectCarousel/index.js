@@ -1,6 +1,8 @@
 import ImageCarousel from "@/components/ImageCarousel";
 
-const ProjectCarousel = ({ company, color }) => {
+const ProjectCarousel = ({ company, color, darkMode }) => {
+
+  const owensCorning = []
 
   const trustlayer = [
     {
@@ -64,6 +66,9 @@ const ProjectCarousel = ({ company, color }) => {
       case 'trustlayer':
         return trustlayer
         break;
+      case 'owens corning':
+        return owensCorning
+        break;
       case 'masonite':
         return masonite
         break;
@@ -81,6 +86,7 @@ const ProjectCarousel = ({ company, color }) => {
       images={changeCompany(company)}
       company={company}
       color={color}
+      darkMode={darkMode}
     />
   )
 }
