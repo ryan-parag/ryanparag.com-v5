@@ -48,16 +48,6 @@ const LinkSection = () => {
 const AboutContent = () => {
   return(
     <div className="section">
-      <div className="mb-4">
-        <Link href="/">
-          <span className="inline-flex items-center link-shadow">
-            <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
-              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M13.25 8.75L9.75 12L13.25 15.25"></path>
-            </svg>
-            Back
-          </span>
-        </Link>
-      </div>
       <Memoji/>
       <motion.section
         className="relative top-8"

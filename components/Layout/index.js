@@ -3,10 +3,11 @@ import { useTheme } from 'next-themes'
 import { checkMode } from '@/utils/darkMode';
 import { argbFromHex, themeFromSourceColor, applyTheme } from "@material/material-color-utilities";
 import ThemePicker from '@/components/ThemePicker';
-import Footer from '../Footer';
+import Footer from '@/components/Footer';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import Script from 'next/script'
+import Navigation from '@/components/Navigation';
 
 const Layout = ({ children }) => {
 
@@ -44,7 +45,6 @@ const Layout = ({ children }) => {
   useEffect(() => {
     applyTheme(runColor(currentColor), {target: document.getElementById('body'), dark: darkMode})
     updateLocalStorage(currentColor)
-    console.log(darkMode)
   }, [currentColor, darkMode]);
 
   const meta = {
@@ -101,6 +101,7 @@ const Layout = ({ children }) => {
           viewport={{ once: true }}
         />
       </motion.div>
+      <Navigation/>
       <main
         className={`w-full pt-40`}
       >
@@ -114,7 +115,7 @@ const Layout = ({ children }) => {
         {children}
       </main>
       <motion.footer
-        className="bg-themeSurfaceVariant text-themeOnSurfaceVariant py-16 w-full mt-16"
+        className="bg-themeSurfaceVariant text-themeOnSurfaceVariant pt-16 pb-24 w-full mt-16"
         style={{
           background: 'linear-gradient(to top, var(--md-sys-color-surface-variant), transparent)'
         }}
