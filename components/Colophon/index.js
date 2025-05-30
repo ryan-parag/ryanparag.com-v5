@@ -105,7 +105,7 @@ const Theme = () => {
                 item.values.map((color,i) => (
                   <li className="transition flex items-center py-1 text-themeOutline hover:text-themeOnBackground" key={i}>
                     <span className="h-4 w-4 rounded-full mr-2 border border-black border-opacity-10 dark:border-white dark:border-opacity-10" style={{ background: `var(--md-sys-color-${color.variable})`}}/>
-                    <span className="text-xs font-mono">{color.name}</span>
+                    <span className="text-xs">{color.name}</span>
                   </li>
                 ))
               }
@@ -173,6 +173,9 @@ const Colophon = () => {
               <a key={i} className="button mr-4" href={item.link} target="_blank">Version {item.version}</a>
             ))
           }
+        </div>
+        <div className="mt-4">
+          <a href="https://timeline.ryanparag.com" target="_blank" className="button buttonPrimary">View timeline</a>
         </div>
       </div>
     </div>

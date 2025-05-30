@@ -2,6 +2,8 @@ import ProjectCarousel from "../ProjectCarousel"
 import Image from "next/image"
 import Logo from "../Logo"
 import { motion } from "framer-motion"
+import { useTheme } from 'next-themes'
+import { checkMode } from '@/utils/darkMode';
 
 const Position = ({ role, start, end }) => {
   return(
@@ -56,12 +58,13 @@ const Container = ({ children, id }) => {
   )
 }
 
-export const TrustLayer = () => {
+export const TrustLayer = ({ darkMode }) => {
   return(
     <Container id={'trustlayer'}>
       <ProjectCarousel
         company={'trustlayer'}
         color={'#1C66DC'}
+        darkMode={darkMode}
       />
       <motion.div
         className="section px-0 pt-4 md:pt-0 relative top-8"
@@ -78,7 +81,7 @@ export const TrustLayer = () => {
         <Position
           role="Senior Product Designer"
           start="2021"
-          end="Present"
+          end="2024"
         />
         <p>Insurance is really complicated 😩. And virtually every business has had to deal with the frustration of proving they have coverage and are compliant. At TrustLayer, I help design, problem-solve, and ship solutions that help businesses and enterprises automate their insurance compliance process.</p>
       </motion.div>
@@ -86,12 +89,44 @@ export const TrustLayer = () => {
   )
 }
 
-export const Masonite = () => {
+export const OwensCorning = ({ darkMode }) => {
+  return(
+    <Container id={'owens-corning'}>
+      <ProjectCarousel
+        company={'owens corning'}
+        color={'#D40f7D'}
+        darkMode={darkMode}
+      />
+      <motion.div
+        className="section px-0 pt-4 md:pt-0 relative top-8"
+        initial={{ opacity: 0 }}
+        whileInView= {{ opacity: 1, top: 0 }}
+        transition={{ duration: 0.3, delay: .1, type: "spring", stiffness: 80 }}
+        viewport={{ once: true }}
+      >
+        <Header
+          image="owens-corning"
+          title="Owens Corning"
+          description="Automating insurance verification and simplifying compliance"
+        />
+        <Position
+          role="Design Lead"
+          start="2024"
+          end="Present"
+        />
+        <p>Test</p>
+      </motion.div>
+    </Container>
+  )
+}
+
+export const Masonite = ({ darkMode }) => {
   return(
     <Container id={'masonite'}>
       <ProjectCarousel
         company={'masonite'}
         color={'#99C221'}
+        darkMode={darkMode}
       />
       <motion.div
         className="section px-0 pt-4 md:pt-0 relative top-8"
@@ -122,12 +157,13 @@ export const Masonite = () => {
   )
 }
 
-export const Chargebacks911 = () => {
+export const Chargebacks911 = ({ darkMode }) => {
   return(
     <Container id={'chargebacks911'}>
       <ProjectCarousel
         company={'chargebacks911'}
         color={'#FA0000'}
+        darkMode={darkMode}
       />
       <motion.div
         className="section px-0 pt-4 md:pt-0 relative top-8"
@@ -175,6 +211,11 @@ export const SideProjects = () => {
       title: 'Race Times',
       description: 'A directory of translated race times schedules and leaderboards',
       logo: 'race-times-logo.svg',
+    }, {
+      link: 'https://timeline.ryanparag.com/',
+      title: 'Portfolio Timeline',
+      description: 'A timeline viewer for past versions of my portfolio',
+      logo: 'timeline-logo.svg',
     }
   ]
 
