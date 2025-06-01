@@ -39,7 +39,7 @@ const Data = {
       description: 'Leading a team of designers and designing enablement tools for direct customers, indirect customers, home builders, and homeowners.',
     },{
       company: 'TrustLayer',
-      role: 'Senior Product Designer',
+      role: 'Founding Designer',
       start: 'April 2021',
       end: 'June 2024',
       description: 'I lead design at TrustLayer, as their first design hire. I worked closely with product operations, product management, and engineering to create better experiences around collecting/verifying insurance. Delived features around automation, AI, and workflow to help scale through Series A.',

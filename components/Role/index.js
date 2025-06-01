@@ -79,7 +79,7 @@ export const TrustLayer = ({ darkMode }) => {
           description="Automating insurance verification and simplifying compliance"
         />
         <Position
-          role="Senior Product Designer"
+          role="Founding Designer"
           start="2021"
           end="2024"
         />
@@ -188,6 +188,28 @@ export const Chargebacks911 = ({ darkMode }) => {
   )
 }
 
+export const SideProject = ({ link, title, description, logo, delay}) => {
+  return(
+    <motion.div
+      className="flex flex-row md:flex-col items-start p-4 rounded-xl bg-themeSurfaceVariant text-themeOnSurfaceVariant relative opacity-0 top-8 w-full"
+      initial={{ opacity: 0, rotate: '2deg' }}
+      whileInView= {{ opacity: 1, top: 0, rotate: 0 }}
+      transition={{ duration: 0.3, delay: .1 + .1*delay, type: "spring", stiffness: 80 }}
+      viewport={{ once: true }}
+    >
+      <div className="h-10 w-10 md:h-12 md:w-12 relative mb-2">
+        <Image alt={title} src={`/projects/${logo}`} layout="fill"/>
+      </div>
+      <div className="inline-block md:hidden h-10 w-px bg-themeOutline mx-3"/>
+      <div className="flex-1 w-full flex items-start flex-col">
+        <h5 className="text-lg">{title}</h5>
+        <span className="text-sm mt-1 mb-3">{description}</span>
+        <a href={link} target="_blank" className="text-link--icon">View Project</a>
+      </div>
+    </motion.div>
+  )
+}
+
 export const SideProjects = () => {
 
   const projects = [
@@ -229,23 +251,14 @@ export const SideProjects = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 my-6 gap-4">
           {
             projects.map((project, i) => (
-              <motion.div
-                className="flex flex-row md:flex-col items-start p-4 rounded-xl bg-themeSurfaceVariant text-themeOnSurfaceVariant relative opacity-0 top-8" key={i}
-                initial={{ opacity: 0, rotate: '2deg' }}
-                whileInView= {{ opacity: 1, top: 0, rotate: 0 }}
-                transition={{ duration: 0.3, delay: .1 + .1*i, type: "spring", stiffness: 80 }}
-                viewport={{ once: true }}
-              >
-                <div className="h-10 w-10 md:h-12 md:w-12 relative mb-2">
-                  <Image alt={project.title} src={`/projects/${project.logo}`} layout="fill"/>
-                </div>
-                <div className="inline-block md:hidden h-10 w-px bg-themeOutline mx-3"/>
-                <div className="flex-1 w-full flex items-start flex-col">
-                  <h5 className="text-lg">{project.title}</h5>
-                  <span className="text-sm mt-1 mb-3">{project.description}</span>
-                  <a href={project.link} target="_blank" className="text-link--icon">View Project</a>
-                </div>
-              </motion.div>
+              <SideProject
+                link={project.link}
+                key={i}
+                title={project.title}
+                description={project.description}
+                logo={project.logo}
+                delay={i}
+              />
             ))
           }
         </div>

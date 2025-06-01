@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { ChromePicker } from 'react-color'
+import { CompactPicker } from 'react-color'
 
 const ColorPicker = ({ currentColor, setCurrentColor }) => {
 
@@ -26,7 +26,7 @@ const ColorPicker = ({ currentColor, setCurrentColor }) => {
         open && (
           <div className="fixed z-1 top-0 bottom-0">
             <div className="relative z-10 top-10 left-20">
-              <ChromePicker
+              <CompactPicker
                 color={pickerColor}
                 onChange={
                   (color) => {

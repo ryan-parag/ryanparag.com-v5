@@ -1,11 +1,24 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Tooltip } from "radix-ui";
 
 const NavItem = ({ label, icon }) => {
   return(
-    <div className="transition transform rounded-xl p-2 flex items-center justify-center bg-themeSurface text-themeOnSurfaceVariant hover:scale-125 hover:shadow-lg">
-      {icon}
-    </div>
+    <Tooltip.Provider delayDuration="100">
+			<Tooltip.Root>
+				<Tooltip.Trigger asChild>
+          <div className="transition transform rounded-xl p-2 flex items-center justify-center bg-themeSurface text-themeOnSurfaceVariant hover:scale-125 hover:shadow-lg">
+            {icon}
+          </div>
+        </Tooltip.Trigger>
+				<Tooltip.Portal>
+					<Tooltip.Content className="shadow-xl z-20 bg-themeSurfaceVariant text-sm p-2 rounded-lg" side={'right'} sideOffset={5} aria-label={label}>
+						{label}
+						<Tooltip.Arrow className="text-themeSurfaceVariant fill-current" />
+					</Tooltip.Content>
+				</Tooltip.Portal>
+			</Tooltip.Root>
+		</Tooltip.Provider>
   )
 }
 
@@ -29,9 +42,9 @@ const Navigation = () => {
 
   return(
     <motion.div
-      className="grid grid-cols-3 lg:grid-cols-1 gap-2 fixed bottom-6 left-1/2 -translate-x-1/2 lg:-translate-x-0 lg:bottom-auto lg:left-6 rounded-2xl bg-themeSurfaceVariant shadow-2xl z-20 lg:top-1/2 lg:-translate-y-1/2 p-2 border dark:border-transparent border-current text-themeBackground opacity-0"
+      className="grid grid-cols-3 lg:grid-cols-1 gap-2 fixed bottom-6 left-1/2 -translate-x-1/2 lg:-translate-x-0 lg:bottom-auto lg:left-6 rounded-2xl bg-themeSurfaceVariant shadow-2xl z-20 lg:top-1/2 lg:-translate-y-1/2 p-2 border dark:border-transparent border-current text-themeBackground opacity-0 border dark:border-transparent border-current text-themeBackground"
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.1, delay: 0.5, type: "spring", stiffness: 150 }}
+      transition={{ duration: .24, delay: 1, type: "spring", stiffness: 100 }}
     >
       <NavLink
         label={'Home'}

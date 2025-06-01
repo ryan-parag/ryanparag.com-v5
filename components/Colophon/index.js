@@ -1,3 +1,5 @@
+import { SideProject } from "../Role";
+
 const Theme = () => {
   const tokens = [
     {
@@ -149,13 +151,16 @@ const Colophon = () => {
 
   const portfolios = [
     {
-      version: '2',
+      version: '1 (2019)',
+      link: 'https://2019.ryanparag.com'
+    },{
+      version: '2 (2020)',
       link: 'https://2020.ryanparag.com'
     }, {
-      version: '3',
-      link: 'https://2022.ryanparag.com'
+      version: '3 (2021)',
+      link: 'https://2021.ryanparag.com'
     }, {
-      version: '4',
+      version: '4 (2023)',
       link: 'https://2023.ryanparag.com'
     }
   ]
@@ -167,15 +172,26 @@ const Colophon = () => {
       <Theme/>
       <div>
         <h2 className="spatial text-sm mb-4">Previous portfolios:</h2>
-        <div className="flex items-center">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           {
             portfolios.map((item,i) => (
-              <a key={i} className="button mr-4" href={item.link} target="_blank">Version {item.version}</a>
+              <a key={i} className="button" href={item.link} target="_blank">Version {item.version}</a>
             ))
           }
         </div>
-        <div className="mt-4">
-          <a href="https://timeline.ryanparag.com" target="_blank" className="button buttonPrimary">View timeline</a>
+        <div className="my-4 text-xs uppercase text-themeOnSurfaceVariant text-center w-full flex flex-row items-center">
+          <span className="h-px bg-themeOutlineVariant w-full block mr-4"/>
+          or
+          <span className="h-px bg-themeOutlineVariant w-full block ml-4"/>
+        </div>
+        <div className="flex items-center justify-center w-full">
+          <SideProject
+            link={'https://timeline.ryanparag.com/'}
+            title={'Portfolio Timeline'}
+            description={'A timeline viewer for past versions of my portfolio'}
+            logo={'timeline-logo.svg'}
+            delay={0}
+          />
         </div>
       </div>
     </div>
