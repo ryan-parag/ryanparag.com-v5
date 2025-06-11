@@ -70,7 +70,8 @@ const Layout = ({ children }) => {
         <meta property="twitter:title" content={meta.name}/>
         <meta property="twitter:description" content={meta.description}/>
         <meta property="twitter:image" content="/social-media.png"/>
-        <meta name="keywords" content="ryan, parag, graphic, web, designer, product, tampa, design, trustlayer, masonite, chargebacks911"></meta>
+        <meta name="keywords" content="ryan, parag, graphic, web, designer, product, tampa, design, trustlayer, masonite, chargebacks911"/>
+        <meta name="robots" content="index, follow"/>
       </Head>
       <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}`} />
       <Script id="google-analytics">

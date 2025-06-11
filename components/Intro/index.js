@@ -3,56 +3,93 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 import Link from "next/link"
 
+const XPItem = ({ company, role, time, current }) => {
+  return(
+    <div className="flex w-full items-center py-3">
+      <div className="flex flex-col w-full flex-1">
+        <div className="text-base font-bold text-themeOnSurface">{company}</div>
+        <div className="text-xs text-themeOutline">{role}</div>
+      </div>
+      <div className={`${current ? 'bg-themeSurfaceVariant text-themeOnSurfaceVariant' : 'bg-transparent text-themeOnSurfaceVariant'} text-sm rounded-lg py-1 px-2`}>
+        {time}
+      </div>
+    </div>
+  )
+}
+
+const XP = () => {
+  return(
+    <>
+      <div className="section">
+        <h2 className="spatial text-xl">Experience</h2>
+      </div>
+      <div className="section mb-6">
+        <XPItem company="Owens Corning" role="Design Lead" time="2024 - Now" current/>
+        <div className="h-px bg-themeOutlineVariant w-full"/>
+        <XPItem company="TrustLayer" role="Founding Designer" time="2021 - 2024"/>
+        <div className="h-px bg-themeOutlineVariant w-full"/>
+        <XPItem company="Masonite" role="Senior Product Designer" time="2019 - 2021"/>
+        <div className="h-px bg-themeOutlineVariant w-full"/>
+        <XPItem company="Chargebacks911" role="Product Designer" time="2016 - 2019"/>
+        <div className="h-px bg-themeOutline w-20 my-16"/>
+      </div>
+    </>
+  )
+}
+
 const Intro = () => {
   return(
-    <div className={'section'}>
-      <motion.div
-        className="bg-themeSurfaceVariant h-24 w-24 p-1 rounded-full relative inline-flex items-center justify-center mb-6"
-        initial={{ opacity: 0, top: '24px' }}
-        whileInView= {{ opacity: 1, top: 0 }}
-        transition={{ duration: 0.1, delay: 0.2, type: "spring", stiffness: 150 }}
-        viewport={{ once: true }}
-      >
-        <div className="bg-themeSurface h-full w-full p-1 rounded-full relative inline-flex items-center justify-center">
-          <motion.div
-            className="relative rounded-full w-full h-full overflow-hidden z-10 opacity-0"
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.3, type: "spring", stiffness: 150 }}
-          >
-            <Image src="/avatar.png" layout="fill" alt="Ryan's face"/>
-          </motion.div>
-          <motion.div
-            className="absolute opacity-0 top-0 bottom-0 left-0 right-0 bg-themePrimary blur-xl rounded-full z-0"
-            animate={{ opacity: 0.5 }}
-            transition={{ duration: 1, delay: 0.8, type: "spring", stiffness: 150 }}
-          />
-        </div>
-      </motion.div>
-      <motion.h1
-        className="text-4xl lg:text-5xl mb-2 md:mb-4 top-8 opacity-0 relative"
-        animate={{ top: 0, opacity: 1 }}
-        transition={{ duration: 0.3, delay: 0.5, type: "spring", stiffness: 150 }}
-      >
-          Hello, I&apos;m Ryan.👋
-      </motion.h1>
-      <motion.p
-        className="text-base sm:text-lg lg:text-2xl leading-loose mb-8 top-8 opacity-0 relative"
-        animate={{ top: 0, opacity: 1 }}
-        transition={{ duration: 0.3, delay: 0.6, type: "spring", stiffness: 150 }}
-      >
-          I&apos;m a product designer and <Randomizer/>.
-      </motion.p>
-      <Link href="/about">
-        <motion.span
-          className="button buttonLg buttonPrimary opacity-0 top-4"
-          animate={{ opacity: 1, top: 0 }}
-          transition={{ duration: 0.3, delay: 0.7, type: "spring", stiffness: 150 }}
+    <>
+      <div className={'section'}>
+        <motion.div
+          className="bg-themeSurfaceVariant h-24 w-24 p-1 rounded-full relative inline-flex items-center justify-center mb-6"
+          initial={{ opacity: 0, top: '24px' }}
+          whileInView= {{ opacity: 1, top: 0 }}
+          transition={{ duration: 0.1, delay: 0.2, type: "spring", stiffness: 150 }}
+          viewport={{ once: true }}
         >
-          More Info
-        </motion.span>
-      </Link>
-      <div className="h-px bg-themeOutline w-20 my-16"/>
-    </div>
+          <div className="bg-themeSurface h-full w-full p-1 rounded-full relative inline-flex items-center justify-center">
+            <motion.div
+              className="relative rounded-full w-full h-full overflow-hidden z-10 opacity-0"
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.3, type: "spring", stiffness: 150 }}
+            >
+              <Image src="/avatar.png" layout="fill" alt="Ryan's face"/>
+            </motion.div>
+            <motion.div
+              className="absolute opacity-0 top-0 bottom-0 left-0 right-0 bg-themePrimary blur-xl rounded-full z-0"
+              animate={{ opacity: 0.5 }}
+              transition={{ duration: 1, delay: 0.8, type: "spring", stiffness: 150 }}
+            />
+          </div>
+        </motion.div>
+        <motion.h1
+          className="text-4xl lg:text-5xl mb-2 md:mb-4 top-8 opacity-0 relative"
+          animate={{ top: 0, opacity: 1 }}
+          transition={{ duration: 0.3, delay: 0.5, type: "spring", stiffness: 150 }}
+        >
+            Hello, I&apos;m Ryan.👋
+        </motion.h1>
+        <motion.p
+          className="text-base sm:text-lg lg:text-2xl leading-loose mb-8 top-8 opacity-0 relative"
+          animate={{ top: 0, opacity: 1 }}
+          transition={{ duration: 0.3, delay: 0.6, type: "spring", stiffness: 150 }}
+        >
+            I&apos;m a product designer and <Randomizer/>.
+        </motion.p>
+        <Link href="/about">
+          <motion.span
+            className="button buttonLg buttonPrimary opacity-0 top-4"
+            animate={{ opacity: 1, top: 0 }}
+            transition={{ duration: 0.3, delay: 0.7, type: "spring", stiffness: 150 }}
+          >
+            More Info
+          </motion.span>
+        </Link>
+        <div className="h-px bg-themeOutline w-20 my-16"/>
+      </div>
+      <XP/>
+    </>
   )
 }
 

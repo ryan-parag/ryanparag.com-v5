@@ -214,6 +214,11 @@ export const SideProjects = () => {
 
   const projects = [
     {
+      link: 'https://tampabay.design',
+      title: 'TampaBay.design',
+      description: 'How to get involved in one of the many local design communities',
+      logo: 'tampa-bay-designers-logo.svg',
+    }, {
       link: 'https://donuts.ryanparag.com/',
       title: 'Donut Drums',
       description: 'A simple, tappable drum kit - an homage to the great J Dilla',
@@ -223,11 +228,6 @@ export const SideProjects = () => {
       title: 'Slack Themes',
       description: 'Having trouble keeping track of all of your Slack workspaces?',
       logo: 'slack-themes-logo.svg',
-    }, {
-      link: 'https://tampabay.design',
-      title: 'TampaBay.design',
-      description: 'How to get involved in one of the many local design communities',
-      logo: 'tampa-bay-designers-logo.svg',
     }, {
       link: 'https://race-times.vercel.app/',
       title: 'Race Times',

@@ -21,7 +21,6 @@ const ResumePage = () => {
 
   return(
     <>
-      <Header/>
       <div className="grid grid-cols-12 gap-x-8 border-b border-black border-opacity-10 dark:border-white dark:border-opacity-10">
         <div className="col-span-12 mb-6">
           <div className="h-12 w-12 lg:h-16 lg:w-16 mr-3 transform relative -rotate-6">
