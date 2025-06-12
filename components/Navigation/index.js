@@ -48,11 +48,16 @@ const NavEmail = ({ label, icon, href }) => {
     <div className="relative">
       {
         copied && (
-          <div className="absolute sm:-top-10 sm:left-1/2 sm:-translate-x-1/2 sm:translate-y-auto md:top-1/2 md:-translate-y-1/2 md:left-10 md:translate-x-4">
-            <div className="flex w-max shrink-0 items-center gap-1.5 rounded-lg border border-themeOutlineVariant py-1.5 pr-3 pl-2.5 shadow-xs bg-themeSurfaceVariant text-sm text-themeOnSurfaceVariant">
+          <div className="absolute -top-10 left-1/2 -translate-x-1/2 translate-y-auto md:top-1/2 md:-translate-y-1/2 md:left-10 md:translate-x-4">
+            <motion.div
+              className="transform relative flex w-max shrink-0 items-center gap-1.5 rounded-lg border border-themeOutlineVariant py-1.5 pr-3 pl-2.5 shadow-xs bg-themeSurfaceVariant text-sm text-themeOnSurfaceVariant opacity-0"
+              initial={{ translateY: '16px' }}
+              animate={{ opacity: 1, translateY: '0px' }}
+              transition={{ duration: 1, delay: 0.1, type: "spring", stiffness: 150 }}
+            >
               <svg xmlns="http://www.w3.org/2000/svg" className="mr-1" height="16px" viewBox="0 -960 960 960" width="16px" fill="currentColor"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h167q11-35 43-57.5t70-22.5q40 0 71.5 22.5T594-840h166q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560h-80v80q0 17-11.5 28.5T640-640H320q-17 0-28.5-11.5T280-680v-80h-80v560Zm280-560q17 0 28.5-11.5T520-800q0-17-11.5-28.5T480-840q-17 0-28.5 11.5T440-800q0 17 11.5 28.5T480-760Z"/></svg>
               Copied to clipboard
-            </div>
+            </motion.div>
           </div>
         )
       }
