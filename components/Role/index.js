@@ -238,6 +238,11 @@ export const SideProjects = () => {
       title: 'Portfolio Timeline',
       description: 'A timeline viewer for past versions of my portfolio',
       logo: 'timeline-logo.svg',
+    }, {
+      link: 'https://scorekeeper.ryanparag.com/',
+      title: 'ScoreKeeper',
+      description: 'Track scores across all your favorite card games',
+      logo: 'scorekeeper-logo.svg',
     }
   ]
 
