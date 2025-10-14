@@ -2,8 +2,7 @@ import ProjectCarousel from "../ProjectCarousel"
 import Image from "next/image"
 import Logo from "../Logo"
 import { motion } from "framer-motion"
-import { useTheme } from 'next-themes'
-import { checkMode } from '@/utils/darkMode';
+import PreviewLink from "@/components/PreviewLink"
 
 const Position = ({ role, start, end }) => {
   return(
@@ -188,7 +187,7 @@ export const Chargebacks911 = ({ darkMode }) => {
   )
 }
 
-export const SideProject = ({ link, title, description, logo, delay}) => {
+export const SideProject = ({ link, title, description, logo, delay, img}) => {
   return(
     <motion.div
       className="flex flex-row md:flex-col items-start p-4 rounded-xl bg-themeSurfaceVariant text-themeOnSurfaceVariant relative opacity-0 top-8 w-full"
@@ -204,7 +203,7 @@ export const SideProject = ({ link, title, description, logo, delay}) => {
       <div className="flex-1 w-full flex items-start flex-col">
         <h5 className="text-lg">{title}</h5>
         <span className="text-sm mt-1 mb-3">{description}</span>
-        <a href={link} target="_blank" className="text-link--icon">View Project</a>
+        <PreviewLink href={link} label={'View Project'} description={description} img={img} />
       </div>
     </motion.div>
   )
@@ -218,31 +217,37 @@ export const SideProjects = () => {
       title: 'TampaBay.design',
       description: 'How to get involved in one of the many local design communities',
       logo: 'tampa-bay-designers-logo.svg',
+      img: '/projects/preview-tbd.png'
     }, {
       link: 'https://donuts.ryanparag.com/',
       title: 'Donut Drums',
       description: 'A simple, tappable drum kit - an homage to the great J Dilla',
       logo: 'donuts-logo.svg',
+      img: '/projects/preview-donutdrums.png'
     }, {
       link: 'https://slack-themes.vercel.app',
       title: 'Slack Themes',
       description: 'Having trouble keeping track of all of your Slack workspaces?',
       logo: 'slack-themes-logo.svg',
+      img: '/projects/preview-slackthemes.png'
     }, {
       link: 'https://race-times.vercel.app/',
       title: 'Race Times',
       description: 'A directory of translated race times schedules and leaderboards',
       logo: 'race-times-logo.svg',
+      img: '/projects/preview-racetimes.png'
     }, {
       link: 'https://timeline.ryanparag.com/',
       title: 'Portfolio Timeline',
       description: 'A timeline viewer for past versions of my portfolio',
       logo: 'timeline-logo.svg',
+      img: '/projects/preview-timeline.png'
     }, {
       link: 'https://scorekeeper.ryanparag.com/',
       title: 'ScoreKeeper',
       description: 'Track scores across all your favorite card games',
       logo: 'scorekeeper-logo.svg',
+      img: '/projects/preview-scorekeeper.png'
     }
   ]
 
@@ -262,6 +267,7 @@ export const SideProjects = () => {
                 title={project.title}
                 description={project.description}
                 logo={project.logo}
+                img={project.img}
                 delay={i}
               />
             ))
