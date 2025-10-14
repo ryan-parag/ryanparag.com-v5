@@ -6,17 +6,18 @@ import Logo from "@/components/Logo"
 import { Certifications, Education, Experience, TagSection } from "./sections"
 import { motion } from "framer-motion"
 import { Title } from './components'
+import { Toast } from '@base-ui-components/react'
 
 const ResumePage = () => {
 
-  const [copied, setCopied] = useState(false)
-
-  const copyEmail = () => {
+  const toastManager = Toast.useToastManager();
+      
+  const createToast = () => {
     copyTextToClipboard()
-    setCopied(true)
-    setTimeout(() => {
-      setCopied(false)
-    }, 1000)
+    toastManager.add({
+      title: `Email Address Copied ✉️`,
+      description: 'You copied the email address to your clipboard.',
+    });
   }
 
   return(
@@ -43,7 +44,7 @@ const ResumePage = () => {
             <div className="flex items-center">
               <span>p*********@gmail.com</span>
               <span className="h-4 w-px mx-2 bg-themeOnSurfaceVariant opacity-50"/>
-              <button onClick={() => copyEmail()} className="link-shadow">{copied ? 'Copied' : 'Copy Email'}</button>
+              <button onClick={() => createToast()} className="link-shadow">Copy Email</button>
             </div>
             <div className="flex items-center">
               <span className="truncate">{Data.pdf}</span>

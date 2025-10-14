@@ -2,17 +2,18 @@ import React, { useState, useRef } from 'react'
 import Image from 'next/image';
 import { copyTextToClipboard } from '@/utils/copy';
 import { motion, useInView } from 'framer-motion';
+import { Toast } from '@base-ui-components/react';
 
 const CTA = () => {
 
-  const [copied, setCopied] = useState(false)
-
-  const copyEmail = () => {
+  const toastManager = Toast.useToastManager();
+    
+  const createToast = () => {
     copyTextToClipboard()
-    setCopied(true)
-    setTimeout(() => {
-      setCopied(false)
-    }, 1000)
+    toastManager.add({
+      title: `Email Address Copied ✉️`,
+      description: 'You copied the email address to your clipboard.',
+    });
   }
 
   const ref = useRef(null)
@@ -62,26 +63,9 @@ const CTA = () => {
             transition={{ duration: 0.3, delay: .2, type: "spring", stiffness: 80 }}
             viewport={{ once: true }}
           >
-            <button onClick={() => copyEmail()} className="w-full md:w-auto button buttonLg buttonPrimary">Copy email address</button>
+            <button onClick={() => createToast()} className="w-full md:w-auto button buttonLg buttonPrimary">Copy email address</button>
             <span className={`text-sm mt-4 md:mt-0 ml-0 md:ml-4`}>
-              {
-                copied ? (
-                  <motion.span
-                    className="inline-flex items-center opacity-0"
-                    whileInView={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.2, delay: 0, type: "spring", stiffness: 200 }}
-                  >
-                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" className="mr-1 text-themePrimary">
-                      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M5.75 12.8665L8.33995 16.4138C9.15171 17.5256 10.8179 17.504 11.6006 16.3715L18.25 6.75"></path>
-                    </svg>
-                    Copied
-                  </motion.span>
-                )
-                : (
-                  'pa********@gmail.com'
-                )
-              }
+              pa********@gmail.com
             </span>
           </motion.div>
       </motion.article>
