@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
+import PreviewLink from "@/components/PreviewLink";
 
-const XPItem = ({ company, role, time, current, divider }) => {
+const XPItem = ({ company, role, time, current, divider, img, href, description }) => {
   return(
     <>
       <div className="flex w-full items-center py-3 px-4">
-        <div className="flex flex-col w-full flex-1">
-          <div className="text-base font-bold text-themeOnSurface">{company}</div>
+        <div className="flex flex-col w-full flex-1 items-start">
+          <PreviewLink label={company} href={href} img={img} description={href}/>
           <div className="text-xs text-themeOutline">{role}</div>
         </div>
         <div className={`${current ? 'bg-themeSurfaceVariant text-themeOnSurfaceVariant' : 'bg-transparent text-themeOnSurfaceVariant'} text-sm rounded-lg py-1 px-2`}>
@@ -19,6 +20,46 @@ const XPItem = ({ company, role, time, current, divider }) => {
     </>
   )
 }
+
+const roles = [
+  {
+    company: 'Owens Corning',
+    href:"https://owenscorning.com",
+    role: 'Design Lead',
+    time: '2024 - Now',
+    current: true,
+    img: '/projects/preview-oc.png',
+    description: 'sup fool',
+    divider: true
+  }, {
+    company: 'TrustLayer',
+    href:"https://trustlayer.io",
+    role: 'Founding Designer',
+    time: '2021 - 2024',
+    current: false,
+    img: '/projects/preview-tl.png',
+    description: 'sup fool',
+    divider: true
+  }, {
+    company: 'Masonite',
+    href:"https://masonite.com",
+    role: 'Senior Product Designer',
+    time: '2019 - 2021',
+    current: false,
+    img: '/projects/preview-masonite.png',
+    description: 'sup fool',
+    divider: true
+  }, {
+    company: 'Chargebacks911',
+    href:"https://chargebacks911.com",
+    role: 'Product Designer',
+    time: '2016 - 2019',
+    current: false,
+    img: '/projects/preview-cb911.png',
+    description: 'sup fool',
+    divider: true
+  }
+]
 
 export const XP = () => {
   return(
@@ -33,10 +74,21 @@ export const XP = () => {
       </div>
       <div className="section mb-6">
         <article className="rounded-xl border border-themeOutlineVariant">
-          <XPItem company="Owens Corning" role="Design Lead" time="2024 - Now" current divider/>
-          <XPItem company="TrustLayer" role="Founding Designer" time="2021 - 2024" divider/>
-          <XPItem company="Masonite" role="Senior Product Designer" time="2019 - 2021" divider/>
-          <XPItem company="Chargebacks911" role="Product Designer" time="2016 - 2019" divider/>
+          {
+            roles.map((item,i) => (
+              <XPItem
+                key={i}
+                company={item.company}
+                role={item.role}
+                time={item.time}
+                current={item.current}
+                divider={item.divider}
+                href={item.href}
+                img={item.img}
+                description={item.description}
+              />
+            ))
+          }
           <div className="px-4 py-4">
             <Link href="/resume">
               <span className="button w-full md:w-auto">

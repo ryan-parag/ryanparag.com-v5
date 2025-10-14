@@ -42,7 +42,7 @@ const Data = {
       role: 'Founding Designer',
       start: 'April 2021',
       end: 'June 2024',
-      description: 'I lead design at TrustLayer, as their first design hire. I worked closely with product operations, product management, and engineering to create better experiences around collecting/verifying insurance. Delived features around automation, AI, and workflow to help scale through Series A.',
+      description: 'I lead design at TrustLayer, as their first design hire. I worked closely with product operations, product management, and engineering to create better experiences around collecting/verifying insurance. Delivered features around automation, AI, and workflow to help scale through Series A.',
     }, {
       company: 'Masonite',
       role: 'Senior Product Designer',

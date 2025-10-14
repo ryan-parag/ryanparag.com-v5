@@ -478,6 +478,21 @@
   @apply w-3 h-3;
 }
 
+.Popup {
+  @apply w-64 flex flex-col gap-2 p-2 rounded-md bg-themeSurface border border-themeOutlineVariant shadow-md;
+  box-sizing: border-box;
+  transform-origin: var(--transform-origin);
+  transition:
+    transform 150ms,
+    opacity 150ms;
+
+  &[data-starting-style],
+  &[data-ending-style] {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
   .link-shadow {
     --color: var(--md-sys-color-inverse-on-surface);
     @apply transition text-themePrimary px-1 cursor-pointer rounded-md;
@@ -487,6 +502,42 @@
       background: var(--color);
     }
   }
+
+  .Arrow {
+  display: flex;
+
+  &[data-side='top'] {
+    bottom: -8px;
+    rotate: 180deg;
+  }
+
+  &[data-side='bottom'] {
+    top: -8px;
+    rotate: 0deg;
+  }
+
+  &[data-side='left'] {
+    right: -13px;
+    rotate: 90deg;
+  }
+
+  &[data-side='right'] {
+    left: -13px;
+    rotate: -90deg;
+  }
+}
+
+.ArrowFill {
+  fill: canvas;
+}
+
+.ArrowOuterStroke, .ArrowInnerStroke {
+  @apply fill-current text-themeOutlineVariant;
+}
+
+.Image {
+  @apply rounded-md h-auto w-full block;
+}
   
   .text-link--icon {
     --color: var(--md-sys-color-inverse-on-surface);
