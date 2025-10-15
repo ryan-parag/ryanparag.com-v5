@@ -191,6 +191,7 @@ const Colophon = () => {
             description={'A timeline viewer for past versions of my portfolio'}
             logo={'timeline-logo.svg'}
             delay={0}
+            img={'/projects/preview-timeline.png'}
           />
         </div>
       </div>
