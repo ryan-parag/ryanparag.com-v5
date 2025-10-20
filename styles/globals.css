@@ -356,7 +356,7 @@
   }
   
   .button {
-    @apply inline-flex space-x-2 flex-none items-center justify-center cursor-pointer leading-none transition-all font-semibold px-5 py-2.5 text-sm opacity-100 rounded-md text-themeOnBackground bg-transparent hover:scale-105 button-class !border-themeOutlineVariant
+    @apply inline-flex space-x-2 flex-none items-center justify-center cursor-pointer leading-none transition-all font-semibold px-5 py-2.5 text-sm opacity-100 rounded-md text-themeOnBackground bg-themeSurfaceVariant hover:scale-105 button-class !border-themeOutlineVariant
   }
 
   .buttonPrimary {
