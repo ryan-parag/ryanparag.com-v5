@@ -57,7 +57,7 @@ const Navigation = () => {
   return(
     <ToastList>
       <motion.div
-        className="transition grid grid-cols-3 lg:grid-cols-1 gap-2 fixed bottom-6 left-1/2 -translate-x-1/2 lg:-translate-x-0 lg:bottom-auto lg:left-6 rounded-2xl bg-transparent hover:bg-themeSurfaceVariant z-20 lg:top-1/2 lg:-translate-y-1/2 p-2 border dark:border-transparent border-current text-themeBackground opacity-0 border dark:border-transparent border-current text-themeBackground"
+        className="transition grid grid-cols-3 lg:grid-cols-1 gap-2 fixed bottom-6 left-1/2 -translate-x-1/2 lg:-translate-x-0 lg:bottom-auto lg:left-6 rounded-2xl bg-themeSurfaceVariant bg-transparent hover:bg-themeSurfaceVariant z-20 lg:top-1/2 lg:-translate-y-1/2 p-2 border dark:border-transparent border-current text-themeBackground opacity-0 border dark:border-transparent border-current text-themeBackground"
         animate={{ opacity: 1 }}
         transition={{ duration: .24, delay: 1, type: "spring", stiffness: 100 }}
       >
