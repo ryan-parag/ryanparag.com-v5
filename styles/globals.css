@@ -195,6 +195,10 @@
   .bg-themePrimary {
     background: var(--md-sys-color-primary);
   }
+
+  .border-themePrimary {
+    border-color: var(--md-sys-color-primary);
+  }
   
   .text-themeOnPrimary {
     color: var(--md-sys-color-on-primary);
@@ -340,27 +344,17 @@
     @apply mx-auto max-w-2xl px-4;
   }
 
-  .shadow-button {
-    --tw-shadow: var(--button-shadow);
-    --tw-shadow-colored: var(--button-shadow);
-  }
-
-  .shadow, .shadow-button {
-    box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
-  }
-
   .button-class {
-    @apply focus-visible:ring-2 focus-visible:ring-blue-300 dark:focus-visible:ring-blue-600 focus-visible:outline-none border-transparent focus-visible:border-blue-500 leading-none touch-none select-none disabled:opacity-50 disabled:cursor-not-allowed w-auto flex-none
-    border relative transform-gpu
-    before:hidden after:block after:absolute after:-inset-[1px] after:rounded-md after:bg-gradient-to-t after:from-black/5 dark:after:from-black/[0.15] after:opacity-50 hover:after:opacity-100 after:transition-opacity shadow-button
+    @apply focus-visible:ring-2 focus-visible:ring-blue-300 dark:focus-visible:ring-blue-600 focus-visible:outline-none border-transparent focus-visible:border-blue-500 leading-none touch-none select-none disabled:opacity-50 disabled:cursor-not-allowed w-auto flex-none relative transform-gpu
+    before:hidden after:block after:absolute after:-inset-[1px] after:rounded-md after:bg-gradient-to-t after:from-black/5 dark:after:from-black/[0.15] after:opacity-50 hover:after:opacity-100 after:transition-opacity
   }
   
   .button {
-    @apply inline-flex space-x-2 flex-none items-center justify-center cursor-pointer leading-none transition-all font-semibold px-5 py-2.5 text-sm opacity-100 rounded-md text-themeOnBackground bg-themeSurfaceVariant hover:scale-105 button-class !border-themeOutlineVariant
+    @apply inline-flex space-x-2 flex-none items-center justify-center cursor-pointer leading-none transition-all font-semibold px-5 py-2.5 text-sm opacity-100 rounded-md text-themeOnBackground bg-themeSurfaceVariant hover:scale-105 button-class
   }
 
   .buttonPrimary {
-    @apply text-themeOnPrimary bg-themePrimary;
+    @apply text-themeOnPrimary bg-themePrimary border-themePrimary;
   }
 
   .buttonLg {
