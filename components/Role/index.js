@@ -247,7 +247,7 @@ export const SideProjects = () => {
       title: 'ScoreKeeper',
       description: 'Track scores across all your favorite card games',
       logo: 'scorekeeper-logo.svg',
-      img: '/projects/preview-scorekeeper.png'
+      img: '/projects/preview-scorekeeper.gif'
     }
   ]
 
