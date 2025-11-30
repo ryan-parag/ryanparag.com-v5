@@ -248,6 +248,12 @@ export const SideProjects = () => {
       description: 'Track scores across all your favorite card games',
       logo: 'scorekeeper-logo.svg',
       img: '/projects/preview-scorekeeper.gif'
+    }, {
+      link: 'https://timezones.ryanparag.com/',
+      title: 'Timezones',
+      description: 'View and manage timezones across the world',
+      logo: 'timezones-logo.svg',
+      img: '/projects/preview-timezones.png'
     }
   ]
 
