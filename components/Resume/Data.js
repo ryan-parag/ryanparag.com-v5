@@ -25,6 +25,7 @@ const Data = {
     'HTML/CSS/JS',
     'React',
     'Node & Firebase',
+    'Cursor/Claude',
     'Airtable / Notion',
     'Adobe Creative Suite',
     'Framer',
