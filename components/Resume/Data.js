@@ -36,7 +36,7 @@ const Data = {
       company: 'Owens Corning',
       role: 'Design Lead',
       start: 'June 2024',
-      end: 'Present',
+      end: 'Current',
       description: 'Leading a team of designers and designing enablement tools for direct customers, indirect customers, home builders, and homeowners.',
     },{
       company: 'TrustLayer',

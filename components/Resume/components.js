@@ -40,23 +40,23 @@ export const Role = ({ company }) => {
           <span className="mx-2 text-secondary">/</span>
           <span className="spatial text-xs">{company.role}</span>
         </div>
-        <span className={`hidden md:block mx-4 mt-1 h-1 border-t border-current text-themeOnSurfaceVariant border-dashed opacity-30 w-full block flex-1`}/>
+        <span className={`mx-4 mt-1 h-1 border-t border-current text-themeOnSurfaceVariant border-dashed opacity-30 w-full hidden md:block flex-1`}/>
         <span className="mt-2 md:mt-0 text-xs spatial">{company.start} - {company.end}</span>
       </div>
-      <p>{company.description}</p>
+      <p className="text-sm leading-normal">{company.description}</p>
     </li>
   )
 }
 
 export const Misc = ({ item }) => {
   return(
-    <li className="mb-12 block">
-      <div className="flex items-center mb-3">
+    <li className="mb-6 block">
+      <div className="flex items-center mb-1">
         <div className="flex flex-1 items-center">
           <h4 className="text-themePrimary">{item.title}</h4>
         </div>
       </div>
-      <p className="text-secondary">
+      <p className="text-secondary text-sm">
         <strong>{item.description}</strong> ({item.date})
       </p>
     </li>

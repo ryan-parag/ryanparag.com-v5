@@ -4,7 +4,7 @@ export const Experience = ({ data }) => {
   return(
     <section className="col-span-1 md:col-span-2">
       <Title>Experience</Title>
-      <ul>
+      <ul className="pl-4 border-l border-themeOutlineVariant">
         {
           data.map((company,i) => (
             <Role company={company} key={i}/>
@@ -17,9 +17,9 @@ export const Experience = ({ data }) => {
 
 export const Education = ({ data }) => {
   return(
-    <section className="col-span-1">
+    <section className="col-span-1 md:col-span-2">
       <Title>Education</Title>
-      <ul>
+      <ul className="pl-4 border-l border-themeOutlineVariant">
         {
           data.map((item,i) => (
             <Misc item={item} key={i}/>
@@ -32,9 +32,9 @@ export const Education = ({ data }) => {
 
 export const Certifications = ({ data }) => {
   return(
-    <section className="col-span-1">
+    <section className="col-span-1 md:col-span-2">
       <Title>Certifications</Title>
-      <ul>
+      <ul className="pl-4 border-l border-themeOutlineVariant">
         {
           data.map((item,i) => (
             <Misc item={item} key={i}/>
@@ -49,10 +49,10 @@ export const TagSection = ({title, data}) => {
   return(
     <section className="mb-8">
       <Title>{title}</Title>
-      <ul className="self-start">
+      <ul className="self-start flex flex-wrap gap-2 pl-4 border-l border-themeOutlineVariant">
         {
           data.map((item,i) => (
-            <li className="tag tag--outline mb-2 mr-2" key={i}>{item}</li>
+            <li className="rounded-md inline-flex px-1.5 py-0.5 text-sm bg-gradient-to-t dark:from-white/10 dark:to-transparent border border-themeOutlineVariant text-themeOnSurfaceVariant" key={i}>{item}</li>
           ))
         }
       </ul>
