@@ -42,14 +42,18 @@ const ResumePage = () => {
           >
             <Title flat>Contact</Title>
             <div className="flex items-center">
-              <span>p*********@gmail.com</span>
-              <span className="h-4 w-px mx-2 bg-themeOnSurfaceVariant opacity-50"/>
-              <button onClick={() => createToast()} className="link-shadow transform active:scale-95">Copy Email</button>
+              Email:
+              <button onClick={() => createToast()} className="link-shadow transform active:scale-95 inline-flex items-center gap-1">
+                <span>p*********@gmail.com</span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor"><path d="M360-240q-33 0-56.5-23.5T280-320v-480q0-33 23.5-56.5T360-880h360q33 0 56.5 23.5T800-800v480q0 33-23.5 56.5T720-240H360Zm0-80h360v-480H360v480ZM200-80q-33 0-56.5-23.5T120-160v-560h80v560h440v80H200Zm160-240v-480 480Z"/></svg>
+              </button>
             </div>
             <div className="flex items-center">
-              <span className="truncate">{Data.pdf}</span>
-              <span className="h-4 w-px mx-2 bg-themeOnSurfaceVariant opacity-50"/>
-              <a className="link-shadow transform active:scale-95" href={`/${Data.pdf}`} target="_blank">Download</a>
+              Resume:
+              <a className="link-shadow transform active:scale-95 inline-flex items-center gap-1" href={`/${Data.pdf}`} target="_blank">
+                <span className="truncate">{Data.pdf}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg>
+              </a>
             </div>
           </motion.div>
         </div>
