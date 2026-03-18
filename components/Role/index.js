@@ -254,6 +254,12 @@ export const SideProjects = () => {
       description: 'View and manage timezones across the world',
       logo: 'timezones-logo.svg',
       img: '/projects/preview-timezones.png'
+    }, {
+      link: 'https://cutting-board-designer.ryanparag.com/',
+      title: 'Cutting Board Designer',
+      description: 'Design custom cutting boards with precision',
+      logo: 'cbd-logo.svg',
+      img: '/projects/preview-cbd.png'
     }
   ]
 
