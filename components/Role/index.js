@@ -213,6 +213,30 @@ export const SideProjects = () => {
 
   const projects = [
     {
+      link: 'https://scorekeeper.ryanparag.com/',
+      title: 'ScoreKeeper',
+      description: 'Track scores across all your favorite card games',
+      logo: 'scorekeeper-logo.svg',
+      img: '/projects/preview-scorekeeper.gif'
+    }, {
+      link: 'https://timezones.ryanparag.com/',
+      title: 'Timezones',
+      description: 'View and manage timezones across the world',
+      logo: 'timezones-logo.svg',
+      img: '/projects/preview-timezones.png'
+    }, {
+      link: 'https://cutting-board-designer.ryanparag.com/',
+      title: 'Cutting Board Designer',
+      description: 'Design custom cutting boards with precision',
+      logo: 'cbd-logo.svg',
+      img: '/projects/preview-cbd.png'
+    }, {
+      link: 'https://vanilla.ryanparag.com/',
+      title: 'Vanilla Extract Calculator',
+      description: 'Precisely make vanilla extract',
+      logo: 'vanilla.svg',
+      img: '/projects/preview-vanilla.png'
+    }, {
       link: 'https://tampabay.design',
       title: 'TampaBay.design',
       description: 'How to get involved in one of the many local design communities',
@@ -242,24 +266,6 @@ export const SideProjects = () => {
       description: 'A timeline viewer for past versions of my portfolio',
       logo: 'timeline-logo.svg',
       img: '/projects/preview-timeline.png'
-    }, {
-      link: 'https://scorekeeper.ryanparag.com/',
-      title: 'ScoreKeeper',
-      description: 'Track scores across all your favorite card games',
-      logo: 'scorekeeper-logo.svg',
-      img: '/projects/preview-scorekeeper.gif'
-    }, {
-      link: 'https://timezones.ryanparag.com/',
-      title: 'Timezones',
-      description: 'View and manage timezones across the world',
-      logo: 'timezones-logo.svg',
-      img: '/projects/preview-timezones.png'
-    }, {
-      link: 'https://cutting-board-designer.ryanparag.com/',
-      title: 'Cutting Board Designer',
-      description: 'Design custom cutting boards with precision',
-      logo: 'cbd-logo.svg',
-      img: '/projects/preview-cbd.png'
     }
   ]
 
