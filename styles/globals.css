@@ -532,6 +532,14 @@
 .Image {
   @apply rounded-md h-auto w-full block;
 }
+
+.pasito-override .pasito-container {
+  --pill-dot-size: 12px !important;
+  --pill-active-bg: rgba(255,255,255,1);
+  --pill-bg: rgba(255,255,255,.3);
+  --pill-fill-bg:rgba(255,255,255,.3);
+  @apply rounded-full !bg-black/20 !backdrop-blur h-8;
+}
   
   .text-link--icon {
     --color: var(--md-sys-color-inverse-on-surface);
