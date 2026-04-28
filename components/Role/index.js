@@ -204,7 +204,7 @@ export const SideProject = ({ slug, title, description, logo, delay, img}) => {
           <div className="h-8 w-8 overflow-hidden rounded-lg relative">
             <Image alt={title} src={`/projects/${logo}`} layout="fill"/>
           </div>
-          <strong className="text-base font-bold">{title}</strong>
+          <strong className="text-sm lg:text-base font-bold">{title}</strong>
           
             <span className="text-sm text-themePrimary">
               View Project

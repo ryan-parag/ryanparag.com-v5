@@ -48,7 +48,7 @@ export const sideProjects = [
     link: 'https://vanilla.ryanparag.com/',
     title: 'Vanilla Extract Calculator',
     description: 'Precisely make vanilla extract',
-    longDescription: '',
+    longDescription: 'I wanted to stop buying vanilla extract and begin calculating how much of each ingredient I would need to make better quality (and cheaper) vanilla extract for my own use. Depending on which formula I wanted to use, I could easily deduce how much vanilla bean and alcohol I would need to make the desired amount of extract to fit into a container. This project is a simple calculator that allows users to toggle between different formulas and adjust the desired output to get precise measurements for their homemade vanilla extract.',
     logo: 'vanilla.svg',
     color: '#EAC234',
     images: [

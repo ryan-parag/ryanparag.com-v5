@@ -7,7 +7,6 @@ import Link from 'next/link'
 
 export default function SideProjectPage({ project }) {
 
-  console.log(sideProjects)
   return (
     <Layout>
       <div className="section px-4 md:!px-0">
@@ -49,7 +48,7 @@ export default function SideProjectPage({ project }) {
         </div>
       )}
 
-      <div className="w-full max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 my-6 gap-4">
+      <div className="w-full max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 my-6 gap-4 px-4 lg:px-0">
         <div className="h-px bg-themeOutline w-20 my-16"/>
         <h3 className="mb-4 col-span-2 md:col-span-3">View more projects from the Playground</h3>
         {
@@ -61,7 +60,7 @@ export default function SideProjectPage({ project }) {
                   <div className="h-8 w-8 overflow-hidden rounded-lg relative">
                     <Image alt={item.title} src={`/projects/${item.logo}`} layout="fill"/>
                   </div>
-                  <strong className="text-base font-bold">{item.title}</strong>
+                  <strong className="text-sm lg:text-base font-bold truncate">{item.title}</strong>
                   
                     <span className="text-sm text-themePrimary">
                       View Project
