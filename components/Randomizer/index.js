@@ -66,7 +66,8 @@ const Randomizer = () => {
     { text: "I'm trying to take my time and live in the present"},
     { text: "I'm trying my best at keeping my house plants alive"},
     { text: "I like to make things"},
-    { text: "I've been practicing eating super spicy foods since birth"}
+    { text: "I've been practicing eating super spicy foods since birth"},
+    { text: "a novice wood worker"},
   ]
 
   const randomFact = () => {

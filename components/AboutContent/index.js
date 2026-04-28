@@ -86,13 +86,13 @@ const AboutContent = () => {
         >
           <h3 className="spatial text-sm mb-4">Career</h3>
           <p>
-            Currently, I&apos;m designing at <PreviewLink label="Owens Corning" href="https://owenscorning.com" img="/projects/preview-oc.png" description="https://owenscorning.com"/>, where I&apos;m helping create leading software/systems for builders, contractors, homeowners, and other building materials customers (+ some cool 0-1 projects long the way).
+            Currently, I&apos;m designing at <a href="https://owenscorning.com" target="_blank" rel="noopener noreferrer" className="text-link--icon">Owens Corning</a>, where I&apos;m helping create leading software/systems for builders, contractors, homeowners, and other building materials customers (+ some cool 0-1 projects long the way).
           </p>
           <p>
-            Previously, I was designing at <PreviewLink label="TrustLayer" href="https://trustlayer.io" img="/projects/preview-tl.png" description="https://trustlayer.io"/>, where I worked on collaborative tools where businesses can share insurance verification and begin working together with less difficulty through the use of automation and AI.
+            Previously, I was designing at <a href="https://trustlayer.io" target="_blank" rel="noopener noreferrer" className="text-link--icon">TrustLayer</a>, where I worked on collaborative tools where businesses can share insurance verification and begin working together with less difficulty through the use of automation and AI.
           </p>
           <p>
-            Before that, I was on the digital innovation team at <PreviewLink label="Masonite" href="https://masonite.com" img="/projects/preview-masonite.png" description="https://masonite.com"/> — conceptualizing a simpler home remodeling experience and designing multiple smart-home experiences for homeowners, builders, and internal teams. I got my start at <PreviewLink label="Chargebacks911" href="https://chargebacks911.com" img="/projects/preview-cb911.png" description="https://chargebacks911.com"/> , designing digital tools for fraud-auditing teams at banks.
+            Before that, I was on the digital innovation team at <a href="https://masonite.com" target="_blank" rel="noopener noreferrer" className="text-link--icon">Masonite</a> — conceptualizing a simpler home remodeling experience and designing multiple smart-home experiences for homeowners, builders, and internal teams. I got my start at <a href="https://chargebacks911.com" target="_blank" rel="noopener noreferrer" className="text-link--icon">Chargebacks911</a> , designing digital tools for fraud-auditing teams at banks.
           </p>
         </motion.section>
         <LinkSection/>

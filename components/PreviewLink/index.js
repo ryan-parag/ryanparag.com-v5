@@ -23,7 +23,7 @@ const PreviewLink = ({ href, img, label, description }) => {
   return(
     <PreviewCard.Root delay="300">
       <PreviewCard.Trigger
-        className={'text-link--icon'}
+        className={'button buttonSecondary'}
         href={href}
       >
         {label}

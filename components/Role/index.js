@@ -3,6 +3,8 @@ import Image from "next/image"
 import Logo from "../Logo"
 import { motion } from "framer-motion"
 import PreviewLink from "@/components/PreviewLink"
+import Link from "next/link"
+import { sideProjects } from "@/data/sideProjects"
 
 const Position = ({ role, start, end }) => {
   return(
@@ -187,110 +189,55 @@ export const Chargebacks911 = ({ darkMode }) => {
   )
 }
 
-export const SideProject = ({ link, title, description, logo, delay, img}) => {
+export const SideProject = ({ slug, title, description, logo, delay, img}) => {
   return(
     <motion.div
-      className="flex flex-row md:flex-col items-start p-4 rounded-xl bg-themeSurfaceVariant text-themeOnSurfaceVariant relative opacity-0 top-8 w-full"
+      className="relative opacity-0 top-8 w-full"
       initial={{ opacity: 0, rotate: '2deg' }}
       whileInView= {{ opacity: 1, top: 0, rotate: 0 }}
       transition={{ duration: 0.3, delay: .1 + .1*delay, type: "spring", stiffness: 80 }}
       viewport={{ once: true }}
     >
-      <div className="h-10 w-10 md:h-12 md:w-12 relative mb-2">
-        <Image alt={title} src={`/projects/${logo}`} layout="fill"/>
-      </div>
-      <div className="inline-block md:hidden h-10 w-px bg-themeOutline mx-3"/>
-      <div className="flex-1 w-full flex items-start flex-col">
-        <h5 className="text-lg">{title}</h5>
-        <span className="text-sm mt-1 mb-3">{description}</span>
-        <PreviewLink href={link} label={'View Project'} description={description} img={img} />
-      </div>
+      <Link href={`/projects/${slug}`} className="mt-auto">
+        <div className="w-full flex flex-col gap-2 p-3 rounded-lg bg-themeSurface group relative overflow-hidden border border-themeOutlineVariant">
+          <div className="absolute top-0 bottom-0 left-0 right-0 bg-themeSurfaceVariant opacity-0 group-hover:opacity-40 transition z-0"/>
+          <div className="h-8 w-8 overflow-hidden rounded-lg relative">
+            <Image alt={title} src={`/projects/${logo}`} layout="fill"/>
+          </div>
+          <strong className="text-base font-bold">{title}</strong>
+          
+            <span className="text-sm text-themePrimary">
+              View Project
+            </span>
+        </div>
+      </Link>
     </motion.div>
   )
 }
 
 export const SideProjects = () => {
-
-  const projects = [
-    {
-      link: 'https://scorekeeper.ryanparag.com/',
-      title: 'ScoreKeeper',
-      description: 'Track scores across all your favorite card games',
-      logo: 'scorekeeper-logo.svg',
-      img: '/projects/preview-scorekeeper.gif'
-    }, {
-      link: 'https://timezones.ryanparag.com/',
-      title: 'Timezones',
-      description: 'View and manage timezones across the world',
-      logo: 'timezones-logo.svg',
-      img: '/projects/preview-timezones.png'
-    }, {
-      link: 'https://cutting-board-designer.ryanparag.com/',
-      title: 'Cutting Board Designer',
-      description: 'Design custom cutting boards with precision',
-      logo: 'cbd-logo.svg',
-      img: '/projects/preview-cbd.png'
-    }, {
-      link: 'https://vanilla.ryanparag.com/',
-      title: 'Vanilla Extract Calculator',
-      description: 'Precisely make vanilla extract',
-      logo: 'vanilla.svg',
-      img: '/projects/preview-vanilla.png'
-    }, {
-      link: 'https://tampabay.design',
-      title: 'TampaBay.design',
-      description: 'How to get involved in one of the many local design communities',
-      logo: 'tampa-bay-designers-logo.svg',
-      img: '/projects/preview-tbd.png'
-    }, {
-      link: 'https://donuts.ryanparag.com/',
-      title: 'Donut Drums',
-      description: 'A simple, tappable drum kit - an homage to the great J Dilla',
-      logo: 'donuts-logo.svg',
-      img: '/projects/preview-donutdrums.png'
-    }, {
-      link: 'https://slack-themes.vercel.app',
-      title: 'Slack Themes',
-      description: 'Having trouble keeping track of all of your Slack workspaces?',
-      logo: 'slack-themes-logo.svg',
-      img: '/projects/preview-slackthemes.png'
-    }, {
-      link: 'https://race-times.vercel.app/',
-      title: 'Race Times',
-      description: 'A directory of translated race times schedules and leaderboards',
-      logo: 'race-times-logo.svg',
-      img: '/projects/preview-racetimes.png'
-    }, {
-      link: 'https://timeline.ryanparag.com/',
-      title: 'Portfolio Timeline',
-      description: 'A timeline viewer for past versions of my portfolio',
-      logo: 'timeline-logo.svg',
-      img: '/projects/preview-timeline.png'
-    }
-  ]
-
   return(
     <Container id={'ryan-side-projects'}>
       <div className="section px-0 pt-4 md:pt-0">
         <Header
-          title="Side Projects"
+          title="Playground"
           description="A selection of side projects I'm tinkering through."
         />
-        <div className="grid grid-cols-1 md:grid-cols-2 my-6 gap-4">
-          {
-            projects.map((project, i) => (
-              <SideProject
-                link={project.link}
-                key={i}
-                title={project.title}
-                description={project.description}
-                logo={project.logo}
-                img={project.img}
-                delay={i}
-              />
-            ))
-          }
-        </div>
+      </div>
+      <div className="w-full max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 my-6 gap-4">
+        {
+          sideProjects.map((project, i) => (
+            <SideProject
+              key={i}
+              slug={project.slug}
+              title={project.title}
+              description={project.description}
+              logo={project.logo}
+              img={project.images[0]?.src}
+              delay={i}
+            />
+          ))
+        }
       </div>
     </Container>
   )
