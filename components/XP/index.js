@@ -7,7 +7,9 @@ const XPItem = ({ company, role, time, current, divider, img, href, description 
     <>
       <div className="flex w-full items-center py-3 px-4">
         <div className="flex flex-col w-full flex-1 items-start">
-          <PreviewLink label={company} href={href} img={img} description={href}/>
+          <a className="text-link--icon" href={href} target="_blank" rel="noopener noreferrer">
+            {company}
+          </a>
           <div className="text-xs text-themeOutline">{role}</div>
         </div>
         <div className={`${current ? 'bg-themeSurfaceVariant text-themeOnSurfaceVariant' : 'bg-transparent text-themeOnSurfaceVariant'} text-sm rounded-lg py-1 px-2`}>
