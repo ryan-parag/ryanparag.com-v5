@@ -3,6 +3,7 @@ const Data = {
   role: 'Product Designer',
   email: 'parag.ryan@gmail.com',
   pdf: 'RyanParag_resume_2023.pdf',
+  description:'Ryan Parag is a designer who codes, based in Tampa, FL. I dedicate most my time to continuous learning and refining my skillset around product design, user experience, and front-end development. I enjoy building thoughtful products that solve real problems for people, and collaborating with cross-functional teams to bring those products to life.',
   skills: [
     'Interface Design',
     'Interaction & UI Design',

@@ -4,6 +4,7 @@ import Layout from '@/components/Layout'
 import ProjectGallery from '@/components/ProjectGallery'
 import { sideProjects } from '@/data/sideProjects'
 import Link from 'next/link'
+import { motion, AnimatePresence } from 'framer-motion'
 
 export default function SideProjectPage({ project }) {
 
@@ -12,10 +13,20 @@ export default function SideProjectPage({ project }) {
       <div className="section px-4 md:!px-0">
 
         {/* Header */}
-        <div className="flex flex-col items-start gap-6 mb-12">
-          <div className="h-16 w-16 relative flex-shrink-0">
+        <motion.div
+          initial={{ opacity: 0, top: 48 }}
+          animate={{ opacity: 1, top: 0 }}
+          className="flex flex-col items-start gap-6 mb-6 transform relative"
+          transition={{  duration: 0.8, delay: 0.4, ease: [0, 0.71, 0.2, 1.01], }}
+        >
+          <motion.div
+            className="h-16 w-16 relative flex-shrink-0"
+            initial={{ opacity: 0, top: 24, rotate: 15 }}
+            animate={{ opacity: 1, top: 0, rotate: 0 }}
+            transition={{  duration: 0.8, delay: 0.6, ease: [0, 0.71, 0.2, 1.01], }}
+          >
             <Image alt={project.title} src={`/projects/${project.logo}`} layout="fill" />
-          </div>
+          </motion.div>
           <div className="flex-1">
             <h1 className="mb-1">{project.title}</h1>
             <p className="text-lg opacity-70 !mb-4">{project.description}</p>
@@ -31,13 +42,18 @@ export default function SideProjectPage({ project }) {
               </svg>
             </a>
           </div>
-        </div>
+        </motion.div>
 
         {/* Long description */}
         {project.longDescription && (
-          <div className="max-w-4xl mx-auto mt-8">
+          <motion.div
+            initial={{ opacity: 0, top: 24 }}
+            animate={{ opacity: 1, top: 0 }}
+            className="max-w-4xl mx-auto mt-8 relative transform"
+            transition={{  duration: 0.8, delay: 0.5, ease: [0, 0.71, 0.2, 1.01], }}
+          >
             <p>{project.longDescription}</p>
-          </div>
+          </motion.div>
         )}
 
       </div>
@@ -51,25 +67,34 @@ export default function SideProjectPage({ project }) {
       <div className="w-full max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 my-6 gap-4 px-4 lg:px-0">
         <div className="h-px bg-themeOutline w-20 my-16"/>
         <h3 className="mb-4 col-span-2 md:col-span-3">View more projects from the Playground</h3>
-        {
-          sideProjects.map((item,i) => (
-            item.slug !== project.slug && (
-              <Link key={i} href={`/projects/${item.slug}`} className="mt-auto">
-                <div className="w-full flex flex-col gap-2 p-3 rounded-lg bg-themeSurface group relative overflow-hidden border border-themeOutlineVariant">
-                  <div className="absolute top-0 bottom-0 left-0 right-0 bg-themeSurfaceVariant opacity-0 group-hover:opacity-40 transition z-0"/>
-                  <div className="h-8 w-8 overflow-hidden rounded-lg relative">
-                    <Image alt={item.title} src={`/projects/${item.logo}`} layout="fill"/>
-                  </div>
-                  <strong className="text-sm lg:text-base font-bold truncate">{item.title}</strong>
-                  
-                    <span className="text-sm text-themePrimary">
-                      View Project
-                    </span>
-                </div>
-              </Link>
-            )
-          ))
-        }
+        <AnimatePresence mode="wait">
+          {
+            sideProjects.map((item,i) => (
+              item.slug !== project.slug && (
+                <Link key={i} href={`/projects/${item.slug}`} className="mt-auto">
+                  <motion.div
+                    initial={{ opacity: 0, top: 16 }}
+                    animate={{ opacity: 1, top: 0 }}
+                    whileInView={{ opacity: 1, top: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.1 * i, ease: [0, 0.71, 0.2, 1.01] }}
+                    className="transition w-full flex flex-col gap-2 p-3 rounded-lg bg-themeSurface group relative overflow-hidden border border-themeOutlineVariant"
+                  >
+                    <div className="absolute top-0 bottom-0 left-0 right-0 bg-themeSurfaceVariant opacity-0 group-hover:opacity-40 transition z-0"/>
+                    <div className="h-8 w-8 overflow-hidden rounded-lg relative">
+                      <Image alt={item.title} src={`/projects/${item.logo}`} layout="fill"/>
+                    </div>
+                    <strong className="text-sm lg:text-base font-bold truncate">{item.title}</strong>
+                    
+                      <span className="text-sm text-themePrimary">
+                        View Project
+                      </span>
+                  </motion.div>
+                </Link>
+              )
+            ))
+          }
+        </AnimatePresence>
       </div>
     </Layout>
   )

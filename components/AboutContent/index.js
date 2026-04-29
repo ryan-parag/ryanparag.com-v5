@@ -43,93 +43,76 @@ const LinkSection = () => {
   )
 }
 
-const ArrowSvg = () => {
-  return (
-    <svg width="20" height="10" viewBox="0 0 20 10" fill="none">
-      <path
-        d="M9.66437 2.60207L4.80758 6.97318C4.07308 7.63423 3.11989 8 2.13172 8H0V10H20V8H18.5349C17.5468 8 16.5936 7.63423 15.8591 6.97318L11.0023 2.60207C10.622 2.2598 10.0447 2.25979 9.66437 2.60207Z"
-        className={'ArrowFill'}
-      />
-      <path
-        d="M8.99542 1.85876C9.75604 1.17425 10.9106 1.17422 11.6713 1.85878L16.5281 6.22989C17.0789 6.72568 17.7938 7.00001 18.5349 7.00001L15.89 7L11.0023 2.60207C10.622 2.2598 10.0447 2.2598 9.66436 2.60207L4.77734 7L2.13171 7.00001C2.87284 7.00001 3.58774 6.72568 4.13861 6.22989L8.99542 1.85876Z"
-        className={'ArrowOuterStroke'}
-      />
-      <path
-        d="M10.3333 3.34539L5.47654 7.71648C4.55842 8.54279 3.36693 9 2.13172 9H0V8H2.13172C3.11989 8 4.07308 7.63423 4.80758 6.97318L9.66437 2.60207C10.0447 2.25979 10.622 2.2598 11.0023 2.60207L15.8591 6.97318C16.5936 7.63423 17.5468 8 18.5349 8H20V9H18.5349C17.2998 9 16.1083 8.54278 15.1901 7.71648L10.3333 3.34539Z"
-        className={'ArrowInnerStroke'}
-      />
-    </svg>
-  );
-}
-
 const AboutContent = () => {
   return(
-    <div className="section">
-       <Memoji/>
-      <h1>About</h1>
-      <motion.div
-        className="relative py-6 px-8 rounded-lg border border-themeOutlineVariant shadow-lg transition transform hover:md:rotate-1"
-        style={{
-          background: 'linear-gradient(to bottom, var(--md-sys-color-surface), var(--md-sys-color-surface-variant))'
-        }}
-        initial={{ top: '16px', opacity: 0 }}
-        whileInView= {{ top: '0px', opacity: 1 }}
-        transition={{ duration: 0.3, delay: 1, type: "spring", stiffness: 80 }}
-        viewport={{ once: true }}
-      >
-        <motion.section
-          className="relative top-8"
-          initial={{ opacity: 0 }}
-          whileInView= {{ opacity: 1, top: 0 }}
-          transition={{ duration: 0.3, delay: .5, type: "spring", stiffness: 80 }}
+    <div className="flex flex-col">
+      <div className="section">
+        <Memoji/>
+        <h1>About</h1>
+        <motion.div
+          className="relative py-6 px-8 rounded-lg border border-themeOutlineVariant shadow-lg transition transform hover:md:rotate-1"
+          style={{
+            background: 'linear-gradient(to bottom, var(--md-sys-color-surface), var(--md-sys-color-surface-variant))'
+          }}
+          initial={{ top: '16px', opacity: 0 }}
+          whileInView= {{ top: '0px', opacity: 1 }}
+          transition={{ duration: 0.3, delay: 1, type: "spring", stiffness: 80 }}
           viewport={{ once: true }}
         >
-          <h3 className="spatial text-sm mb-4">Career</h3>
-          <p>
-            Currently, I&apos;m designing at <a href="https://owenscorning.com" target="_blank" rel="noopener noreferrer" className="text-link--icon">Owens Corning</a>, where I&apos;m helping create leading software/systems for builders, contractors, homeowners, and other building materials customers (+ some cool 0-1 projects long the way).
-          </p>
-          <p>
-            Previously, I was designing at <a href="https://trustlayer.io" target="_blank" rel="noopener noreferrer" className="text-link--icon">TrustLayer</a>, where I worked on collaborative tools where businesses can share insurance verification and begin working together with less difficulty through the use of automation and AI.
-          </p>
-          <p>
-            Before that, I was on the digital innovation team at <a href="https://masonite.com" target="_blank" rel="noopener noreferrer" className="text-link--icon">Masonite</a> — conceptualizing a simpler home remodeling experience and designing multiple smart-home experiences for homeowners, builders, and internal teams. I got my start at <a href="https://chargebacks911.com" target="_blank" rel="noopener noreferrer" className="text-link--icon">Chargebacks911</a> , designing digital tools for fraud-auditing teams at banks.
-          </p>
-        </motion.section>
-        <LinkSection/>
-        <motion.section
-          className="relative top-8"
-          initial={{ opacity: 0 }}
-          whileInView= {{ opacity: 1, top: 0 }}
-          transition={{ duration: 0.3, delay: .2, type: "spring", stiffness: 80 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="spatial text-sm mb-4">Education</h3>
-          <p>
-            In a previous life, I studied Healthcare Informatics and Biology. After graduating, I crunched the numbers for pricing model forecasts as a healthcare analyst - and in my after hours I cut my teeth designing as a freelancer, for a diverse group of clients <i>(global non-profits, restaurants, pre-seed startups, musicians etc.)</i>.
-          </p>
-        </motion.section>
-        <motion.section
-          className="relative top-8"
-          initial={{ opacity: 0 }}
-          whileInView= {{ opacity: 1, top: 0 }}
-          transition={{ duration: 0.3, delay: .2, type: "spring", stiffness: 80 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="spatial text-sm mb-4">Misc.</h3>
-          <p>
-            I thrive in fast-paced, collaborative environments and am committed to being transparent in my work. In my free time, you can find me tinkering on a random project, finding the first window seat on a flight 🛫, biking around town 🚴‍♂️, and more 🎸 🥐 🏎!
-          </p>
-        </motion.section>
-        <div className="inline-flex items-center font-bold">
-          <span className="text-sm mr-2">–</span>
-          <div className="h-5 w-5 relative">
-            <Logo/>
+          <motion.section
+            className="relative top-8"
+            initial={{ opacity: 0 }}
+            whileInView= {{ opacity: 1, top: 0 }}
+            transition={{ duration: 0.3, delay: .5, type: "spring", stiffness: 80 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="spatial text-sm mb-4">Career</h3>
+            <p>
+              Currently, I&apos;m designing at <a href="https://owenscorning.com" target="_blank" rel="noopener noreferrer" className="text-link--icon">Owens Corning</a>, where I&apos;m helping create leading software/systems for builders, contractors, homeowners, and other building materials customers (+ some cool 0-1 projects long the way).
+            </p>
+            <p>
+              Previously, I was designing at <a href="https://trustlayer.io" target="_blank" rel="noopener noreferrer" className="text-link--icon">TrustLayer</a>, where I worked on collaborative tools where businesses can share insurance verification and begin working together with less difficulty through the use of automation and AI.
+            </p>
+            <p>
+              Before that, I was on the digital innovation team at <a href="https://masonite.com" target="_blank" rel="noopener noreferrer" className="text-link--icon">Masonite</a> — conceptualizing a simpler home remodeling experience and designing multiple smart-home experiences for homeowners, builders, and internal teams. I got my start at <a href="https://chargebacks911.com" target="_blank" rel="noopener noreferrer" className="text-link--icon">Chargebacks911</a> , designing digital tools for fraud-auditing teams at banks.
+            </p>
+          </motion.section>
+          <LinkSection/>
+          <motion.section
+            className="relative top-8"
+            initial={{ opacity: 0 }}
+            whileInView= {{ opacity: 1, top: 0 }}
+            transition={{ duration: 0.3, delay: .2, type: "spring", stiffness: 80 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="spatial text-sm mb-4">Education</h3>
+            <p>
+              In a previous life, I studied Healthcare Informatics and Biology. After graduating, I crunched the numbers for pricing model forecasts as a healthcare analyst - and in my after hours I cut my teeth designing as a freelancer, for a diverse group of clients <i>(global non-profits, restaurants, pre-seed startups, musicians etc.)</i>.
+            </p>
+          </motion.section>
+          <motion.section
+            className="relative top-8"
+            initial={{ opacity: 0 }}
+            whileInView= {{ opacity: 1, top: 0 }}
+            transition={{ duration: 0.3, delay: .2, type: "spring", stiffness: 80 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="spatial text-sm mb-4">Misc.</h3>
+            <p>
+              I thrive in fast-paced, collaborative environments and am committed to being transparent in my work. In my free time, you can find me tinkering on a random project, finding the first window seat on a flight 🛫, biking around town 🚴‍♂️, and more 🎸 🥐 🏎!
+            </p>
+          </motion.section>
+          <div className="inline-flex items-center font-bold">
+            <span className="text-sm mr-2">–</span>
+            <div className="h-5 w-5 relative">
+              <Logo/>
+            </div>
+            <span className="text-sm ml-2">Ryan 👋</span>
           </div>
-          <span className="text-sm ml-2">Ryan 👋</span>
+        </motion.div>
+        <div className="section !px-0">
+          <div className="h-px bg-themeOutline w-20 my-12"/>
         </div>
-      </motion.div>
-      <div className="section !px-0">
-        <div className="h-px bg-themeOutline w-20 my-12"/>
       </div>
       <motion.section
         className="relative top-8"

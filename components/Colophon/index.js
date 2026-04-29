@@ -95,23 +95,28 @@ const Theme = () => {
     }
   ]
   return(
-    <div className="my-8">
-      <h2 className="spatial text-sm mb-4">Current theme</h2>
-      <p>I wanted to take a different approach to theming my portfolio for v5 and thought using <a href="https://github.com/material-foundation/material-color-utilities" className="text-link--icon" target="_blank">Google&apos;s Material 3 dynamic color functions</a> could be a fun way to drive more personalized theming on the site. Check out your current theme below:</p>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+    <div className="my-8 w-full section">
+      <div className="flex flex-col">
+        <h2 className="spatial text-sm mb-4">Current theme</h2>
+        <p>I wanted to take a different approach to theming my portfolio for v5 and thought using <a href="https://github.com/material-foundation/material-color-utilities" className="text-link--icon" target="_blank">Google&apos;s Material 3 dynamic color functions</a> could be a fun way to drive more personalized theming on the site. Check out your current theme below:</p>
+      </div>
+      <div className="grid grid-cols-1 gap-0 w-full max-w-4xl px-4 lg:!px-0 mx-auto overflow-hidden border border-themeOutlineVariant rounded-lg">
         {
           tokens.map((item, i) => (
-            <ul className="flex flex-col" key={i}>
-              <li className="spatial text-xs mb-2">{item.name}</li>
+            <div className="flex flex-col gap-0 p-3 border-b border-themeOutlineVariant" key={i}>
+              <span className="flex spatial text-xs mb-2">{item.name}</span>
+              <ul className="flex flex-row gap-2 flex-wrap">
               {
                 item.values.map((color,i) => (
-                  <li className="transition flex items-center py-1 text-themeOutline hover:text-themeOnBackground" key={i}>
-                    <span className="h-4 w-4 rounded-full mr-2 border border-black border-opacity-10 dark:border-white dark:border-opacity-10" style={{ background: `var(--md-sys-color-${color.variable})`}}/>
+                  <li className="transition flex items-center gap-1.5 pr-2 text-themeOnBackground rounded-md border border-themeOutline overflow-hidden relative" key={i}>
+                    <span className="h-6 w-6 rounded-none border-r border-themeOutline" style={{ background: `var(--md-sys-color-${color.variable})`}}/>
                     <span className="text-xs">{color.name}</span>
+                    <span className="absolute top-0 bottom-0 left-0 right-0 z-0 bg-gradient-to-t from-black/10 to-transparent"/>
                   </li>
                 ))
               }
-            </ul>
+              </ul>
+            </div>
           ))
         }
       </div>
@@ -167,10 +172,12 @@ const Colophon = () => {
 
   return(
     <div>
-      <h3>Colophon</h3>
-      <p>This is the 5th version of my portfolio and I designed and developed it using <a href={build.built.link} target="_blank" className="text-link--icon">{build.built.name}</a> to build, <a href={build.style.link} target="_blank" className="text-link--icon">{build.style.name}</a> for styling, <a href={build.animation.link} target="_blank" className="text-link--icon">{build.animation.name}</a> for animation, <a href={build.deploy.link} target="_blank" className="text-link--icon">{build.deploy.name}</a> for deploying/hosting, and <a href={build.storage.link} target="_blank" className="text-link--icon">{build.storage.name}</a> for storage. Typography is set in <a href={build.typography.link} target="_blank" className="text-link--icon">{build.typography.name}</a>.</p>
+      <div className="section">
+        <h3>Colophon</h3>
+        <p>This is the 5th version of my portfolio and I designed and developed it using <a href={build.built.link} target="_blank" className="text-link--icon">{build.built.name}</a> to build, <a href={build.style.link} target="_blank" className="text-link--icon">{build.style.name}</a> for styling, <a href={build.animation.link} target="_blank" className="text-link--icon">{build.animation.name}</a> for animation, <a href={build.deploy.link} target="_blank" className="text-link--icon">{build.deploy.name}</a> for deploying/hosting, and <a href={build.storage.link} target="_blank" className="text-link--icon">{build.storage.name}</a> for storage. Typography is set in <a href={build.typography.link} target="_blank" className="text-link--icon">{build.typography.name}</a>.</p>
+      </div>
       <Theme/>
-      <div>
+      <div className="section">
         <h2 className="spatial text-sm mb-4">Previous portfolios:</h2>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           {
