@@ -1,38 +1,94 @@
 import React, { useState } from 'react'
 import Randomizer from "../Randomizer"
 import Image from "next/image"
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import Link from "next/link"
 import { copyTextToClipboard } from "@/utils/copy";
 import XP from '../XP';
 import Connect from '../Connect';
+import { HalftoneCmyk, FlutedGlass, HalftoneDots, ImageDithering } from '@paper-design/shaders-react';
+
+const FILTERS = [
+  { id: 'default', label: 'No Filter' },
+  { id: 'halftone', label: 'Halftone CMYK' },
+  { id: 'dots', label: 'Halftone Dots' },
+  { id: 'fluted-glass', label: 'Fluted Glass' },
+  { id: 'dithering', label: 'Image Dithering' },
+]
+
+const shaderStyle = { width: '100%', height: '100%' }
+
+const AvatarImage = ({ filter }) => {
+  const image = '/avatar.png'
+  if (filter === 'halftone') return <HalftoneCmyk image={image} style={shaderStyle} />
+  if (filter === 'dots') return <HalftoneDots image={image} style={shaderStyle} />
+  if (filter === 'fluted-glass') return <FlutedGlass image={image} style={shaderStyle} />
+  if (filter === 'dithering') return <ImageDithering image={image} style={shaderStyle} />
+  return <Image src={image} layout="fill" alt="Ryan's face" />
+}
 
 const Intro = () => {
+  const [activeFilter, setActiveFilter] = useState('default')
+  const [isHovered, setIsHovered] = useState(false)
+
   return(
     <>
       <div className={'section'}>
-        <motion.div
-          className="bg-themeSurfaceVariant h-24 w-24 p-1 rounded-full relative inline-flex items-center justify-center mb-6"
-          initial={{ opacity: 0, top: '24px' }}
-          whileInView= {{ opacity: 1, top: 0 }}
-          transition={{ duration: 0.1, delay: 0.2, type: "spring", stiffness: 150 }}
-          viewport={{ once: true }}
+        <div
+          className="relative inline-flex flex-col items-center mb-6"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
         >
-          <div className="bg-themeSurface h-full w-full p-1 rounded-full relative inline-flex items-center justify-center">
-            <motion.div
-              className="relative rounded-full w-full h-full overflow-hidden z-10 opacity-0"
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.3, type: "spring", stiffness: 150 }}
-            >
-              <Image src="/avatar.png" layout="fill" alt="Ryan's face"/>
-            </motion.div>
-            <motion.div
-              className="absolute opacity-0 top-0 bottom-0 left-0 right-0 bg-themePrimary blur-xl rounded-full z-0"
-              animate={{ opacity: 0.5 }}
-              transition={{ duration: 1, delay: 0.8, type: "spring", stiffness: 150 }}
-            />
-          </div>
-        </motion.div>
+          <motion.div
+            className="bg-themeSurfaceVariant h-24 w-24 p-1 rounded-full relative inline-flex items-center justify-center"
+            initial={{ opacity: 0, top: '24px' }}
+            whileInView={{ opacity: 1, top: 0 }}
+            transition={{ duration: 0.1, delay: 0.2, type: "spring", stiffness: 150 }}
+            viewport={{ once: true }}
+          >
+            <div className="bg-themeSurface h-full w-full p-1 rounded-full relative inline-flex items-center justify-center">
+              <motion.div
+                className="relative rounded-full w-full h-full overflow-hidden z-10 opacity-0"
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.3, type: "spring", stiffness: 150 }}
+              >
+                <AvatarImage filter={activeFilter} />
+              </motion.div>
+              <motion.div
+                className="absolute opacity-0 top-0 bottom-0 left-0 right-0 bg-themePrimary blur-xl rounded-full z-0"
+                animate={{ opacity: 0.5 }}
+                transition={{ duration: 1, delay: 0.8, type: "spring", stiffness: 150 }}
+              />
+            </div>
+          </motion.div>
+
+          <AnimatePresence>
+            {isHovered && (
+              <motion.div
+                className="absolute top-full mt-2 left-1/2 -translate-x-1/2 z-30 bg-themeSurface border border-themeOutlineVariant shadow-md rounded-xl p-1.5 flex flex-col gap-0.5 w-40"
+                initial={{ opacity: 0, y: -6, scale: 0.97 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -6, scale: 0.97 }}
+                transition={{ duration: 0.15, type: "spring", stiffness: 300, damping: 20 }}
+              >
+                {FILTERS.map(filter => (
+                  <button
+                    key={filter.id}
+                    onClick={() => setActiveFilter(filter.id)}
+                    className={`text-left text-xs px-2 py-1.5 rounded-lg transition-colors ${
+                      activeFilter === filter.id
+                        ? 'bg-themePrimaryContainer text-themePrimary font-semibold'
+                        : 'hover:bg-themeSurfaceVariant'
+                    }`}
+                  >
+                    {filter.label}
+                  </button>
+                ))}
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+
         <motion.h1
           className="text-4xl lg:text-5xl mb-2 md:mb-4 top-8 opacity-0 relative"
           animate={{ top: 0, opacity: 1 }}
