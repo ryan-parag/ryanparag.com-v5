@@ -116,7 +116,21 @@ export const sideProjects = [
     logo: 'timeline-logo.svg',
     color: '#00d1b2',
     images: [
-      { src: '/projects/timeline/1.png', caption: 'Timeline widget for all of the different vresions of my portfolio' }
+      { src: '/projects/timeline/1.png', caption: 'Timeline widget for all of the different versions of my portfolio' }
+    ]
+  },
+  {
+    slug: 'buy-fresh-florida',
+    link: 'https://buy-fresh-florida.ryanparag.com/',
+    title: 'Buy Fresh Florida',
+    description: 'Find what produce is in season in Florida',
+    longDescription: `This project turns a clunky, static PDF of Florida’s agricultural data into a clean, searchable web app that's actually easy to use on the go. I focused on stripping away the noise to create a high-utility experience that helps locals find what's in season in seconds. It’s a simple, mobile-first solution for anyone who wants to shop local without the headache of digging through government charts.`,
+    logo: 'buy-fresh-logo.svg',
+    color: '#f97316',
+    images: [
+      { src: '/projects/buy-fresh-florida/1.png', caption: 'Choose a month and see what produce is in season in Florida' },
+      { src: '/projects/buy-fresh-florida/2.png', caption: 'Light mode' },
+       { src: '/projects/buy-fresh-florida/3.png', caption: 'Dark mode' }
     ]
   }
 ]
