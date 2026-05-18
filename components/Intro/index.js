@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Randomizer from "../Randomizer"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
@@ -18,18 +18,45 @@ const FILTERS = [
 
 const shaderStyle = { width: '100%', height: '100%' }
 
-const AvatarImage = ({ filter }) => {
+const readDitheringColors = () => {
+  const style = getComputedStyle(document.body)
+  return {
+    colorFront: style.getPropertyValue('--md-sys-color-on-background').trim() || '#000000',
+    colorBack: style.getPropertyValue('--md-sys-color-background').trim() || '#ffffff',
+    colorHighlight: style.getPropertyValue('--md-sys-color-primary').trim() || '#00d1b2',
+  }
+}
+
+const useDitheringColors = () => {
+  const [colors, setColors] = useState({
+    colorFront: '#000000',
+    colorBack: '#ffffff',
+    colorHighlight: '#00d1b2',
+  })
+
+  useEffect(() => {
+    setColors(readDitheringColors())
+    const observer = new MutationObserver(() => setColors(readDitheringColors()))
+    observer.observe(document.body, { attributes: true, attributeFilter: ['style'] })
+    return () => observer.disconnect()
+  }, [])
+
+  return colors
+}
+
+const AvatarImage = ({ filter, ditheringColors }) => {
   const image = '/avatar.png'
   if (filter === 'halftone') return <HalftoneCmyk image={image} style={shaderStyle} />
   if (filter === 'dots') return <HalftoneDots image={image} style={shaderStyle} />
   if (filter === 'fluted-glass') return <FlutedGlass image={image} style={shaderStyle} />
-  if (filter === 'dithering') return <ImageDithering image={image} style={shaderStyle} />
+  if (filter === 'dithering') return <ImageDithering image={image} style={shaderStyle} {...ditheringColors} />
   return <Image src={image} layout="fill" alt="Ryan's face" />
 }
 
 const Intro = () => {
   const [activeFilter, setActiveFilter] = useState('default')
   const [isHovered, setIsHovered] = useState(false)
+  const ditheringColors = useDitheringColors()
 
   return(
     <>
@@ -52,7 +79,7 @@ const Intro = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.3, type: "spring", stiffness: 150 }}
               >
-                <AvatarImage filter={activeFilter} />
+                <AvatarImage filter={activeFilter} ditheringColors={ditheringColors} />
               </motion.div>
               <motion.div
                 className="absolute opacity-0 top-0 bottom-0 left-0 right-0 bg-themePrimary blur-xl rounded-full z-0"
