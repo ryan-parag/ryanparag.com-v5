@@ -28,6 +28,10 @@ export default function SideProjectPage({ project }) {
             <Image alt={project.title} src={`/projects/${project.logo}`} layout="fill" />
           </motion.div>
           <div className="flex-1">
+            <div className="inline-flex items-center gap-0 text-sm border border-themeOutlineVariant rounded-md mb-2 overflow-hidden">
+              <span className="py-0.5 px-1.5 text-themeOnSurfaceVariant border-r border-themeOutlineVariant">Published</span>
+              <span className="py-0.5 px-1.5 font-semibold bg-themeSurfaceVariant text-themeOnSurface">{project.published}</span>
+            </div>
             <h1 className="mb-1">{project.title}</h1>
             <p className="text-lg opacity-70 !mb-4">{project.description}</p>
             <a
