@@ -193,7 +193,7 @@ const Colophon = () => {
         </div>
         <div className="flex items-center justify-center w-full">
           <SideProject
-            link={'https://timeline.ryanparag.com/'}
+            slug={'portfolio-timeline'}
             title={'Portfolio Timeline'}
             description={'A timeline viewer for past versions of my portfolio'}
             logo={'timeline-logo.svg'}
