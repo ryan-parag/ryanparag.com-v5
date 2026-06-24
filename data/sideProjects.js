@@ -125,7 +125,8 @@ export const sideProjects = [
     logo: 'timeline-logo.svg',
     color: '#00d1b2',
     images: [
-      { src: '/projects/timeline/1.png', caption: 'Timeline widget for all of the different versions of my portfolio' }
+      { src: '/projects/timeline/1.png', caption: 'Timeline viewer for all of the different iterations of my portfolio' },
+      { src: '/projects/timeline/2.png', caption: 'Portfolio iteration view with all of the major build materials' }
     ]
   },
   {
