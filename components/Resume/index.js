@@ -3,10 +3,11 @@ import { copyTextToClipboard } from '@/utils/copy'
 import {  Header} from "./components"
 import Data from "./Data"
 import Logo from "@/components/Logo"
-import { Certifications, Education, Experience, TagSection } from "./sections"
+import { Certifications, Education, Experience, TagSection, About } from "./sections"
 import { motion } from "framer-motion"
 import { Title } from './components'
 import { Toast } from '@base-ui-components/react'
+import SideNav from './SideNav'
 
 const ResumePage = () => {
 
@@ -62,6 +63,7 @@ const ResumePage = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3, delay: 0.5 }}
         >
+          <About/>
           <Experience data={Data.positions}/>
           <Education data={Data.education}/>
           <Certifications data={Data.certs}/>
@@ -71,10 +73,11 @@ const ResumePage = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3, delay: 0.7 }}
         >
-          <TagSection title="Skills" data={Data.skills}/>
-          <TagSection title="Tools" data={Data.experience}/>
+          <TagSection id="skills" title="Skills" data={Data.skills}/>
+          <TagSection id="tools" title="Tools" data={Data.experience}/>
         </motion.div>
       </div>
+      <SideNav/>
     </>
   )
 }

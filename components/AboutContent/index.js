@@ -50,7 +50,7 @@ const AboutContent = () => {
         <Memoji/>
         <h1>About</h1>
         <motion.div
-          className="relative py-6 px-8 rounded-lg border border-themeOutlineVariant shadow-lg transition transform hover:md:rotate-1"
+          className="relative py-6 px-8 rounded-lg border border-themeOutlineVariant shadow-lg transition transform"
           style={{
             background: 'linear-gradient(to bottom, var(--md-sys-color-surface), var(--md-sys-color-surface-variant))'
           }}

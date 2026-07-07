@@ -24,7 +24,13 @@ export const Header = () => {
 
 export const Title = ({ children, flat }) => {
   return(
-    <h3 className={`text-base spatial ${flat ? 'mb-0' : 'mb-6'}`}>{children}</h3>
+    <h3 className={`text-lg spatial ${flat ? 'mb-0' : 'mb-6'}`}>{children}</h3>
+  )
+}
+
+export const Subtitle = ({ children, flat }) => {
+  return(
+    <h3 className={`text-base spatial ${flat ? 'mb-0' : 'mb-4'}`}>{children}</h3>
   )
 }
 

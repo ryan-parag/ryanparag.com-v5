@@ -2,7 +2,13 @@ import React, { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 
-const ProjectGallery = ({ images }) => {
+const gridColsClasses = {
+  1: 'grid-cols-1',
+  2: 'grid-cols-1 md:grid-cols-2',
+  3: 'grid-cols-1 md:grid-cols-3',
+}
+
+const ProjectGallery = ({ images, columns = 1 }) => {
   const [lightboxIndex, setLightboxIndex] = useState(null)
 
   const isOpen = lightboxIndex !== null
@@ -34,7 +40,7 @@ const ProjectGallery = ({ images }) => {
   return (
     <>
       {/* Grid */}
-      <div className="grid grid-cols-1 gap-12 md:gap-20 my-6">
+      <div className={`grid ${gridColsClasses[columns] || gridColsClasses[1]} gap-4 md:gap-4 my-6`}>
         {images.map((image, i) => (
           <div className="flex flex-col gap-3" key={i}>
             <button
