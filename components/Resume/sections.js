@@ -16,7 +16,7 @@ export const About = () => {
     <section id="about" className="col-span-1 md:col-span-2 mb-8">
       <Title>About</Title>
       <p>
-        I&apos;m a product designer and design engineer living in <strong>Tampa, FL 🌴</strong>.
+        I&apos;m a product designer with a penchant for code. Currently building things in <strong>Tampa, FL 🌴</strong>.
       </p>
       <Subtitle>Current Role</Subtitle>
       <ul className="mb-4 list-disc list-inside">
