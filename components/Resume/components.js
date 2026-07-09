@@ -30,7 +30,7 @@ export const Title = ({ children, flat }) => {
 
 export const Subtitle = ({ children, flat }) => {
   return(
-    <h3 className={`text-base spatial ${flat ? 'mb-0' : 'mb-4'}`}>{children}</h3>
+    <h3 className={`text-sm text-themeOnSurfaceVariant spatial ${flat ? 'mb-0' : 'mb-2'}`}>{children}</h3>
   )
 }
 

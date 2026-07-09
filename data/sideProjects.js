@@ -15,6 +15,9 @@ export const sideProjects = [
       { src: '/projects/scorekeeper/4.png', caption: 'Leaderboard view for tracking performance per player, per type of game, # of rounds, etc.' },
       { src: '/projects/scorekeeper/5.png', caption: 'Chart breakdown for players in a league' },
       { src: '/projects/scorekeeper/6.png', caption: 'Profile settings and customization options' }
+    ],
+    videos: [
+      { src: 'GcBFtzu5WQQu4GveFZ2hyi49H5wGv1BXP3MCNufFiZg', format: 'mobile' }
     ]
   },
   {
@@ -30,6 +33,9 @@ export const sideProjects = [
       { src: '/projects/preview-timezones.png', caption: 'Homepage where you can add, manage, and share a world clock of timezones' },
       { src: '/projects/timezones/1.png', caption: 'Dark mode and dense view' },
       { src: '/projects/timezones/2.png', caption: 'Searchable list of cities' }
+    ],
+    videos: [
+      { src: 'qdHMp3bH4iii76FdAI7mVSKnhO6qxoyJLsACzhicdvQ', format: 'browser' }
     ]
   },
   {
@@ -44,6 +50,9 @@ export const sideProjects = [
     images: [
       { src: '/projects/cbd/1.png', caption: 'Design for the desired dimensions, wood species, and type of cutting board' },
       { src: '/projects/cbd/2.png', caption: 'Walk through which cuts are needed for what was designed' }
+    ],
+    videos: [
+      { src: 'eiFuSTfkfugRYQXsiu8GwwWwC5EHLZOEgw1ugtLyX9k', format: 'browser' }
     ]
   },
   {
@@ -57,6 +66,9 @@ export const sideProjects = [
     color: '#EAC234',
     images: [
       { src: '/projects/vanilla/1.png', caption: 'Select the type of vanilla extract and walk through the necessary components needed to make it' }
+    ],
+    videos: [
+      { src: '5D027iQCvoSIWQto01Y1RSJ7bM3tgzLn3k3qbMo3d2w01w', format: 'mobile' }
     ]
   },
   {
@@ -74,6 +86,9 @@ export const sideProjects = [
       { src: '/projects/tbd/3.png', caption: 'Event page' },
       { src: '/projects/tbd/4.png', caption: 'Newlsetter and calendar sign up' },
       { src: '/projects/tbd/5.png', caption: 'Internal site for quickly generating event images for Meetup, Social Media, and OpenGraph' },
+    ],
+    videos: [
+      { src: '3CruE9ikCl569nLjlBzImIP2JAnJzdqkqcrT01EXDiEw', format: 'browser' }
     ]
   },
   {
@@ -87,6 +102,9 @@ export const sideProjects = [
     color: '#FF8A00',
     images: [
       { src: '/projects/donut-drums/1.png', caption: 'Click or use keyboard shortcuts to play with a simple drum machine' }
+    ],
+    videos: [
+      { src: 'uMu4itqngB9YzhNdQu008Un9kWRKZFgoHwQbL2nybRTw', format: 'browser' }
     ]
   },
   {
@@ -127,6 +145,9 @@ export const sideProjects = [
     images: [
       { src: '/projects/timeline/1.png', caption: 'Timeline viewer for all of the different iterations of my portfolio' },
       { src: '/projects/timeline/2.png', caption: 'Portfolio iteration view with all of the major build materials' }
+    ],
+    videos: [
+      { src: 'Hir5I8FriYH7roqWzyBUevd002NJh2h8T00PxeqxsxdpY', format: 'browser' }
     ]
   },
   {
@@ -142,6 +163,9 @@ export const sideProjects = [
       { src: '/projects/buy-fresh-florida/1.png', caption: 'Choose a month and see what produce is in season in Florida' },
       { src: '/projects/buy-fresh-florida/2.png', caption: 'Light mode' },
        { src: '/projects/buy-fresh-florida/3.png', caption: 'Dark mode' }
+    ],
+    videos: [
+      { src: 'OiEFwqrtFFr01vYTyrKFhmKAtCYUUsTgHDNStHTAztbg', format: 'mobile' }
     ]
   }
 ]
