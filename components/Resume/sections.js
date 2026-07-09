@@ -1,6 +1,9 @@
 import { Misc, Role, Title, Subtitle } from "./components"
 import Link from "next/link"
+import Image from "next/image"
 import ProjectGallery from "../ProjectGallery"
+import BrowserVideo from "../BrowserVideo"
+import MobileVideo from "../MobileVideo"
 
 const workGalleryImages = [
   { src: "/projects/trustlayer/5.png" },
@@ -16,12 +19,10 @@ export const About = () => {
     <section id="about" className="col-span-1 md:col-span-2 mb-8">
       <Title>About</Title>
       <p>
-        I&apos;m a product designer with a penchant for code. Currently building things in <strong>Tampa, FL 🌴</strong>.
+        I&apos;m a product designer with a penchant for code, based in <strong>Tampa, FL 🌴</strong>. Currently, I lead the direct customer experience and design systems at <a href="https://owenscorning.com" target="_blank" rel="noopener noreferrer" className="text-link--icon">Owens Corning</a>.
       </p>
-      <Subtitle>Current Role</Subtitle>
-      <ul className="mb-4 list-disc list-inside">
-        <li>Design lead for Direct Customer experience and Design Systems at <a href="https://owenscorning.com" target="_blank" rel="noopener noreferrer" className="text-link--icon">Owens Corning</a></li>
-      </ul>
+      <Subtitle>Testing MuxVideo</Subtitle>
+      <MobileVideo muxId="GcBFtzu5WQQu4GveFZ2hyi49H5wGv1BXP3MCNufFiZg" poster={0} />
       <Subtitle>In my spare time...</Subtitle>
       <ul className="mb-4 list-disc list-inside">
         <li>Building <Link href="/projects/scorekeeper"><span className="link-shadow transform active:scale-95 inline-flex items-center">ScoreKeeper</span></Link> - a simple way to track game scores with friends</li>
@@ -35,6 +36,7 @@ export const About = () => {
           View More Work
         </span>
       </Link>
+      <BrowserVideo muxId="eiFuSTfkfugRYQXsiu8GwwWwC5EHLZOEgw1ugtLyX9k" poster={0} url="https://scorekeeper.ryanparag.com" />
     </section>
   )
 }
