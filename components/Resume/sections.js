@@ -7,7 +7,7 @@ import MobileVideo from "../MobileVideo"
 
 const workGalleryImages = [
   { src: "/projects/trustlayer/5.png" },
-  { src: "/projects/chargebacks911/2.png" },
+  { src: "/projects/trustlayer/6.png" },
   { src: "/projects/masonite/2.png" },
   { src: "/projects/scorekeeper/2.png" },
   { src: "/projects/cbd/1.png" },
