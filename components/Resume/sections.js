@@ -21,8 +21,6 @@ export const About = () => {
       <p>
         I&apos;m a product designer with a penchant for code, based in <strong>Tampa, FL 🌴</strong>. Currently, I lead the direct customer experience and design systems at <a href="https://owenscorning.com" target="_blank" rel="noopener noreferrer" className="text-link--icon">Owens Corning</a>.
       </p>
-      <Subtitle>Testing MuxVideo</Subtitle>
-      <MobileVideo muxId="GcBFtzu5WQQu4GveFZ2hyi49H5wGv1BXP3MCNufFiZg" poster={0} />
       <Subtitle>In my spare time...</Subtitle>
       <ul className="mb-4 list-disc list-inside">
         <li>Building <Link href="/projects/scorekeeper"><span className="link-shadow transform active:scale-95 inline-flex items-center">ScoreKeeper</span></Link> - a simple way to track game scores with friends</li>
@@ -36,7 +34,6 @@ export const About = () => {
           View More Work
         </span>
       </Link>
-      <BrowserVideo muxId="eiFuSTfkfugRYQXsiu8GwwWwC5EHLZOEgw1ugtLyX9k" poster={0} url="https://scorekeeper.ryanparag.com" />
     </section>
   )
 }
