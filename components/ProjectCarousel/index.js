@@ -12,14 +12,17 @@ const ProjectCarousel = ({ company, color, darkMode }) => {
       caption: 'A network of live data sources from which organizations can have a constant and real-time trace of coverage',
       src: '/projects/trustlayer/2.png' 
     }, {
+      caption: 'An easy-to-use visual workflow builder to automate repetitive workflows',
+      src: '/projects/trustlayer/5.png' 
+    },{
       caption: 'A clearer experience for tasks centered around providing insurance information',
       src: '/projects/trustlayer/3.png' 
     }, {
+      caption: 'A white-labeled experience for insurance carriers/brokers to provide their customers a way to view and share their insurance information',
+      src: '/projects/trustlayer/6.png' 
+    }, {
       caption: 'An AI-powered document extraction tool',
       src: '/projects/trustlayer/4.png' 
-    }, {
-      caption: 'An easy-to-use visual workflow builder to automate repetitive workflows',
-      src: '/projects/trustlayer/5.png' 
     }
   ]
 
