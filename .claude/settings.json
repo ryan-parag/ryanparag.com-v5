@@ -1,7 +1,23 @@
 {
   "permissions": {
     "allow": [
-      "Bash(xargs -I{} echo {})"
+      "Bash(xargs -I{} echo {})",
+      "WebFetch(domain:motion.dev)",
+      "Bash(npx --yes playwright --version)",
+      "Bash(npx --yes playwright install chromium)",
+      "Bash(node /private/tmp/claude-501/-Users-rparag-Downloads-ryanparag-com-v5/d3d440bb-fc7e-45fd-821f-6f5c458feca0/scratchpad/verify.js)",
+      "Bash(node verify.js)",
+      "Bash(node verify3.js)",
+      "WebFetch(domain:react-aria.adobe.com)",
+      "WebFetch(domain:react-spectrum.adobe.com)",
+      "Bash(node -e \"const m = require\\('react-aria-components'\\); console.log\\(Object.keys\\(m\\).filter\\(k => /color/i.test\\(k\\)\\).sort\\(\\)\\)\")",
+      "Bash(node -e \"const m = require\\('react-aria-components'\\); ['SliderTrack','SliderOutput','Popover','Dialog','Input','Label','Button','DialogTrigger'].forEach\\(k=>console.log\\(k, typeof m[k]\\)\\)\")",
+      "Bash(npm uninstall *)",
+      "Bash(curl -s http://localhost:3001 -o /dev/null -w \"%{http_code}\\\\n\")",
+      "Bash(npm init *)",
+      "Bash(npm install *)",
+      "Bash(node debug7.js)",
+      "Bash(curl -s http://localhost:3001/ -o /dev/null -w \"%{http_code}\\\\n\")"
     ]
   }
 }
