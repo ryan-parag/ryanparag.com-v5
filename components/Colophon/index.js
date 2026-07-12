@@ -1,4 +1,5 @@
 import { SideProject } from "../Role";
+import { sideProjects } from "@/data/sideProjects";
 
 const Theme = () => {
   const tokens = [
@@ -193,12 +194,12 @@ const Colophon = () => {
         </div>
         <div className="flex items-center justify-center w-full">
           <SideProject
-            slug={'portfolio-timeline'}
-            title={'Portfolio Timeline'}
-            description={'A timeline viewer for past versions of my portfolio'}
-            logo={'timeline-logo.svg'}
-            delay={0}
-            img={'/projects/preview-timeline.png'}
+            sideProject={sideProjects[8]}
+            slug={sideProjects[8].slug}
+            title={sideProjects[8].title}
+            description={sideProjects[8].description}
+            logo={sideProjects[8].logo}
+            img={sideProjects[8].images[0]?.src}
           />
         </div>
       </div>

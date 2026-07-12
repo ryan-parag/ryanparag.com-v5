@@ -2,9 +2,10 @@ import ProjectCarousel from "../ProjectCarousel"
 import Image from "next/image"
 import Logo from "../Logo"
 import { motion } from "framer-motion"
-import PreviewLink from "@/components/PreviewLink"
 import Link from "next/link"
 import { sideProjects } from "@/data/sideProjects"
+import BrowserVideo from '@/components/BrowserVideo'
+import MobileVideo from '@/components/MobileVideo'
 
 const Position = ({ role, start, end }) => {
   return(
@@ -51,9 +52,9 @@ const Header = ({ image, title, description}) => {
   )
 }
 
-const Container = ({ children, id }) => {
+const Container = ({ children, id, padding }) => {
   return(
-    <div id={id} className="py-8 px-4">
+    <div id={id} className={`overflow-x-hidden scrollbar-hidden py-8 ${padding ? 'px-4' : 'px-0'}`}>
       {children}
     </div>
   )
@@ -61,7 +62,7 @@ const Container = ({ children, id }) => {
 
 export const TrustLayer = ({ darkMode }) => {
   return(
-    <Container id={'trustlayer'}>
+    <Container id={'trustlayer'} padding>
       <ProjectCarousel
         company={'trustlayer'}
         color={'#1C66DC'}
@@ -92,7 +93,7 @@ export const TrustLayer = ({ darkMode }) => {
 
 export const OwensCorning = ({ darkMode }) => {
   return(
-    <Container id={'owens-corning'}>
+    <Container id={'owens-corning'} padding>
       <ProjectCarousel
         company={'owens corning'}
         color={'#D40f7D'}
@@ -123,7 +124,7 @@ export const OwensCorning = ({ darkMode }) => {
 
 export const Masonite = ({ darkMode }) => {
   return(
-    <Container id={'masonite'}>
+    <Container id={'masonite'} padding>
       <ProjectCarousel
         company={'masonite'}
         color={'#99C221'}
@@ -160,7 +161,7 @@ export const Masonite = ({ darkMode }) => {
 
 export const Chargebacks911 = ({ darkMode }) => {
   return(
-    <Container id={'chargebacks911'}>
+    <Container id={'chargebacks911'} padding>
       <ProjectCarousel
         company={'chargebacks911'}
         color={'#FA0000'}
@@ -189,26 +190,51 @@ export const Chargebacks911 = ({ darkMode }) => {
   )
 }
 
-export const SideProject = ({ slug, title, description, logo, delay, img}) => {
+export const SideProject = ({ sideProject, slug, title, description, logo, delay, img}) => {
   return(
     <motion.div
-      className="relative opacity-0 top-8 w-full"
-      initial={{ opacity: 0, rotate: '2deg' }}
-      whileInView= {{ opacity: 1, top: 0, rotate: 0 }}
-      transition={{ duration: 0.3, delay: .1 + .1*delay, type: "spring", stiffness: 80 }}
+      className="relative opacity-0 top-8 w-auto shrink-0"
+      initial={{ opacity: 0 }}
+      whileInView= {{ opacity: 1, top: 0 }}
+      transition={{ duration: 0.3, delay: .1, type: "spring", stiffness: 80 }}
       viewport={{ once: true }}
     >
-      <Link href={`/projects/${slug}`} className="mt-auto">
-        <div className="w-full flex flex-col gap-2 p-3 rounded-lg bg-themeSurface group relative overflow-hidden border border-themeOutlineVariant">
+      <Link href={`/projects/${slug}`} className="mt-auto inline-flex w-auto">
+        <div className="w-96 shrink-0 h-[520px] overflow-y-hidden flex flex-col gap-2 px-6 pt-6 rounded-2xl bg-themeSurface group relative overflow-hidden border border-themeOutlineVariant">
           <div className="absolute top-0 bottom-0 left-0 right-0 bg-themeSurfaceVariant opacity-0 group-hover:opacity-40 transition z-0"/>
-          <div className="h-8 w-8 overflow-hidden rounded-lg relative">
+          <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 blur-3xl z-0 w-80 h-80 opacity-20">
             <Image alt={title} src={`/projects/${logo}`} layout="fill"/>
           </div>
-          <strong className="text-sm lg:text-base font-bold">{title}</strong>
-          
-            <span className="text-sm text-themePrimary">
-              View Project
-            </span>
+          <div className="transition h-10 w-10 overflow-hidden rounded-lg relative">
+            <Image alt={title} src={`/projects/${logo}`} layout="fill"/>
+          </div>
+          <strong className="text-xl font-bold">{title}</strong>
+          <span className="text-sm text-themeOnSurfaceVariant">{description}</span>
+          <div className="transition delay-50 duration-150 absolute z-0 bottom-0 left-0 right-0 h-96 translate-y-6 scale-[98%] group-hover:scale-100 w-full overflow-hidden group-hover:translate-y-0">
+            {
+              sideProject?.videos ? (
+                sideProject.videos.length > 0 && sideProject.videos[0].format === 'browser' ? (
+                  <div className="translate-x-6 w-[720px] h-[400px] relative">
+                    <BrowserVideo muxId={sideProject.videos[0].src} thumbnail={sideProject.thumbnail?.src} url={sideProject.link} />
+                  </div>
+                ) : sideProject.videos[0].format === 'mobile' ? (
+                  <MobileVideo muxId={sideProject.videos[0].src} thumbnail={sideProject.thumbnail?.src} />
+                ) : null
+              )
+              :
+              (
+                <div className="relative top-8 w-full max-w-xs mx-auto rounded-lg bg-black/5 dark:bg-white/5 py-4 text-center text-sm flex flex-col items-center justify-center gap-2 h-60">
+                  <div className="h-6 w-6 animate-pulse">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M84.27,171.73l-55.09-20.3a7.92,7.92,0,0,1,0-14.86l55.09-20.3,20.3-55.09a7.92,7.92,0,0,1,14.86,0l20.3,55.09,55.09,20.3a7.92,7.92,0,0,1,0,14.86l-55.09,20.3-20.3,55.09a7.92,7.92,0,0,1-14.86,0Z" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16"/><line x1="176" y1="16" x2="176" y2="64" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16"/><line x1="224" y1="72" x2="224" y2="104" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16"/><line x1="152" y1="40" x2="200" y2="40" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16"/><line x1="208" y1="88" x2="240" y2="88" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16"/></svg>
+                  </div>
+                  Coming soon...
+                </div>
+              )
+            }
+          </div>
+          <span className="transition delay-100 translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 button w-auto absolute z-10 bottom-4 right-4">
+            View Project
+          </span>
         </div>
       </Link>
     </motion.div>
@@ -218,17 +244,18 @@ export const SideProject = ({ slug, title, description, logo, delay, img}) => {
 export const SideProjects = () => {
   return(
     <Container id={'ryan-side-projects'}>
-      <div className="section px-0 pt-4 md:pt-0">
+      <div className="section px-4 md:px-0 pt-4 md:pt-0">
         <Header
           title="Playground"
           description="A selection of side projects I'm tinkering through."
         />
       </div>
-      <div className="w-full max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 my-6 gap-4">
+      <div className={`w-auto py-8 px-4 md:px-40 overflow-x-scroll overflow-y-hidden scrollbar-hidden mx-auto flex items-start gap-4`}>
         {
           sideProjects.map((project, i) => (
             <SideProject
               key={i}
+              sideProject={project}
               slug={project.slug}
               title={project.title}
               description={project.description}

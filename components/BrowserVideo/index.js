@@ -1,7 +1,8 @@
 import React from 'react';
 import MuxVideo from '../MuxVideo';
+import Image from 'next/image';
 
-export default function BrowserVideo({ muxId, poster, url = "https://ryanparag.com/" }) {
+export default function BrowserVideo({ muxId, poster, thumbnail, url = "https://ryanparag.com/" }) {
   return (
     <div className="w-full mb-4 mx-auto rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-2xl overflow-hidden bg-white dark:bg-zinc-900">
       {/* Browser Header */}
@@ -26,7 +27,7 @@ export default function BrowserVideo({ muxId, poster, url = "https://ryanparag.c
         </div>
       </div>
 
-      {/* Browser Body (Your Recorded Video) */}
+      {/* Browser Body (Your Recorded Video, with an optional Thumbnail shown until hover) */}
       <div className="relative bg-black aspect-video w-full">
         <MuxVideo
           id={muxId}
@@ -36,8 +37,18 @@ export default function BrowserVideo({ muxId, poster, url = "https://ryanparag.c
           muted
           loop
           playsInline
-          className="w-full h-full object-cover"
+          className={`w-full h-full object-cover${thumbnail ? ' absolute inset-0' : ''}`}
         />
+        {
+          thumbnail && (
+            <Image
+              src={thumbnail}
+              alt=""
+              fill
+              className="object-cover transition-opacity duration-300 group-hover:opacity-0"
+            />
+          )
+        }
       </div>
     </div>
   );

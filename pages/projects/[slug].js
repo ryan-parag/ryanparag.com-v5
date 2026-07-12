@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import BrowserVideo from '@/components/BrowserVideo'
 import MobileVideo from '@/components/MobileVideo'
+import { SideProject } from '@/components/Role'
 
 export default function SideProjectPage({ project }) {
 
@@ -89,37 +90,27 @@ export default function SideProjectPage({ project }) {
         </div>
       )}
 
-      <div className="w-full max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 my-6 gap-4 px-4 lg:px-0">
+      <div className="w-full max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-3 my-6 gap-4 px-4 lg:px-0">
         <div className="h-px bg-themeOutline w-20 my-16"/>
         <h3 className="mb-4 col-span-2 md:col-span-3">View more projects from the Playground</h3>
-        <AnimatePresence mode="wait">
-          {
-            sideProjects.map((item,i) => (
-              item.slug !== project.slug && (
-                <Link key={i} href={`/projects/${item.slug}`} className="mt-auto">
-                  <motion.div
-                    initial={{ opacity: 0, top: 16 }}
-                    animate={{ opacity: 1, top: 0 }}
-                    whileInView={{ opacity: 1, top: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.1 * i, ease: [0, 0.71, 0.2, 1.01] }}
-                    className="transition w-full flex flex-col gap-2 p-3 rounded-lg bg-themeSurface group relative overflow-hidden border border-themeOutlineVariant"
-                  >
-                    <div className="absolute top-0 bottom-0 left-0 right-0 bg-themeSurfaceVariant opacity-0 group-hover:opacity-40 transition z-0"/>
-                    <div className="h-8 w-8 overflow-hidden rounded-lg relative">
-                      <Image alt={item.title} src={`/projects/${item.logo}`} layout="fill"/>
-                    </div>
-                    <strong className="text-sm lg:text-base font-bold truncate">{item.title}</strong>
-                    
-                      <span className="text-sm text-themePrimary">
-                        View Project
-                      </span>
-                  </motion.div>
-                </Link>
-              )
-            ))
-          }
-        </AnimatePresence>
+      </div>
+      <div className={`w-auto py-8 px-40 overflow-x-scroll overflow-y-hidden scrollbar-hidden mx-auto flex items-start gap-4`}>
+        {
+          sideProjects.map((item,i) => (
+            item.slug !== project.slug && (
+              <SideProject
+                key={i}
+                sideProject={item}
+                slug={item.slug}
+                title={item.title}
+                description={item.description}
+                logo={item.logo}
+                img={item.images[0]?.src}
+                delay={i}
+              />
+            )
+          ))
+        }
       </div>
     </Layout>
   )

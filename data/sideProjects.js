@@ -18,7 +18,8 @@ export const sideProjects = [
     ],
     videos: [
       { src: 'GcBFtzu5WQQu4GveFZ2hyi49H5wGv1BXP3MCNufFiZg', format: 'mobile' }
-    ]
+    ],
+    thumbnail: { src: 'https://image.mux.com/GcBFtzu5WQQu4GveFZ2hyi49H5wGv1BXP3MCNufFiZg/thumbnail.png?time=7', format: 'mobile' }
   },
   {
     slug: 'timezones',
@@ -36,7 +37,8 @@ export const sideProjects = [
     ],
     videos: [
       { src: 'qdHMp3bH4iii76FdAI7mVSKnhO6qxoyJLsACzhicdvQ', format: 'browser' }
-    ]
+    ],
+    thumbnail: { src: 'https://image.mux.com/qdHMp3bH4iii76FdAI7mVSKnhO6qxoyJLsACzhicdvQ/thumbnail.png', format: 'browser' }
   },
   {
     slug: 'cutting-board-designer',
@@ -53,7 +55,8 @@ export const sideProjects = [
     ],
     videos: [
       { src: 'eiFuSTfkfugRYQXsiu8GwwWwC5EHLZOEgw1ugtLyX9k', format: 'browser' }
-    ]
+    ],
+    thumbnail: { src: 'https://image.mux.com/eiFuSTfkfugRYQXsiu8GwwWwC5EHLZOEgw1ugtLyX9k/thumbnail.png?time=1', format: 'browser' }
   },
   {
     slug: 'vanilla-extract-calculator',
@@ -69,7 +72,8 @@ export const sideProjects = [
     ],
     videos: [
       { src: '5D027iQCvoSIWQto01Y1RSJ7bM3tgzLn3k3qbMo3d2w01w', format: 'mobile' }
-    ]
+    ],
+    thumbnail: { src: 'https://image.mux.com/5D027iQCvoSIWQto01Y1RSJ7bM3tgzLn3k3qbMo3d2w01w/thumbnail.png?time=1', format: 'mobile' }
   },
   {
     slug: 'tampabay-design',
@@ -89,7 +93,8 @@ export const sideProjects = [
     ],
     videos: [
       { src: '3CruE9ikCl569nLjlBzImIP2JAnJzdqkqcrT01EXDiEw', format: 'browser' }
-    ]
+    ],
+    thumbnail: { src: 'https://image.mux.com/3CruE9ikCl569nLjlBzImIP2JAnJzdqkqcrT01EXDiEw/thumbnail.png?time=2', format: 'browser' }
   },
   {
     slug: 'donut-drums',
@@ -105,7 +110,8 @@ export const sideProjects = [
     ],
     videos: [
       { src: 'uMu4itqngB9YzhNdQu008Un9kWRKZFgoHwQbL2nybRTw', format: 'browser' }
-    ]
+    ],
+    thumbnail: { src: 'https://image.mux.com/uMu4itqngB9YzhNdQu008Un9kWRKZFgoHwQbL2nybRTw/thumbnail.png?time=4', format: 'browser' }
   },
   {
     slug: 'slack-themes',
@@ -148,7 +154,8 @@ export const sideProjects = [
     ],
     videos: [
       { src: 'Hir5I8FriYH7roqWzyBUevd002NJh2h8T00PxeqxsxdpY', format: 'browser' }
-    ]
+    ],
+    thumbnail: { src: 'https://image.mux.com/Hir5I8FriYH7roqWzyBUevd002NJh2h8T00PxeqxsxdpY/thumbnail.png?time=1', format: 'browser' }
   },
   {
     slug: 'buy-fresh-florida',
@@ -166,6 +173,7 @@ export const sideProjects = [
     ],
     videos: [
       { src: 'OiEFwqrtFFr01vYTyrKFhmKAtCYUUsTgHDNStHTAztbg', format: 'mobile' }
-    ]
+    ],
+    thumbnail: { src: 'https://image.mux.com/OiEFwqrtFFr01vYTyrKFhmKAtCYUUsTgHDNStHTAztbg/thumbnail.png?time=1', format: 'mobile' }
   }
 ]
