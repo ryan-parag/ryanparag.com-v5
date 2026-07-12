@@ -2,7 +2,7 @@ import React from 'react';
 import MuxVideo from '../MuxVideo';
 import Image from 'next/image';
 
-export default function MobileVideo({ muxId, poster }) {
+export default function MobileVideo({ muxId, poster, thumbnail }) {
   return (
     <div className="relative mb-4 mx-auto w-72" style={{ aspectRatio: "1350 / 2760" }}>
       <MuxVideo
@@ -15,6 +15,18 @@ export default function MobileVideo({ muxId, poster }) {
         controls={false}
         className="absolute top-[2.6%] bottom-[2.6%] left-[5.6%] right-[5.6%] w-[88.8%] h-[94.8%] rounded-[8%] object-cover"
       />
+      {
+        thumbnail && (
+          <div className="absolute top-[2.6%] bottom-[2.6%] left-[5.6%] right-[5.6%] w-[88.8%] h-[94.8%] rounded-[8%] overflow-hidden transition-opacity duration-300 group-hover:opacity-0">
+            <Image
+              src={thumbnail}
+              alt=""
+              fill
+              className="object-cover"
+            />
+          </div>
+        )
+      }
       <Image
         src="/iPhone17Pro.webp"
         alt=""
