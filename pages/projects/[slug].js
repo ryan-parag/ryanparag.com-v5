@@ -94,7 +94,7 @@ export default function SideProjectPage({ project }) {
         <div className="h-px bg-themeOutline w-20 my-16"/>
         <h3 className="mb-4 col-span-2 md:col-span-3">View more projects from the Playground</h3>
       </div>
-      <div className={`w-auto py-8 px-40 overflow-x-scroll overflow-y-hidden scrollbar-hidden mx-auto flex items-start gap-4`}>
+      <div className={`w-auto py-8 px-4 md:px-40 overflow-x-scroll overflow-y-hidden scrollbar-hidden mx-auto flex items-start gap-4`}>
         {
           sideProjects.map((item,i) => (
             item.slug !== project.slug && (
