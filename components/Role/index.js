@@ -205,14 +205,16 @@ export const SideProject = ({ sideProject, slug, title, description, logo, delay
           <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 blur-3xl z-0 w-80 h-80 opacity-20">
             <Image alt={title} src={`/projects/${logo}`} layout="fill"/>
           </div>
-          <div className="transition h-10 w-10 overflow-hidden rounded-lg relative">
+          <div className="transition h-10 w-10 overflow-hidden rounded-xl shadow border border-black/5 relative">
             <Image alt={title} src={`/projects/${logo}`} layout="fill"/>
           </div>
-          <strong className="text-xl font-bold">{title}</strong>
-          <span className="text-sm text-themeOnSurfaceVariant">{description}</span>
-          <div className="transition delay-50 duration-150 absolute z-0 bottom-0 left-0 right-0 h-96 translate-y-6 scale-[98%] group-hover:scale-100 w-full overflow-hidden group-hover:translate-y-0">
+          <div className="flex flex-col w-full">
+            <strong className="text-xl font-bold">{title}</strong>
+            <span className="text-sm text-themeOnSurfaceVariant">{description}</span>
+          </div>
+          <div className="transition delay-50 duration-150 absolute z-0 bottom-0 left-4 right-4 h-96 translate-y-8 scale-[98%] group-hover:scale-100 w-full overflow-hidden group-hover:translate-y-0">
             {
-              sideProject?.videos ? (
+              sideProject?.videos && (
                 sideProject.videos.length > 0 && sideProject.videos[0].format === 'browser' ? (
                   <div className="translate-x-6 w-[720px] h-[400px] relative">
                     <BrowserVideo muxId={sideProject.videos[0].src} thumbnail={sideProject.thumbnail?.src} url={sideProject.link} />
@@ -221,17 +223,18 @@ export const SideProject = ({ sideProject, slug, title, description, logo, delay
                   <MobileVideo muxId={sideProject.videos[0].src} thumbnail={sideProject.thumbnail?.src} />
                 ) : null
               )
-              :
-              (
-                <div className="relative top-8 w-full max-w-xs mx-auto rounded-lg bg-black/5 dark:bg-white/5 py-4 text-center text-sm flex flex-col items-center justify-center gap-2 h-60">
-                  <div className="h-6 w-6 animate-pulse">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M84.27,171.73l-55.09-20.3a7.92,7.92,0,0,1,0-14.86l55.09-20.3,20.3-55.09a7.92,7.92,0,0,1,14.86,0l20.3,55.09,55.09,20.3a7.92,7.92,0,0,1,0,14.86l-55.09,20.3-20.3,55.09a7.92,7.92,0,0,1-14.86,0Z" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16"/><line x1="176" y1="16" x2="176" y2="64" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16"/><line x1="224" y1="72" x2="224" y2="104" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16"/><line x1="152" y1="40" x2="200" y2="40" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16"/><line x1="208" y1="88" x2="240" y2="88" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16"/></svg>
-                  </div>
-                  Coming soon...
-                </div>
-              )
             }
           </div>
+          {
+            !sideProject.videos && (
+              <div className="transition absolute z-10 left-1/2 -translate-x-1/2 -bottom-8 w-80 rounded-2xl bg-themeSurfaceVariant py-12 text-center text-sm flex flex-col items-center justify-start gap-2 h-96 opacity-60 group-hover:opacity-100 translate-y-48 group-hover:translate-y-32">
+                <div className="h-10 w-10 inline-flex rounded-xl bg-themeSurface p-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M84.27,171.73l-55.09-20.3a7.92,7.92,0,0,1,0-14.86l55.09-20.3,20.3-55.09a7.92,7.92,0,0,1,14.86,0l20.3,55.09,55.09,20.3a7.92,7.92,0,0,1,0,14.86l-55.09,20.3-20.3,55.09a7.92,7.92,0,0,1-14.86,0Z" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16"/><line x1="176" y1="16" x2="176" y2="64" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16"/><line x1="224" y1="72" x2="224" y2="104" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16"/><line x1="152" y1="40" x2="200" y2="40" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16"/><line x1="208" y1="88" x2="240" y2="88" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16"/></svg>
+                </div>
+                Coming soon...
+              </div>
+            )
+          }
           <span className="transition delay-100 translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 button w-auto absolute z-10 bottom-4 right-4">
             View Project
           </span>

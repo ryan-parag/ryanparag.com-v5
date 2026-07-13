@@ -1,5 +1,6 @@
 import { SideProject } from "../Role";
 import { sideProjects } from "@/data/sideProjects";
+import Link from "next/link";
 
 const Theme = () => {
   const tokens = [
@@ -176,33 +177,9 @@ const Colophon = () => {
       <div className="section">
         <h3>Colophon</h3>
         <p>This is the 5th version of my portfolio and I designed and developed it using <a href={build.built.link} target="_blank" className="text-link--icon">{build.built.name}</a> to build, <a href={build.style.link} target="_blank" className="text-link--icon">{build.style.name}</a> for styling, <a href={build.animation.link} target="_blank" className="text-link--icon">{build.animation.name}</a> for animation, <a href={build.deploy.link} target="_blank" className="text-link--icon">{build.deploy.name}</a> for deploying/hosting, and <a href={build.storage.link} target="_blank" className="text-link--icon">{build.storage.name}</a> for storage. Typography is set in <a href={build.typography.link} target="_blank" className="text-link--icon">{build.typography.name}</a>.</p>
+        <p>I began keeping track of the past versions of my portfolio in a timeline project – <Link href={'/projects/portfolio-timeline'} className="link-shadow transform active:scale-95 inline-flex items-center gap-1">take a look</Link> and see the changes I added through the years!</p>
       </div>
       <Theme/>
-      <div className="section">
-        <h2 className="spatial text-sm mb-4">Previous portfolios:</h2>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          {
-            portfolios.map((item,i) => (
-              <a key={i} className="button" href={item.link} target="_blank">Version {item.version}</a>
-            ))
-          }
-        </div>
-        <div className="my-4 text-xs uppercase text-themeOnSurfaceVariant text-center w-full flex flex-row items-center">
-          <span className="h-px bg-themeOutlineVariant w-full block mr-4"/>
-          or
-          <span className="h-px bg-themeOutlineVariant w-full block ml-4"/>
-        </div>
-        <div className="flex items-center justify-center w-full">
-          <SideProject
-            sideProject={sideProjects[8]}
-            slug={sideProjects[8].slug}
-            title={sideProjects[8].title}
-            description={sideProjects[8].description}
-            logo={sideProjects[8].logo}
-            img={sideProjects[8].images[0]?.src}
-          />
-        </div>
-      </div>
     </div>
   )
 }
