@@ -227,15 +227,15 @@ export const SideProject = ({ sideProject, slug, title, description, logo, delay
           </div>
           {
             !sideProject.videos && (
-              <div className="transition absolute z-10 left-1/2 -translate-x-1/2 -bottom-8 w-80 rounded-2xl bg-themeSurfaceVariant py-12 text-center text-sm flex flex-col items-center justify-start gap-2 h-96 opacity-60 group-hover:opacity-100 translate-y-48 group-hover:translate-y-32">
-                <div className="h-10 w-10 inline-flex rounded-xl bg-themeSurface p-2">
+              <div className="transition absolute z-10 left-1/2 -translate-x-1/2 -bottom-8 w-80 rounded-2xl bg-themeSurfaceVariant py-12 text-center text-sm flex flex-col items-center justify-start gap-2 h-96 opacity-60 group-hover:opacity-100 translate-y-48 group-hover:translate-y-36 shadow-none group-hover:shadow-xl">
+                <div className="transition h-10 w-10 inline-flex rounded-xl bg-themeSurface p-2 relative translate-y-0 group-hover:-translate-y-16 group-hover:h-16 group-hover:w-16 group-hover:-rotate-6 border border-themeOutlineVariant">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M84.27,171.73l-55.09-20.3a7.92,7.92,0,0,1,0-14.86l55.09-20.3,20.3-55.09a7.92,7.92,0,0,1,14.86,0l20.3,55.09,55.09,20.3a7.92,7.92,0,0,1,0,14.86l-55.09,20.3-20.3,55.09a7.92,7.92,0,0,1-14.86,0Z" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16"/><line x1="176" y1="16" x2="176" y2="64" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16"/><line x1="224" y1="72" x2="224" y2="104" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16"/><line x1="152" y1="40" x2="200" y2="40" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16"/><line x1="208" y1="88" x2="240" y2="88" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16"/></svg>
                 </div>
-                Coming soon...
+                <span className="relative transition translate-y-0 group-hover:-translate-y-16">Coming soon...</span>
               </div>
             )
           }
-          <span className="transition delay-100 translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 button w-auto absolute z-10 bottom-4 right-4">
+          <span className="transition delay-100 translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 button buttonPrimary w-auto absolute z-10 bottom-4 right-4 shadow-lg">
             View Project
           </span>
         </div>
