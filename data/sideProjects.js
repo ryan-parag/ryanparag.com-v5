@@ -123,7 +123,10 @@ export const sideProjects = [
     logo: 'slack-themes-logo.svg',
     color: '#5D0FDD',
     images: [
-      { src: '/projects/preview-slackthemes.png', caption: 'V2 in progress' }
+      { src: '/projects/preview-slackthemes.png', caption: 'V2 in progress' },
+      { src: '/projects/slack-themes/1.png', caption: 'Legacy slack themes' },
+      { src: '/projects/slack-themes/2.png', caption: 'Theme playground' },
+      { src: '/projects/slack-themes/3.png', caption: 'About page' }
     ]
   },
   {
@@ -136,7 +139,14 @@ export const sideProjects = [
     logo: 'race-times-logo.svg',
     color: '#E684AF',
     images: [
-      { src: '/projects/preview-racetimes.png', caption: 'V2 in progress' }
+      { src: '/projects/preview-racetimes.png', caption: 'V2 in progress' },
+      { src: '/projects/race-times/1.png', caption: 'Race Calendar' },
+      { src: '/projects/race-times/2.png', caption: 'Initial Wireframes' },
+      { src: '/projects/race-times/3.png', caption: 'Design System' },
+      { src: '/projects/race-times/4.png', caption: 'Light/Dark Modes' },
+      { src: '/projects/race-times/5.png', caption: 'Upcoming Race' },
+      { src: '/projects/race-times/6.png', caption: 'Dark Mode' },
+      { src: '/projects/race-times/7.png', caption: 'Empty State' }
     ]
   },
   {
