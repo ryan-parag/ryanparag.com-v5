@@ -550,6 +550,10 @@
   @apply rounded-md h-auto w-full block;
 }
 
+.projectContent p a {
+  @apply text-themePrimary transition hover:opacity-80 hover:underline
+}
+
 .pasito-override .pasito-container {
   --pill-dot-size: 12px !important;
   --pill-active-bg: rgba(255,255,255,1);

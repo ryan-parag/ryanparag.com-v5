@@ -49,21 +49,30 @@ export const Role = ({ company }) => {
         <span className={`mx-4 mt-1 h-1 border-t border-current text-themeOnSurfaceVariant border-dashed opacity-30 w-full hidden md:block flex-1`}/>
         <span className="mt-2 md:mt-0 text-xs spatial">{company.start} - {company.end}</span>
       </div>
-      <p className="text-sm leading-normal">{company.description}</p>
+      {company.location && (
+        <p className="text-xs text-themeOnSurfaceVariant mb-2">{company.location}</p>
+      )}
+      <ul className="text-sm leading-normal list-disc list-inside space-y-1">
+        {
+          company.highlights.map((highlight, i) => (
+            <li key={i}>{highlight}</li>
+          ))
+        }
+      </ul>
     </li>
   )
 }
 
-export const Misc = ({ item }) => {
+export const Misc = ({ primary, secondary, date }) => {
   return(
     <li className="mb-6 block">
       <div className="flex items-center mb-1">
         <div className="flex flex-1 items-center">
-          <h4 className="text-themePrimary">{item.title}</h4>
+          <h4 className="text-themePrimary">{primary}</h4>
         </div>
       </div>
       <p className="text-secondary text-sm">
-        <strong>{item.description}</strong> ({item.date})
+        <strong>{secondary}</strong> ({date})
       </p>
     </li>
   )

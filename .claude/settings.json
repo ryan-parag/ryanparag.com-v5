@@ -19,7 +19,8 @@
       "Bash(node debug7.js)",
       "Bash(curl -s http://localhost:3001/ -o /dev/null -w \"%{http_code}\\\\n\")",
       "Bash(grep -n \"^\\\\s*,\\\\s*$\" /Users/rparag/Downloads/ryanparag.com-v5/data/sideProjects.js)",
-      "Bash(node -e \"const {sideProjects} = require\\('/Users/rparag/Downloads/ryanparag.com-v5/data/sideProjects.js'\\); console.log\\(sideProjects.length\\); sideProjects.forEach\\(\\(p,i\\)=>{ if\\(!p\\) console.log\\('undefined at', i\\)}\\);\")"
+      "Bash(node -e \"const {sideProjects} = require\\('/Users/rparag/Downloads/ryanparag.com-v5/data/sideProjects.js'\\); console.log\\(sideProjects.length\\); sideProjects.forEach\\(\\(p,i\\)=>{ if\\(!p\\) console.log\\('undefined at', i\\)}\\);\")",
+      "Bash(node scripts-tmp-generate-md.mjs)"
     ]
   }
 }

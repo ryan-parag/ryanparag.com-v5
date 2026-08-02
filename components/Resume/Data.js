@@ -1,92 +1,127 @@
 const Data = {
   name: 'Ryan Parag',
-  role: 'Product Designer',
+  role: 'Staff Product Designer & Design Engineer',
   email: 'parag.ryan@gmail.com',
-  pdf: 'RyanParag_resume_2023.pdf',
-  description:'Ryan Parag is a designer who codes, based in Tampa, FL. I dedicate most my time to continuous learning and refining my skillset around product design, user experience, and front-end development. I enjoy building thoughtful products that solve real problems for people, and collaborating with cross-functional teams to bring those products to life.',
-  skills: [
-    'Interface Design',
-    'Interaction & UI Design',
-    'Prototyping',
-    'Visual Design',
-    'UX, ideation and Workflows',
-    'Branding',
-    'User Research',
-    'Usability Testing',
-    'Communication Design',
-    'Front-end Development',
-    'Product Strategy'
-  ],
-  experience: [
-    'Sketch',
+  location: 'Tampa, FL',
+  description:
+    'Staff-level Product Designer and Design Engineer with 10+ years of experience leading product strategy, design systems, and front-end architecture. Proven track record of scaling zero-to-one products through Series A, leading cross-functional teams, and building complex digital tools for enterprise ecosystems.',
+  skills: {
+    leadership: [
+      'Product Strategy & Vision',
+      'Design Systems Architecture',
+      'Cross-Functional Alignment',
+      'User Research & Usability Testing',
+      'Information Architecture',
+      'Interaction & UI Design'
+    ],
+    technical: [
+      'Design Engineering',
+      'Front-End Architecture',
+      'Rapid Prototyping',
+      'Quantitative Data Analysis',
+      'Workflow Automation',
+      'User Research'
+    ]
+  },
+  tools: [
     'Figma',
-    'Miro/Figjam',
-    'Origami',
-    'Git',
-    'HTML/CSS/JS',
     'React',
-    'Node & Firebase',
-    'Cursor/Claude',
-    'Airtable / Notion',
-    'Adobe Creative Suite',
-    'Framer',
-    'SQL/R/Python'
+    'TypeScript',
+    'HTML/CSS/JS',
+    'Git',
+    'Node.js',
+    'SQL/Python/R',
+    'Claude',
+    'Miro / FigJam'
   ],
+
   positions: [
     {
       company: 'Owens Corning',
       role: 'Design Lead',
       start: 'June 2024',
-      end: 'Current',
-      description: 'Leading a team of designers and designing enablement tools for direct customers, indirect customers, home builders, and homeowners.',
-    },{
+      end: 'Present',
+      location: 'Tampa, FL',
+      highlights: [
+        'Lead product design strategy and user experience across digital enablement tools for direct customers, contractors, home builders, and homeowners.',
+        'Spearhead end-to-end design operations, aligning product leadership, engineering, and enterprise business units around unified UX standards.',
+        'Architect intuitive order management, calendar, and wholesale purchasing workflows, significantly reducing customer friction.'
+      ]
+    },
+    {
       company: 'TrustLayer',
-      role: 'Founding Designer',
+      role: 'Founding Product Designer',
       start: 'April 2021',
       end: 'June 2024',
-      description: 'I lead design at TrustLayer, as their first design hire. I worked closely with product operations, product management, and engineering to create better experiences around collecting/verifying insurance. Delivered features around automation, AI, and workflow to help scale through Series A.',
-    }, {
+      location: 'Remote',
+      highlights: [
+        'Established the foundational design practice as the first designer, driving product design from zero-to-one through Series A funding.',
+        'Partnered with executive leadership, product management, and engineering to design automated AI workflows for insurance verification.',
+        'Scaled the core enterprise platform, implementing design systems that accelerated engineering delivery velocity and reduced onboarding friction.'
+      ]
+    },
+    {
       company: 'Masonite',
       role: 'Senior Product Designer',
       start: 'March 2019',
       end: 'April 2021',
-      description: 'Designed multiple product experiences that helped flatten and simplify the home remodeling experience for homeowners and contractors in new and emerging markets. I also help build the IoT experience that helps homeowners connect a Masonite door system to their smart home through our cutting-edge cloud platform.',
-    }, {
+      location: 'Tampa, FL',
+      highlights: [
+        'Designed connected IoT experiences for smart home door systems, integrating physical hardware with cloud-based digital platforms.',
+        'Streamlined complex e-commerce and home remodeling workflows for contractors and homeowners in emerging direct-to-consumer markets.',
+        'Collaborated with hardware and software engineering teams to establish cross-platform design guidelines.'
+      ]
+    },
+    {
       company: 'Chargebacks911',
       role: 'Product Designer',
       start: 'March 2016',
       end: 'March 2019',
-      description: 'Lead designer working between multiple engineering, executive, and marketing teams. Led the design of two legacy applications and one new application for clients in the enterprise payments space. Worked on UX flows, design systems, rapid prototyping, user journeys, marketing assets, and live product. Increased qualified web traffic by 400% and inbound leads by 250%.',
-    }, {
+      location: 'Tampa, FL',
+      highlights: [
+        'Led end-to-end UX for two legacy enterprise payment applications and launched one net-new SaaS product.',
+        'Created design systems, rapid prototypes, and user journeys across cross-functional engineering and executive teams.',
+        'Designed high-converting marketing experiences and landing pages that increased qualified web traffic by 400% and inbound leads by 250%.'
+      ]
+    },
+    {
       company: 'Xcenda',
-      role: 'Healthcare Analyst',
+      role: 'Healthcare Data Analyst',
       start: 'June 2013',
       end: 'March 2016',
-      description: 'Analyzed data to measure pharmaceutical outcomes, investigated key business problems through quantitative analyses of pharmaceutical cost data. Helped forecast business decisions against market outcomes and parent company (AmerisourceBergen) goals. Verfied report data in relation to population demographics, cost, and insurance.',
+      location: 'Tampa, FL',
+      highlights: [
+        'Executed quantitative analyses on complex pharmaceutical cost and outcomes datasets to drive strategic business forecasting.',
+        'Leveraged statistical modeling (SQL/R) to validate demographic, insurance, and population data for enterprise health reports.'
+      ]
     }
   ],
+
   education: [
     {
-      title: 'University of South Florida',
-      description: 'M.S. Certificate, Applied Biostatistics',
-      date: '2015 - 2016'
-    }, {
-      title: 'University of Central Florida',
-      description: 'B.S. Biology, B.S. Health Informatics',
-      date: '2008 - 2012'
+      institution: 'University of South Florida',
+      degree: 'M.S. Certificate, Applied Biostatistics',
+      date: '2015 – 2016'
+    },
+    {
+      institution: 'University of Central Florida',
+      degree: 'B.S. Biology & B.S. Health Informatics',
+      date: '2008 – 2012'
     }
   ],
-  certs: [
+
+  certifications: [
     {
-      title: 'IBM',
-      description: 'Enterprise Design Thinking',
+      issuer: 'IBM',
+      title: 'Enterprise Design Thinking Practitioner',
       date: '2020'
-    }, {
-      title: 'IDEO',
-      description: 'Foundations in Design Thinking',
+    },
+    {
+      issuer: 'IDEO',
+      title: 'Foundations in Design Thinking',
       date: '2019'
     }
   ]
-}
+};
 
 export default Data
