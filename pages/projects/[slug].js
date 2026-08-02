@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import BrowserVideo from '@/components/BrowserVideo'
 import MobileVideo from '@/components/MobileVideo'
 import { SideProject } from '@/components/Role'
+import ReactMarkdown from 'react-markdown'
 
 export default function SideProjectPage({ project }) {
 
@@ -75,10 +76,10 @@ export default function SideProjectPage({ project }) {
           <motion.div
             initial={{ opacity: 0, top: 24 }}
             animate={{ opacity: 1, top: 0 }}
-            className="max-w-4xl mx-auto mt-8 relative transform"
+            className="max-w-4xl mx-auto mt-8 relative transform projectContent"
             transition={{  duration: 0.8, delay: 0.5, ease: [0, 0.71, 0.2, 1.01], }}
           >
-            <p>{project.longDescription}</p>
+            <ReactMarkdown>{project.longDescription}</ReactMarkdown>
           </motion.div>
         )}
 

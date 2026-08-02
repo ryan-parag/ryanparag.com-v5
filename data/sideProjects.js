@@ -1,189 +1,345 @@
+// This file is generated from content/side-projects/*.md — do not edit directly.
+// Run `npm run generate:side-projects` after changing a project's markdown file.
+
 export const sideProjects = [
   {
-    slug: 'scorekeeper',
-    link: 'https://scorekeeper.ryanparag.com/',
-    title: 'ScoreKeeper',
-    published: '2025',
-    description: 'Track scores across your card games',
-    longDescription: 'I built ScoreKeeper to solve a very specific problem: tracking scores during high-stakes lunch-break card games with my coworkers. Tired of hunting for scraps of paper and doing mental math, I designed this "stupidly-simple" web app to handle the heavy lifting. It allows players to set up custom games, manage rounds, and track leaderboards in real-time with a clean, mobile-first interface.',
-    logo: 'scorekeeper-logo.svg',
-    color: '#00d1b2',
-    images: [
-      { src: '/projects/scorekeeper/1.png', caption: 'Homepage, where you can find recent games and their status' },
-      { src: '/projects/scorekeeper/2.png', caption: 'Game summary page for a completed game' },
-      { src: '/projects/scorekeeper/3.png', caption: 'Score interface for entering scores by round and player' },
-      { src: '/projects/scorekeeper/4.png', caption: 'Leaderboard view for tracking performance per player, per type of game, # of rounds, etc.' },
-      { src: '/projects/scorekeeper/5.png', caption: 'Chart breakdown for players in a league' },
-      { src: '/projects/scorekeeper/6.png', caption: 'Profile settings and customization options' }
+    "slug": "scorekeeper",
+    "link": "https://scorekeeper.ryanparag.com/",
+    "title": "ScoreKeeper",
+    "published": "2025",
+    "description": "Track scores across your card games",
+    "logo": "scorekeeper-logo.svg",
+    "color": "#00d1b2",
+    "images": [
+      {
+        "src": "/projects/scorekeeper/1.png",
+        "caption": "Homepage, where you can find recent games and their status"
+      },
+      {
+        "src": "/projects/scorekeeper/2.png",
+        "caption": "Game summary page for a completed game"
+      },
+      {
+        "src": "/projects/scorekeeper/3.png",
+        "caption": "Score interface for entering scores by round and player"
+      },
+      {
+        "src": "/projects/scorekeeper/4.png",
+        "caption": "Leaderboard view for tracking performance per player, per type of game, # of rounds, etc."
+      },
+      {
+        "src": "/projects/scorekeeper/5.png",
+        "caption": "Chart breakdown for players in a league"
+      },
+      {
+        "src": "/projects/scorekeeper/6.png",
+        "caption": "Profile settings and customization options"
+      }
     ],
-    videos: [
-      { src: 'GcBFtzu5WQQu4GveFZ2hyi49H5wGv1BXP3MCNufFiZg', format: 'mobile' }
+    "videos": [
+      {
+        "src": "GcBFtzu5WQQu4GveFZ2hyi49H5wGv1BXP3MCNufFiZg",
+        "format": "mobile"
+      }
     ],
-    thumbnail: { src: 'https://image.mux.com/GcBFtzu5WQQu4GveFZ2hyi49H5wGv1BXP3MCNufFiZg/thumbnail.png?time=7', format: 'mobile' }
+    "thumbnail": {
+      "src": "https://image.mux.com/GcBFtzu5WQQu4GveFZ2hyi49H5wGv1BXP3MCNufFiZg/thumbnail.png?time=7",
+      "format": "mobile"
+    },
+    "longDescription": "I built ScoreKeeper to solve a very specific problem: tracking scores during high-stakes lunch-break card games with my coworkers. Tired of hunting for scraps of paper and doing mental math, I designed this \"stupidly-simple\" web app to handle the heavy lifting. It allows players to set up custom games, manage rounds, and track leaderboards in real-time with a clean, mobile-first interface.\n\nIf you'd like to keep up with some of the onoing changes, check out the [changelog](https://scorekeeper.ryanparag.com/changelog)!"
   },
   {
-    slug: 'timezones',
-    link: 'https://timezones.ryanparag.com/',
-    title: 'Timezones',
-    published: '2025',
-    description: `View and manage timezones across the world`,
-    longDescription: 'Working in distributed teams often leads to the "math tax"—constantly calculating what 10:00 AM EST looks like for a colleague in London or Poland. I built Timezones to move beyond basic world clocks, creating a highly visual interface that makes scheduling across borders intuitive. It’s a utility-first tool designed to ensure no one gets invited to a meeting at 3:00 AM their time.',
-    logo: 'timezones-logo.svg',
-    color: '#5D0FDD',
-    images: [
-      { src: '/projects/preview-timezones.png', caption: 'Homepage where you can add, manage, and share a world clock of timezones' },
-      { src: '/projects/timezones/1.png', caption: 'Dark mode and dense view' },
-      { src: '/projects/timezones/2.png', caption: 'Searchable list of cities' }
+    "slug": "timezones",
+    "link": "https://timezones.ryanparag.com/",
+    "title": "Timezones",
+    "published": "2025",
+    "description": "View and manage timezones across the world",
+    "logo": "timezones-logo.svg",
+    "color": "#5D0FDD",
+    "images": [
+      {
+        "src": "/projects/preview-timezones.png",
+        "caption": "Homepage where you can add, manage, and share a world clock of timezones"
+      },
+      {
+        "src": "/projects/timezones/1.png",
+        "caption": "Dark mode and dense view"
+      },
+      {
+        "src": "/projects/timezones/2.png",
+        "caption": "Searchable list of cities"
+      }
     ],
-    videos: [
-      { src: 'qdHMp3bH4iii76FdAI7mVSKnhO6qxoyJLsACzhicdvQ', format: 'browser' }
+    "videos": [
+      {
+        "src": "qdHMp3bH4iii76FdAI7mVSKnhO6qxoyJLsACzhicdvQ",
+        "format": "browser"
+      }
     ],
-    thumbnail: { src: 'https://image.mux.com/qdHMp3bH4iii76FdAI7mVSKnhO6qxoyJLsACzhicdvQ/thumbnail.png', format: 'browser' }
+    "thumbnail": {
+      "src": "https://image.mux.com/qdHMp3bH4iii76FdAI7mVSKnhO6qxoyJLsACzhicdvQ/thumbnail.png",
+      "format": "browser"
+    },
+    "longDescription": "Working in distributed teams often leads to the \"math tax\"—constantly calculating what 10:00 AM EST looks like for a colleague in London or Poland. I built Timezones to move beyond basic world clocks, creating a highly visual interface that makes scheduling across borders intuitive. It’s a utility-first tool designed to ensure no one gets invited to a meeting at 3:00 AM their time."
   },
   {
-    slug: 'cutting-board-designer',
-    link: 'https://cutting-board-designer.ryanparag.com/',
-    title: 'Cutting Board Designer',
-    published: '2026',
-    description: 'Design custom cutting boards with precision',
-    longDescription: 'As a hobbyist woodworker, I found it difficult to visualize how different wood species and grain patterns would look together before making the first cut. This project is a specialized CAD-lite tool for the browser. It allows makers to toggle between edge-grain and end-grain views and experiment with dimensions and species (like Walnut, Maple, and Cherry) to generate a precise visual blueprint before heading to the shop.',
-    logo: 'cbd-logo.svg',
-    color: '#FF8A00',
-    images: [
-      { src: '/projects/cbd/1.png', caption: 'Design for the desired dimensions, wood species, and type of cutting board' },
-      { src: '/projects/cbd/2.png', caption: 'Walk through which cuts are needed for what was designed' }
+    "slug": "cutting-board-designer",
+    "link": "https://cutting-board-designer.ryanparag.com/",
+    "title": "Cutting Board Designer",
+    "published": "2026",
+    "description": "Design custom cutting boards with precision",
+    "logo": "cbd-logo.svg",
+    "color": "#FF8A00",
+    "images": [
+      {
+        "src": "/projects/cbd/1.png",
+        "caption": "Design for the desired dimensions, wood species, and type of cutting board"
+      },
+      {
+        "src": "/projects/cbd/2.png",
+        "caption": "Walk through which cuts are needed for what was designed"
+      }
     ],
-    videos: [
-      { src: 'eiFuSTfkfugRYQXsiu8GwwWwC5EHLZOEgw1ugtLyX9k', format: 'browser' }
+    "videos": [
+      {
+        "src": "eiFuSTfkfugRYQXsiu8GwwWwC5EHLZOEgw1ugtLyX9k",
+        "format": "browser"
+      }
     ],
-    thumbnail: { src: 'https://image.mux.com/eiFuSTfkfugRYQXsiu8GwwWwC5EHLZOEgw1ugtLyX9k/thumbnail.png?time=1', format: 'browser' }
+    "thumbnail": {
+      "src": "https://image.mux.com/eiFuSTfkfugRYQXsiu8GwwWwC5EHLZOEgw1ugtLyX9k/thumbnail.png?time=1",
+      "format": "browser"
+    },
+    "longDescription": "As a hobbyist woodworker, I found it difficult to visualize how different wood species and grain patterns would look together before making the first cut. This project is a specialized CAD-lite tool for the browser. It allows makers to toggle between edge-grain and end-grain views and experiment with dimensions and species (like Walnut, Maple, and Cherry) to generate a precise visual blueprint before heading to the shop."
   },
   {
-    slug: 'vanilla-extract-calculator',
-    link: 'https://vanilla.ryanparag.com/',
-    title: 'Vanilla Extract Calculator',
-    published: '2026',
-    description: 'Precisely make vanilla extract',
-    longDescription: 'I wanted to stop buying vanilla extract and begin calculating how much of each ingredient I would need to make better quality (and cheaper) vanilla extract for my own use. Depending on which formula I wanted to use, I could easily deduce how much vanilla bean and alcohol I would need to make the desired amount of extract to fit into a container. This project is a simple calculator that allows users to toggle between different formulas and adjust the desired output to get precise measurements for their homemade vanilla extract.',
-    logo: 'vanilla.svg',
-    color: '#EAC234',
-    images: [
-      { src: '/projects/vanilla/1.png', caption: 'Select the type of vanilla extract and walk through the necessary components needed to make it' }
+    "slug": "vanilla-extract-calculator",
+    "link": "https://vanilla.ryanparag.com/",
+    "title": "Vanilla Extract Calculator",
+    "published": "2026",
+    "description": "Precisely make vanilla extract",
+    "logo": "vanilla.svg",
+    "color": "#EAC234",
+    "images": [
+      {
+        "src": "/projects/vanilla/1.png",
+        "caption": "Select the type of vanilla extract and walk through the necessary components needed to make it"
+      }
     ],
-    videos: [
-      { src: '5D027iQCvoSIWQto01Y1RSJ7bM3tgzLn3k3qbMo3d2w01w', format: 'mobile' }
+    "videos": [
+      {
+        "src": "5D027iQCvoSIWQto01Y1RSJ7bM3tgzLn3k3qbMo3d2w01w",
+        "format": "mobile"
+      }
     ],
-    thumbnail: { src: 'https://image.mux.com/5D027iQCvoSIWQto01Y1RSJ7bM3tgzLn3k3qbMo3d2w01w/thumbnail.png?time=1', format: 'mobile' }
+    "thumbnail": {
+      "src": "https://image.mux.com/5D027iQCvoSIWQto01Y1RSJ7bM3tgzLn3k3qbMo3d2w01w/thumbnail.png?time=1",
+      "format": "mobile"
+    },
+    "longDescription": "I wanted to stop buying vanilla extract and begin calculating how much of each ingredient I would need to make better quality (and cheaper) vanilla extract for my own use. Depending on which formula I wanted to use, I could easily deduce how much vanilla bean and alcohol I would need to make the desired amount of extract to fit into a container. This project is a simple calculator that allows users to toggle between different formulas and adjust the desired output to get precise measurements for their homemade vanilla extract."
   },
   {
-    slug: 'tampabay-design',
-    link: 'https://tampabay.design',
-    title: 'TampaBay.design',
-    published: '2019',
-    description: 'How to get involved in one of the many local design communities',
-    longDescription: `When I first entered the design industry in Tampa, I realized there wasn't a centralized hub to find local meetups, agencies, or community events. I launched TampaBay.design to act as a digital compass for the local creative community. By aggregating resources and highlighting local talent, the site serves as a jumping-off point for designers looking to get involved and grow the design culture in the Tampa Bay area.`,
-    logo: 'tampa-bay-designers-logo.svg',
-    color: '#E684AF',
-    images: [
-      { src: '/projects/tbd/1.png', caption: 'Homepage for Tampa Bay Designers' },
-      { src: '/projects/tbd/2.png', caption: 'Events listing' },
-      { src: '/projects/tbd/3.png', caption: 'Event page' },
-      { src: '/projects/tbd/4.png', caption: 'Newlsetter and calendar sign up' },
-      { src: '/projects/tbd/5.png', caption: 'Internal site for quickly generating event images for Meetup, Social Media, and OpenGraph' },
+    "slug": "tampabay-design",
+    "link": "https://tampabay.design",
+    "title": "TampaBay.design",
+    "published": "2019",
+    "description": "How to get involved in one of the many local design communities",
+    "logo": "tampa-bay-designers-logo.svg",
+    "color": "#E684AF",
+    "images": [
+      {
+        "src": "/projects/tbd/1.png",
+        "caption": "Homepage for Tampa Bay Designers"
+      },
+      {
+        "src": "/projects/tbd/2.png",
+        "caption": "Events listing"
+      },
+      {
+        "src": "/projects/tbd/3.png",
+        "caption": "Event page"
+      },
+      {
+        "src": "/projects/tbd/4.png",
+        "caption": "Newlsetter and calendar sign up"
+      },
+      {
+        "src": "/projects/tbd/5.png",
+        "caption": "Internal site for quickly generating event images for Meetup, Social Media, and OpenGraph"
+      }
     ],
-    videos: [
-      { src: '3CruE9ikCl569nLjlBzImIP2JAnJzdqkqcrT01EXDiEw', format: 'browser' }
+    "videos": [
+      {
+        "src": "3CruE9ikCl569nLjlBzImIP2JAnJzdqkqcrT01EXDiEw",
+        "format": "browser"
+      }
     ],
-    thumbnail: { src: 'https://image.mux.com/3CruE9ikCl569nLjlBzImIP2JAnJzdqkqcrT01EXDiEw/thumbnail.png?time=2', format: 'browser' }
+    "thumbnail": {
+      "src": "https://image.mux.com/3CruE9ikCl569nLjlBzImIP2JAnJzdqkqcrT01EXDiEw/thumbnail.png?time=2",
+      "format": "browser"
+    },
+    "longDescription": "When I first entered the design industry in Tampa, I realized there wasn't a centralized hub to find local meetups, agencies, or community events. I launched TampaBay.design to act as a digital compass for the local creative community. By aggregating resources and highlighting local talent, the site serves as a jumping-off point for designers looking to get involved and grow the design culture in the Tampa Bay area."
   },
   {
-    slug: 'donut-drums',
-    link: 'https://donuts.ryanparag.com/',
-    title: 'Donut Drums',
-    published: '2022',
-    description: 'A simple, tappable drum kit - an homage to the great J Dilla',
-    longDescription: 'This project is a playful intersection of my love for beat-making and interactive web design. Inspired by the legendary producer J Dilla, Donut Drums is a browser-based, tappable drum kit. The goal was to create a low-latency, tactile experience where users could trigger soulful samples and loops, proving that the web can be a highly expressive medium for music and sound design.',
-    logo: 'donuts-logo.svg',
-    color: '#FF8A00',
-    images: [
-      { src: '/projects/donut-drums/1.png', caption: 'Click or use keyboard shortcuts to play with a simple drum machine' }
+    "slug": "donut-drums",
+    "link": "https://donuts.ryanparag.com/",
+    "title": "Donut Drums",
+    "published": "2022",
+    "description": "A simple, tappable drum kit - an homage to the great J Dilla",
+    "logo": "donuts-logo.svg",
+    "color": "#FF8A00",
+    "images": [
+      {
+        "src": "/projects/donut-drums/1.png",
+        "caption": "Click or use keyboard shortcuts to play with a simple drum machine"
+      }
     ],
-    videos: [
-      { src: 'uMu4itqngB9YzhNdQu008Un9kWRKZFgoHwQbL2nybRTw', format: 'browser' }
+    "videos": [
+      {
+        "src": "uMu4itqngB9YzhNdQu008Un9kWRKZFgoHwQbL2nybRTw",
+        "format": "browser"
+      }
     ],
-    thumbnail: { src: 'https://image.mux.com/uMu4itqngB9YzhNdQu008Un9kWRKZFgoHwQbL2nybRTw/thumbnail.png?time=4', format: 'browser' }
+    "thumbnail": {
+      "src": "https://image.mux.com/uMu4itqngB9YzhNdQu008Un9kWRKZFgoHwQbL2nybRTw/thumbnail.png?time=4",
+      "format": "browser"
+    },
+    "longDescription": "This project is a playful intersection of my love for beat-making and interactive web design. Inspired by the legendary producer J Dilla, Donut Drums is a browser-based, tappable drum kit. The goal was to create a low-latency, tactile experience where users could trigger soulful samples and loops, proving that the web can be a highly expressive medium for music and sound design."
   },
   {
-    slug: 'slack-themes',
-    link: 'https://slack-themes.vercel.app',
-    title: 'Slack Themes',
-    published: '2019',
-    description: 'Having trouble keeping track of all of your Slack workspaces?',
-    longDescription: 'For anyone juggling five or more Slack workspaces, the "wrong window" mistake is a constant risk. I created this gallery to help users quickly distinguish between their clients, side projects, and primary jobs. It’s a curated collection of copy-pasteable sidebar themes that range from professional to vibrant, designed to help users organize their digital workspace with better visual hierarchy.',
-    logo: 'slack-themes-logo.svg',
-    color: '#5D0FDD',
-    images: [
-      { src: '/projects/preview-slackthemes.png', caption: 'V2 in progress' },
-      { src: '/projects/slack-themes/1.png', caption: 'Legacy slack themes' },
-      { src: '/projects/slack-themes/2.png', caption: 'Theme playground' },
-      { src: '/projects/slack-themes/3.png', caption: 'About page' }
-    ]
+    "slug": "slack-themes",
+    "link": "https://slack-themes.vercel.app",
+    "title": "Slack Themes",
+    "published": "2019",
+    "description": "Having trouble keeping track of all of your Slack workspaces?",
+    "logo": "slack-themes-logo.svg",
+    "color": "#5D0FDD",
+    "images": [
+      {
+        "src": "/projects/preview-slackthemes.png",
+        "caption": "V2 in progress"
+      },
+      {
+        "src": "/projects/slack-themes/1.png",
+        "caption": "Legacy slack themes"
+      },
+      {
+        "src": "/projects/slack-themes/2.png",
+        "caption": "Theme playground"
+      },
+      {
+        "src": "/projects/slack-themes/3.png",
+        "caption": "About page"
+      }
+    ],
+    "longDescription": "For anyone juggling five or more Slack workspaces, the \"wrong window\" mistake is a constant risk. I created this gallery to help users quickly distinguish between their clients, side projects, and primary jobs. It’s a curated collection of copy-pasteable sidebar themes that range from professional to vibrant, designed to help users organize their digital workspace with better visual hierarchy."
   },
   {
-    slug: 'race-times',
-    link: 'https://race-times.vercel.app/',
-    title: 'Race Times',
-    published: '2020',
-    description: 'A directory of translated race times schedules and leaderboards',
-    longDescription: `Formula 1 is a global sport, but keeping track of practice, qualifying, and race start times across shifting timezones is a recurring headache for fans. I built Race Times to act as a dedicated, spoiler-free dashboard. It automatically translates the full race weekend schedule into the user's local time, ensuring you never miss a lights-out moment, regardless of where the Grand Prix is hosted.`,
-    logo: 'race-times-logo.svg',
-    color: '#E684AF',
-    images: [
-      { src: '/projects/preview-racetimes.png', caption: 'V2 in progress' },
-      { src: '/projects/race-times/1.png', caption: 'Race Calendar' },
-      { src: '/projects/race-times/2.png', caption: 'Initial Wireframes' },
-      { src: '/projects/race-times/3.png', caption: 'Design System' },
-      { src: '/projects/race-times/4.png', caption: 'Light/Dark Modes' },
-      { src: '/projects/race-times/5.png', caption: 'Upcoming Race' },
-      { src: '/projects/race-times/6.png', caption: 'Dark Mode' },
-      { src: '/projects/race-times/7.png', caption: 'Empty State' }
-    ]
+    "slug": "race-times",
+    "link": "https://race-times.vercel.app/",
+    "title": "Race Times",
+    "published": "2020",
+    "description": "A directory of translated race times schedules and leaderboards",
+    "logo": "race-times-logo.svg",
+    "color": "#E684AF",
+    "images": [
+      {
+        "src": "/projects/preview-racetimes.png",
+        "caption": "V2 in progress"
+      },
+      {
+        "src": "/projects/race-times/1.png",
+        "caption": "Race Calendar"
+      },
+      {
+        "src": "/projects/race-times/2.png",
+        "caption": "Initial Wireframes"
+      },
+      {
+        "src": "/projects/race-times/3.png",
+        "caption": "Design System"
+      },
+      {
+        "src": "/projects/race-times/4.png",
+        "caption": "Light/Dark Modes"
+      },
+      {
+        "src": "/projects/race-times/5.png",
+        "caption": "Upcoming Race"
+      },
+      {
+        "src": "/projects/race-times/6.png",
+        "caption": "Dark Mode"
+      },
+      {
+        "src": "/projects/race-times/7.png",
+        "caption": "Empty State"
+      }
+    ],
+    "longDescription": "Formula 1 is a global sport, but keeping track of practice, qualifying, and race start times across shifting timezones is a recurring headache for fans. I built Race Times to act as a dedicated, spoiler-free dashboard. It automatically translates the full race weekend schedule into the user's local time, ensuring you never miss a lights-out moment, regardless of where the Grand Prix is hosted."
   },
   {
-    slug: 'portfolio-timeline',
-    link: 'https://timeline.ryanparag.com/',
-    title: 'Portfolio Timeline',
-    published: '2023',
-    description: 'A timeline viewer for past versions of my portfolio',
-    longDescription: `As designers, we often hide our old work, but I believe there is immense value in seeing the evolution of a craft. Portfolio Timeline is a "meta" project that archives and displays past versions of my personal site. It serves as a visual record of my growth in UI trends, front-end technology, and personal branding—turning my own archive into a case study on continuous improvement.`,
-    logo: 'timeline-logo.svg',
-    color: '#00d1b2',
-    images: [
-      { src: '/projects/timeline/1.png', caption: 'Timeline viewer for all of the different iterations of my portfolio' },
-      { src: '/projects/timeline/2.png', caption: 'Portfolio iteration view with all of the major build materials' }
+    "slug": "portfolio-timeline",
+    "link": "https://timeline.ryanparag.com/",
+    "title": "Portfolio Timeline",
+    "published": "2023",
+    "description": "A timeline viewer for past versions of my portfolio",
+    "logo": "timeline-logo.svg",
+    "color": "#00d1b2",
+    "images": [
+      {
+        "src": "/projects/timeline/1.png",
+        "caption": "Timeline viewer for all of the different iterations of my portfolio"
+      },
+      {
+        "src": "/projects/timeline/2.png",
+        "caption": "Portfolio iteration view with all of the major build materials"
+      }
     ],
-    videos: [
-      { src: 'Hir5I8FriYH7roqWzyBUevd002NJh2h8T00PxeqxsxdpY', format: 'browser' }
+    "videos": [
+      {
+        "src": "Hir5I8FriYH7roqWzyBUevd002NJh2h8T00PxeqxsxdpY",
+        "format": "browser"
+      }
     ],
-    thumbnail: { src: 'https://image.mux.com/Hir5I8FriYH7roqWzyBUevd002NJh2h8T00PxeqxsxdpY/thumbnail.png?time=1', format: 'browser' }
+    "thumbnail": {
+      "src": "https://image.mux.com/Hir5I8FriYH7roqWzyBUevd002NJh2h8T00PxeqxsxdpY/thumbnail.png?time=1",
+      "format": "browser"
+    },
+    "longDescription": "As designers, we often hide our old work, but I believe there is immense value in seeing the evolution of a craft. Portfolio Timeline is a \"meta\" project that archives and displays past versions of my personal site. It serves as a visual record of my growth in UI trends, front-end technology, and personal branding—turning my own archive into a case study on continuous improvement."
   },
   {
-    slug: 'buy-fresh-florida',
-    link: 'https://buy-fresh-florida.ryanparag.com/',
-    title: 'Buy Fresh Florida',
-    published: '2026',
-    description: 'Find what produce is in season in Florida',
-    longDescription: `This project turns a clunky, static PDF of Florida’s agricultural data into a clean, searchable web app that's actually easy to use on the go. I focused on stripping away the noise to create a high-utility experience that helps locals find what's in season in seconds. It’s a simple, mobile-first solution for anyone who wants to shop local without the headache of digging through government charts.`,
-    logo: 'buy-fresh-logo.svg',
-    color: '#f97316',
-    images: [
-      { src: '/projects/buy-fresh-florida/1.png', caption: 'Choose a month and see what produce is in season in Florida' },
-      { src: '/projects/buy-fresh-florida/2.png', caption: 'Light mode' },
-       { src: '/projects/buy-fresh-florida/3.png', caption: 'Dark mode' }
+    "slug": "buy-fresh-florida",
+    "link": "https://buy-fresh-florida.ryanparag.com/",
+    "title": "Buy Fresh Florida",
+    "published": "2026",
+    "description": "Find what produce is in season in Florida",
+    "logo": "buy-fresh-logo.svg",
+    "color": "#f97316",
+    "images": [
+      {
+        "src": "/projects/buy-fresh-florida/1.png",
+        "caption": "Choose a month and see what produce is in season in Florida"
+      },
+      {
+        "src": "/projects/buy-fresh-florida/2.png",
+        "caption": "Light mode"
+      },
+      {
+        "src": "/projects/buy-fresh-florida/3.png",
+        "caption": "Dark mode"
+      }
     ],
-    videos: [
-      { src: 'OiEFwqrtFFr01vYTyrKFhmKAtCYUUsTgHDNStHTAztbg', format: 'mobile' }
+    "videos": [
+      {
+        "src": "OiEFwqrtFFr01vYTyrKFhmKAtCYUUsTgHDNStHTAztbg",
+        "format": "mobile"
+      }
     ],
-    thumbnail: { src: 'https://image.mux.com/OiEFwqrtFFr01vYTyrKFhmKAtCYUUsTgHDNStHTAztbg/thumbnail.png?time=1', format: 'mobile' }
+    "thumbnail": {
+      "src": "https://image.mux.com/OiEFwqrtFFr01vYTyrKFhmKAtCYUUsTgHDNStHTAztbg/thumbnail.png?time=1",
+      "format": "mobile"
+    },
+    "longDescription": "This project turns a clunky, static PDF of Florida’s agricultural data into a clean, searchable web app that's actually easy to use on the go. I focused on stripping away the noise to create a high-utility experience that helps locals find what's in season in seconds. It’s a simple, mobile-first solution for anyone who wants to shop local without the headache of digging through government charts."
   }
 ]

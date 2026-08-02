@@ -8,6 +8,7 @@ import { motion } from "framer-motion"
 import { Title } from './components'
 import { Toast } from '@base-ui-components/react'
 import SideNav from './SideNav'
+import ResumeDownloadButton from './ResumeDownloadButton'
 
 const ResumePage = () => {
 
@@ -32,6 +33,7 @@ const ResumePage = () => {
           <div className="w-full col-span-12 lg:col-span-7 xl:col-span-9">
             <h1 className="text-2xl lg:text-3xl mb-0">{Data.name}</h1>
             <span className="text-sm lg:text-base">{Data.role}</span>
+            <span className="text-sm lg:text-base opacity-70"> · {Data.location}</span>
           </div>
         </div>
         <div className="col-span-12 pb-5 border-b border-black border-opacity-10 dark:border-white dark:border-opacity-10 grid grid-cols-12 gap-3">
@@ -51,10 +53,7 @@ const ResumePage = () => {
             </div>
             <div className="flex items-center">
               Resume:
-              <a className="link-shadow transform active:scale-95 inline-flex items-center gap-1" href={`/${Data.pdf}`} target="_blank">
-                <span className="truncate">{Data.pdf}</span>
-                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg>
-              </a>
+              <ResumeDownloadButton className="link-shadow transform active:scale-95 inline-flex items-center gap-1"/>
             </div>
           </motion.div>
         </div>
@@ -66,7 +65,7 @@ const ResumePage = () => {
           <About/>
           <Experience data={Data.positions}/>
           <Education data={Data.education}/>
-          <Certifications data={Data.certs}/>
+          <Certifications data={Data.certifications}/>
         </motion.div>
         <motion.div
           className="col-span-12 pt-8 flex w-full flex-col opacity-0"
@@ -74,7 +73,7 @@ const ResumePage = () => {
           transition={{ duration: 0.3, delay: 0.7 }}
         >
           <TagSection id="skills" title="Skills" data={Data.skills}/>
-          <TagSection id="tools" title="Tools" data={Data.experience}/>
+          <TagSection id="tools" title="Tools" data={Data.tools}/>
         </motion.div>
       </div>
       <SideNav/>

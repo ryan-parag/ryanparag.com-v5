@@ -95,7 +95,7 @@ export const OwensCorning = ({ darkMode }) => {
   return(
     <Container id={'owens-corning'} padding>
       <ProjectCarousel
-        company={'owens corning'}
+        company={'owens_corning'}
         color={'#D40f7D'}
         darkMode={darkMode}
       />
@@ -109,7 +109,7 @@ export const OwensCorning = ({ darkMode }) => {
         <Header
           image="owens-corning"
           title="Owens Corning"
-          description="Automating insurance verification and simplifying compliance"
+          description="Test"
         />
         <Position
           role="Design Lead"

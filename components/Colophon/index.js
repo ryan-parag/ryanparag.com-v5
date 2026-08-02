@@ -102,18 +102,21 @@ const Theme = () => {
         <h2 className="spatial text-sm mb-4">Current theme</h2>
         <p>I wanted to take a different approach to theming my portfolio for v5 and thought using <a href="https://github.com/material-foundation/material-color-utilities" className="text-link--icon" target="_blank">Google&apos;s Material 3 dynamic color functions</a> could be a fun way to drive more personalized theming on the site. Check out your current theme below:</p>
       </div>
-      <div className="grid grid-cols-1 gap-0 w-full max-w-4xl px-4 lg:!px-0 mx-auto overflow-hidden border border-themeOutlineVariant rounded-lg">
+      <div className="grid grid-cols-1 gap-0 w-full max-w-4xl px-0 mx-auto overflow-hidden border border-themeOutlineVariant rounded-lg">
+        <div className="p-3 bg-themeSurfaceVariant">
+          <h4 className="text-lg">Current Theme Tokens</h4>
+        </div>
         {
           tokens.map((item, i) => (
-            <div className="flex flex-col gap-0 p-3 border-b border-themeOutlineVariant" key={i}>
+            <div className={`flex flex-col gap-0 p-3 ${i !== (tokens.length - 1) && 'border-b'} border-themeOutlineVariant`} key={i}>
               <span className="flex spatial text-xs mb-2">{item.name}</span>
               <ul className="flex flex-row gap-2 flex-wrap">
               {
                 item.values.map((color,i) => (
-                  <li className="transition flex items-center gap-1.5 pr-2 text-themeOnBackground rounded-md border border-themeOutline overflow-hidden relative" key={i}>
-                    <span className="h-6 w-6 rounded-none border-r border-themeOutline" style={{ background: `var(--md-sys-color-${color.variable})`}}/>
+                  <li className="transition flex items-center gap-1.5 pr-2 text-themeOnBackground rounded-md border border-themeOutlineVariant overflow-hidden relative" key={i}>
+                    <span className="h-6 w-6 rounded-none border-r border-themeOutlineVariant" style={{ background: `var(--md-sys-color-${color.variable})`}}/>
                     <span className="text-xs">{color.name}</span>
-                    <span className="absolute top-0 bottom-0 left-0 right-0 z-0 bg-gradient-to-t from-black/10 to-transparent"/>
+                    <span className="absolute top-0 bottom-0 left-0 right-0 z-0"/>
                   </li>
                 ))
               }
@@ -155,22 +158,6 @@ export const build = {
 
 
 const Colophon = () => {
-
-  const portfolios = [
-    {
-      version: '1 (2019)',
-      link: 'https://2019.ryanparag.com'
-    },{
-      version: '2 (2020)',
-      link: 'https://2020.ryanparag.com'
-    }, {
-      version: '3 (2021)',
-      link: 'https://2021.ryanparag.com'
-    }, {
-      version: '4 (2023)',
-      link: 'https://2023.ryanparag.com'
-    }
-  ]
 
   return(
     <div>

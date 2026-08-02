@@ -60,7 +60,7 @@ export const Education = ({ data }) => {
       <ul className="pl-4 border-l border-themeOutlineVariant">
         {
           data.map((item,i) => (
-            <Misc item={item} key={i}/>
+            <Misc primary={item.institution} secondary={item.degree} date={item.date} key={i}/>
           ))
         }
       </ul>
@@ -75,7 +75,7 @@ export const Certifications = ({ data }) => {
       <ul className="pl-4 border-l border-themeOutlineVariant">
         {
           data.map((item,i) => (
-            <Misc item={item} key={i}/>
+            <Misc primary={item.issuer} secondary={item.title} date={item.date} key={i}/>
           ))
         }
       </ul>
@@ -83,17 +83,32 @@ export const Certifications = ({ data }) => {
   )
 }
 
+const TagGroup = ({ items }) => (
+  <ul className="self-start flex flex-wrap gap-2 pl-4 border-l border-themeOutlineVariant">
+    {
+      items.map((item,i) => (
+        <li className="rounded-md inline-flex px-1.5 py-0.5 text-sm bg-black/5 dark:bg-white/5 border border-themeOutlineVariant text-themeOnSurfaceVariant" key={i}>{item}</li>
+      ))
+    }
+  </ul>
+)
+
 export const TagSection = ({title, data, id}) => {
   return(
     <section id={id} className="mb-8">
       <Title>{title}</Title>
-      <ul className="self-start flex flex-wrap gap-2 pl-4 border-l border-themeOutlineVariant">
-        {
-          data.map((item,i) => (
-            <li className="rounded-md inline-flex px-1.5 py-0.5 text-sm bg-gradient-to-t dark:from-white/10 dark:to-transparent border border-themeOutlineVariant text-themeOnSurfaceVariant" key={i}>{item}</li>
+      {
+        Array.isArray(data) ? (
+          <TagGroup items={data}/>
+        ) : (
+          Object.entries(data).map(([label, items], i) => (
+            <div key={label} className={i > 0 ? 'mt-4' : ''}>
+              <Subtitle>{label.charAt(0).toUpperCase() + label.slice(1)}</Subtitle>
+              <TagGroup items={items}/>
+            </div>
           ))
-        }
-      </ul>
+        )
+      }
     </section>
   )
 }
