@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { TextMorph } from 'torph/react';
 
 const Randomizer = () => {
 
@@ -82,14 +83,16 @@ const Randomizer = () => {
   }, [])
 
   return(
-    <span
-      role="button"
-      className="link-shadow select-none"
-      onClick={() => setIsRandom(randomFact())}
-      title={`Cycle randomly through all ${facts.length} fun facts!`}
-    >
-      {isRandom.text}
-    </span>
+      <span
+        role="button"
+        className="link-shadow select-none"
+        onClick={() => setIsRandom(randomFact())}
+        title={`Cycle randomly through all ${facts.length} fun facts!`}
+      >
+        <TextMorph>
+          {isRandom.text}
+        </TextMorph>
+      </span>
   )
 }
 
