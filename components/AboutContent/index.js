@@ -66,7 +66,7 @@ const AboutContent = () => {
             transition={{ duration: 0.3, delay: .5, type: "spring", stiffness: 80 }}
             viewport={{ once: true }}
           >
-            <h3 className="spatial text-sm mb-4">Career</h3>
+            <h2 className="spatial text-sm mb-4">Career</h2>
             <p>
               Currently, I&apos;m designing at <a href="https://owenscorning.com" target="_blank" rel="noopener noreferrer" className="text-link--icon">Owens Corning</a>, where I&apos;m helping create leading software/systems for builders, contractors, homeowners, and other building materials customers (+ some cool 0-1 projects long the way).
             </p>
@@ -85,7 +85,7 @@ const AboutContent = () => {
             transition={{ duration: 0.3, delay: .2, type: "spring", stiffness: 80 }}
             viewport={{ once: true }}
           >
-            <h3 className="spatial text-sm mb-4">Education</h3>
+            <h2 className="spatial text-sm mb-4">Education</h2>
             <p>
               In a previous life, I studied Healthcare Informatics and Biology. After graduating, I crunched the numbers for pricing model forecasts as a healthcare analyst - and in my after hours I cut my teeth designing as a freelancer, for a diverse group of clients <i>(global non-profits, restaurants, pre-seed startups, musicians etc.)</i>.
             </p>
@@ -97,7 +97,7 @@ const AboutContent = () => {
             transition={{ duration: 0.3, delay: .2, type: "spring", stiffness: 80 }}
             viewport={{ once: true }}
           >
-            <h3 className="spatial text-sm mb-4">Misc.</h3>
+            <h2 className="spatial text-sm mb-4">Misc.</h2>
             <p>
               I thrive in fast-paced, collaborative environments and am committed to being transparent in my work. In my free time, you can find me tinkering on a random project, finding the first window seat on a flight 🛫, biking around town 🚴‍♂️, and more 🎸 🥐 🏎!
             </p>

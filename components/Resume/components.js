@@ -24,7 +24,7 @@ export const Header = () => {
 
 export const Title = ({ children, flat }) => {
   return(
-    <h3 className={`text-lg spatial ${flat ? 'mb-0' : 'mb-6'}`}>{children}</h3>
+    <h2 className={`text-lg spatial ${flat ? 'mb-0' : 'mb-6'}`}>{children}</h2>
   )
 }
 
@@ -42,7 +42,7 @@ export const Role = ({ company }) => {
           <div className="hidden md:inline-block rounded-md h-8 w-8 mr-3 shadow relative overflow-hidden border border-black border-opacity-10 dark:border-white dark:border-opacity-10">
             <Image src={`/projects/${company.company.replace(/\s+/g, '-').toLowerCase()}.png`} layout="fill"/>
           </div>
-          <h4 className="text-themePrimary">{company.company}</h4>
+          <h3 className="text-themePrimary text-base md:text-lg mb-0">{company.company}</h3>
           <span className="mx-2 text-secondary">/</span>
           <span className="spatial text-xs">{company.role}</span>
         </div>
@@ -52,7 +52,7 @@ export const Role = ({ company }) => {
       {company.location && (
         <p className="text-xs text-themeOnSurfaceVariant mb-2">{company.location}</p>
       )}
-      <ul className="text-sm leading-normal list-disc list-inside space-y-1">
+      <ul className="text-sm leading-normal list-disc list-outside pl-4 space-y-1">
         {
           company.highlights.map((highlight, i) => (
             <li key={i}>{highlight}</li>
@@ -68,7 +68,7 @@ export const Misc = ({ primary, secondary, date }) => {
     <li className="mb-6 block">
       <div className="flex items-center mb-1">
         <div className="flex flex-1 items-center">
-          <h4 className="text-themePrimary">{primary}</h4>
+          <h3 className="text-themePrimary text-base md:text-lg mb-0">{primary}</h3>
         </div>
       </div>
       <p className="text-secondary text-sm">

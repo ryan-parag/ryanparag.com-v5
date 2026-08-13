@@ -99,7 +99,7 @@ const Theme = () => {
   return(
     <div className="my-8 w-full section">
       <div className="flex flex-col">
-        <h2 className="spatial text-sm mb-4">Current theme</h2>
+        <h3 className="spatial text-sm mb-4">Current theme</h3>
         <p>I wanted to take a different approach to theming my portfolio for v5 and thought using <a href="https://github.com/material-foundation/material-color-utilities" className="text-link--icon" target="_blank">Google&apos;s Material 3 dynamic color functions</a> could be a fun way to drive more personalized theming on the site. Check out your current theme below:</p>
       </div>
       <div className="grid grid-cols-1 gap-0 w-full max-w-4xl px-0 mx-auto overflow-hidden border border-themeOutlineVariant rounded-lg">
@@ -162,7 +162,7 @@ const Colophon = () => {
   return(
     <div>
       <div className="section">
-        <h3>Colophon</h3>
+        <h2>Colophon</h2>
         <p>This is the 5th version of my portfolio and I designed and developed it using <a href={build.built.link} target="_blank" className="text-link--icon">{build.built.name}</a> to build, <a href={build.style.link} target="_blank" className="text-link--icon">{build.style.name}</a> for styling, <a href={build.animation.link} target="_blank" className="text-link--icon">{build.animation.name}</a> for animation, <a href={build.deploy.link} target="_blank" className="text-link--icon">{build.deploy.name}</a> for deploying/hosting, and <a href={build.storage.link} target="_blank" className="text-link--icon">{build.storage.name}</a> for storage. Typography is set in <a href={build.typography.link} target="_blank" className="text-link--icon">{build.typography.name}</a>.</p>
         <p>I began keeping track of the past versions of my portfolio in a timeline project – <Link href={'/projects/portfolio-timeline'} className="link-shadow transform active:scale-95 inline-flex items-center gap-1">take a look</Link> and see the changes I added through the years!</p>
       </div>

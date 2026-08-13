@@ -7,7 +7,7 @@ import CTA from '@/components/CTA';
 export default function Home() {
 
   return (
-    <Layout>
+    <Layout path="/">
       <Intro/>
       <WorkList/>
       <CTA/>

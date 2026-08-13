@@ -39,7 +39,7 @@ const CTA = () => {
             <Image src="/memoji/memoji-thanks.png" layout="fill" alt="Ryan's face"/>
           </div>
         </motion.div>
-        <motion.h3
+        <motion.h2
           initial={{ opacity: 0 }}
           whileInView= {{ opacity: 1, top: 0 }}
           transition={{ duration: 0.3, delay: .1, type: "spring", stiffness: 80 }}
@@ -47,7 +47,7 @@ const CTA = () => {
           viewport={{ once: true }}
         >
           Want a closer look into my work?
-        </motion.h3>
+        </motion.h2>
         <motion.p
           initial={{ opacity: 0 }}
           whileInView= {{ opacity: 1, top: 0 }}

@@ -22,7 +22,7 @@ export const About = () => {
         I&apos;m a product designer with a penchant for code, based in <strong>Tampa, FL 🌴</strong>. Currently, I lead the direct customer experience and design systems at <a href="https://owenscorning.com" target="_blank" rel="noopener noreferrer" className="text-link--icon">Owens Corning</a>.
       </p>
       <Subtitle>In my spare time...</Subtitle>
-      <ul className="mb-4 list-disc list-inside">
+      <ul className="mb-4 list-disc list-outside pl-4">
         <li>Building <Link href="/projects/scorekeeper"><span className="link-shadow transform active:scale-95 inline-flex items-center">ScoreKeeper</span></Link> - a simple way to track game scores with friends</li>
         <li>Crafting things as an amateur <Link href="/projects/cutting-board-designer"><span className="link-shadow transform active:scale-95 inline-flex items-center">woodworker</span></Link></li>
         <li>Cooking and <Link href="/projects/vanilla-extract-calculator"><span className="link-shadow transform active:scale-95 inline-flex items-center">baking</span></Link> my way through <Link href="/projects/buy-fresh-florida"><span className="link-shadow transform active:scale-95 inline-flex items-center">different ingredients</span></Link></li>
