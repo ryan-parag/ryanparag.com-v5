@@ -13,7 +13,11 @@ import ReactMarkdown from 'react-markdown'
 export default function SideProjectPage({ project }) {
 
   return (
-    <Layout>
+    <Layout
+      title={`${project.title} — Ryan Parag`}
+      description={project.description}
+      path={`/projects/${project.slug}`}
+    >
        <motion.div
         initial={{ opacity: 0, top: 48 }}
         animate={{ opacity: 1, top: 0 }}
@@ -93,7 +97,7 @@ export default function SideProjectPage({ project }) {
 
       <div className="w-full max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-3 my-6 gap-4 px-4 lg:px-0">
         <div className="h-px bg-themeOutline w-20 my-16"/>
-        <h3 className="mb-4 col-span-2 md:col-span-3">View more projects from the Playground</h3>
+        <h2 className="mb-4 col-span-2 md:col-span-3">View more projects from the Playground</h2>
       </div>
       <div className={`w-auto py-8 px-4 md:px-40 overflow-x-scroll overflow-y-hidden scrollbar-hidden mx-auto flex items-start gap-4`}>
         {

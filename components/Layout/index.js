@@ -10,7 +10,13 @@ import Script from 'next/script'
 import Navigation from '@/components/Navigation';
 import GradientHeader from '@/components/GradientHeader';
 
-const Layout = ({ children }) => {
+const SITE_URL = 'https://ryanparag.com'
+const DEFAULT_TITLE = 'Ryan Parag — Senior Product Designer & Design Lead | Tampa, FL'
+const DEFAULT_DESCRIPTION = 'Product Designer and Design Lead specializing in UX design, complex SaaS platforms, design systems, and product strategy.'
+
+const Layout = ({ children, title = DEFAULT_TITLE, description = DEFAULT_DESCRIPTION, path = '/' }) => {
+
+  const url = `${SITE_URL}${path}`
 
   const themeColors = [
     '#00d1b2',
@@ -50,7 +56,15 @@ const Layout = ({ children }) => {
   return(
     <>
       <Head>
-        <title>Ryan Parag — Product Designer</title>
+        <title>{title}</title>
+        <meta name="description" content={description}/>
+        <link rel="canonical" href={url}/>
+        <meta property="og:title" content={title}/>
+        <meta property="og:description" content={description}/>
+        <meta property="og:url" content={url}/>
+        <meta property="twitter:title" content={title}/>
+        <meta property="twitter:description" content={description}/>
+        <meta property="twitter:url" content={url}/>
       </Head>
       <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}`} />
       <Script id="google-analytics">

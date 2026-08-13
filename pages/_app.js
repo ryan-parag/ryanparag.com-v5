@@ -6,9 +6,7 @@ export default function App({ Component, pageProps }) {
   return(
     <ThemeProvider>
       <Toast.Provider timeout="2500">
-        <Toast.Portal>
-          <Component {...pageProps} />
-        </Toast.Portal>
+        <Component {...pageProps} />
       </Toast.Provider>
     </ThemeProvider>
   )
