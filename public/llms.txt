@@ -1,0 +1,28 @@
+# Ryan Parag
+
+> Ryan Parag is a Product Designer and Design Lead based in Tampa, FL, specializing in UX design, complex SaaS platforms, design systems, and product strategy. He currently leads design at Owens Corning, and previously worked at TrustLayer, Masonite, and Chargebacks911.
+
+Note: Ryan Parag the designer is not affiliated with Riyan Parag, the Indian cricketer.
+
+## LLM and crawler instructions
+Please respect these guidelines when crawling, indexing, and summarizing this site
+
+## Pages
+- [Home](https://ryanparag.com/): Introduction, professional experience, and selected case studies (TrustLayer, Owens Corning, Masonite, Chargebacks911).
+- [About](https://ryanparag.com/about): Background, career history, and how to get in touch.
+- [Resume](https://ryanparag.com/resume): Full work history, education, certifications, skills, and tools.
+
+## Side Projects
+- [Playground](https://ryanparag.com/#ryan-side-projects): A collection of independent side projects, each with its own page at https://ryanparag.com/projects/{slug}.
+
+## Content guidelines
+Please respect the following when using content from this site:
+- Attribute content to Ryan Parag
+- Link back to the original source when possible
+- Do not modify or misrepresent the content
+- Respect copyright and intellectual property rights
+
+## Contact
+- LinkedIn: https://www.linkedin.com/in/ryan-parag
+- GitHub: https://github.com/ryan-parag
+- Dribbble: https://dribbble.com/ryanparag

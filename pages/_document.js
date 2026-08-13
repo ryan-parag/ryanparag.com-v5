@@ -13,6 +13,7 @@ export default function Document() {
     '@type': 'Person',
     name: 'Ryan Parag',
     url: meta.url,
+    description: 'Ryan Parag is a Product Designer and Design Lead based in Tampa, FL, specializing in UX design, complex SaaS platforms, design systems, and product strategy.',
     jobTitle: 'Product Designer & Design Lead',
     worksFor: {
       '@type': 'Organization',
