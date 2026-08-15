@@ -11,8 +11,8 @@ import Navigation from '@/components/Navigation';
 import GradientHeader from '@/components/GradientHeader';
 
 const SITE_URL = 'https://ryanparag.com'
-const DEFAULT_TITLE = 'Ryan Parag — Senior Product Designer & Design Lead | Tampa, FL'
-const DEFAULT_DESCRIPTION = 'Product Designer and Design Lead specializing in UX design, complex SaaS platforms, design systems, and product strategy.'
+const DEFAULT_TITLE = 'Ryan Parag — Senior UX Designer & Design Engineer'
+const DEFAULT_DESCRIPTION = 'Product Designer and Design Engineer specializing in UX design, complex B2B platforms, design systems, and product strategy.'
 
 const Layout = ({ children, title = DEFAULT_TITLE, description = DEFAULT_DESCRIPTION, path = '/' }) => {
 
