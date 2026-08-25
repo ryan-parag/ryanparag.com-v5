@@ -199,7 +199,7 @@ export const SideProject = ({ sideProject, slug, title, description, logo, delay
       transition={{ duration: 0.3, delay: .1, type: "spring", stiffness: 80 }}
       viewport={{ once: true }}
     >
-      <Link href={`/projects/${slug}`} className="mt-auto inline-flex w-auto">
+      <Link href={`/projects/${slug}`} className="mt-auto inline-flex w-auto" aria-label={`View ${title} project`}>
         <div className="w-96 shrink-0 h-[520px] overflow-y-hidden flex flex-col gap-2 px-6 pt-6 rounded-2xl bg-themeSurface group relative overflow-hidden border border-themeOutlineVariant">
           <div className="absolute top-0 bottom-0 left-0 right-0 bg-themeSurfaceVariant opacity-0 group-hover:opacity-40 transition z-0"/>
           <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 blur-3xl z-0 w-80 h-80 opacity-20">
