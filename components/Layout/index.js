@@ -40,13 +40,18 @@ const Layout = ({ children, title = DEFAULT_TITLE, description = DEFAULT_DESCRIP
 
   const { theme, systemTheme, setTheme } = useTheme();
 
-  const [currentColor, setCurrentColor] = useState(checkedSavedTheme() ? checkedSavedTheme : themeColors[0])
+  const [currentColor, setCurrentColor] = useState(themeColors[0])
   const [darkMode, setDarkMode] = useState(checkMode(theme, systemTheme))
 
   const runColor = (color) => {
     const theme = themeFromSourceColor(argbFromHex(color));
     return theme
   }
+
+  useEffect(() => {
+    const savedTheme = checkedSavedTheme()
+    if (savedTheme) setCurrentColor(savedTheme)
+  }, []);
 
   useEffect(() => {
     applyTheme(runColor(currentColor), {target: document.getElementById('body'), dark: darkMode})
