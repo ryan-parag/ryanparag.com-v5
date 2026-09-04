@@ -36,7 +36,7 @@ const CTA = () => {
           viewport={{ once: true }}
         >
           <div className="bg-themeSurface w-full h-full rounded-full relative">
-            <Image src="/memoji/memoji-thanks.png" layout="fill" alt="Ryan's face"/>
+            <Image src="/memoji/memoji-thanks.png" fill alt="Ryan's face"/>
           </div>
         </motion.div>
         <motion.h2

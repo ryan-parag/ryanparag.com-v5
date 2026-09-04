@@ -30,7 +30,7 @@ export default function SideProjectPage({ project }) {
           animate={{ opacity: 1, top: 0, rotate: 0 }}
           transition={{  duration: 0.8, delay: 0.6, ease: [0, 0.71, 0.2, 1.01], }}
         >
-          <Image alt={project.title} src={`/projects/${project.logo}`} layout="fill" />
+          <Image alt={project.title} src={`/projects/${project.logo}`} fill />
         </motion.div>
         <h1 className="mb-1">{project.title}</h1>
         <p className="text-lg opacity-70 !mb-4">{project.description}</p>

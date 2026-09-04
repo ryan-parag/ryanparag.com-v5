@@ -35,7 +35,7 @@ const Header = ({ image, title, description}) => {
       >
         {
           image ? (
-            <Image alt={image} src={`/projects/${image}.png`} layout="fill"/>
+            <Image alt={image} src={`/projects/${image}.png`} fill/>
           )
           :
           (
@@ -203,10 +203,10 @@ export const SideProject = ({ sideProject, slug, title, description, logo, delay
         <div className="w-96 shrink-0 h-[520px] overflow-y-hidden flex flex-col gap-2 px-6 pt-6 rounded-2xl bg-themeSurface group relative overflow-hidden border border-themeOutlineVariant">
           <div className="absolute top-0 bottom-0 left-0 right-0 bg-themeSurfaceVariant opacity-0 group-hover:opacity-40 transition z-0"/>
           <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 blur-3xl z-0 w-80 h-80 opacity-20">
-            <Image alt={title} src={`/projects/${logo}`} layout="fill"/>
+            <Image alt={title} src={`/projects/${logo}`} fill/>
           </div>
           <div className="transition h-10 w-10 overflow-hidden rounded-xl shadow border border-black/5 relative">
-            <Image alt={title} src={`/projects/${logo}`} layout="fill"/>
+            <Image alt={title} src={`/projects/${logo}`} fill/>
           </div>
           <div className="flex flex-col w-full">
             <strong className="text-xl font-bold">{title}</strong>

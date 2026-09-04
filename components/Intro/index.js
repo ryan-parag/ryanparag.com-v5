@@ -50,7 +50,7 @@ const AvatarImage = ({ filter, ditheringColors }) => {
   if (filter === 'dots') return <HalftoneDots image={image} style={shaderStyle} />
   if (filter === 'fluted-glass') return <FlutedGlass image={image} style={shaderStyle} />
   if (filter === 'dithering') return <ImageDithering image={image} style={shaderStyle} {...ditheringColors} />
-  return <Image src={image} layout="fill" alt="Ryan's face" />
+  return <Image src={image} fill alt="Ryan's face" />
 }
 
 const Intro = () => {

@@ -1,4 +1,6 @@
-import ImageCarousel from "@/components/ImageCarousel";
+import dynamic from "next/dynamic";
+
+const ImageCarousel = dynamic(() => import("@/components/ImageCarousel"), { ssr: false });
 
 const ProjectCarousel = ({ company, color, darkMode }) => {
 

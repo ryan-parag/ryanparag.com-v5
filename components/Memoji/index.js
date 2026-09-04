@@ -42,7 +42,7 @@ const Memoji = () => {
               <motion.div
                 className="relative transform rounded-full h-24 w-24 md:h-32 md:w-32 z-10"
               >
-                <Image layout="fill" alt="Ryan's memoji face" src={`/memoji/${isRandom}`}/>
+                <Image fill alt="Ryan's memoji face" src={`/memoji/${isRandom}`}/>
               </motion.div>
               <motion.div
                 className="rounded-full absolute h-24 w-24 md:h-32 md:w-32 blur-xl bg-themePrimary top-0 bottom-0 left-0 right-0 z-0 opacity-0"
