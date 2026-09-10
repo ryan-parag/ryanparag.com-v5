@@ -21,6 +21,8 @@ images:
     caption: Chart breakdown for players in a league
   - src: /projects/scorekeeper/6.png
     caption: Profile settings and customization options
+  - src: /projects/scorekeeper/7.png
+    caption: UI Kit for consistent design language and components across the app
 videos:
   - src: GcBFtzu5WQQu4GveFZ2hyi49H5wGv1BXP3MCNufFiZg
     format: mobile
