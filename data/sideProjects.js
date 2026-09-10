@@ -34,6 +34,10 @@ export const sideProjects = [
       {
         "src": "/projects/scorekeeper/6.png",
         "caption": "Profile settings and customization options"
+      },
+      {
+        "src": "/projects/scorekeeper/7.png",
+        "caption": "UI Kit for consistent design language across the app"
       }
     ],
     "videos": [
