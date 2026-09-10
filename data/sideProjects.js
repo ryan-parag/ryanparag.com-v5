@@ -37,7 +37,7 @@ export const sideProjects = [
       },
       {
         "src": "/projects/scorekeeper/7.png",
-        "caption": "UI Kit for consistent design language across the app"
+        "caption": "UI Kit for consistent design language and components across the app"
       }
     ],
     "videos": [
