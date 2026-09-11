@@ -10,6 +10,8 @@ import { Toast } from '@base-ui-components/react'
 import SideNav from './SideNav'
 import ResumeDownloadButton from './ResumeDownloadButton'
 
+const stackStyle = "max-w-2xl mx-auto w-full col-span-12"
+
 const ResumePage = () => {
 
   const toastManager = Toast.useToastManager();
@@ -24,8 +26,8 @@ const ResumePage = () => {
 
   return(
     <>
-      <div className="w-full max-w-2xl mx-auto grid grid-cols-12 gap-x-8">
-        <div className="col-span-12 mb-6 gap-4 flex items-center">
+      <div className="w-full grid grid-cols-12 gap-x-8">
+        <div className={`${stackStyle} col-span-12 mb-6 gap-4 flex items-center`}>
           <div className="h-16 w-16 transform relative top-1 -rotate-6">
             <Logo/>
             <span className="absolute top-0 bottom-0 right-0 left-0 bg-themePrimary blur-lg opacity-30 -z-10"/>
@@ -36,7 +38,7 @@ const ResumePage = () => {
             <span className="text-sm lg:text-base opacity-70"> · {Data.location}</span>
           </div>
         </div>
-        <div className="col-span-12 pb-5 border-b border-black border-opacity-10 dark:border-white dark:border-opacity-10 grid grid-cols-12 gap-3">
+        <div className={`${stackStyle} col-span-12 pb-5 border-b border-black border-opacity-10 dark:border-white dark:border-opacity-10 grid grid-cols-12 gap-3`}>
           <motion.div
             className="col-span-12 grid grid-cols-1 gap-3 w-full mt-6 mb-3 md:mt-0 rounded-xl bg-themeSurfaceVariant text-themeOnSurfaceVariant p-4"
             initial={{ opacity: 0 }}
@@ -58,17 +60,23 @@ const ResumePage = () => {
           </motion.div>
         </div>
         <motion.div
-          className="col-span-12 pt-8 grid grid-cols-1 opacity-0"
+          className={`col-span-12 grid grid-cols-1 pt-8 opacity-0`}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3, delay: 0.5 }}
         >
-          <About/>
-          <Experience data={Data.positions}/>
-          <Education data={Data.education}/>
-          <Certifications data={Data.certifications}/>
+          <About stackStyle={stackStyle}/>
+          <div className={stackStyle}>
+            <Experience data={Data.positions}/>
+          </div>
+          <div className={stackStyle}>
+            <Education data={Data.education}/>
+          </div>
+          <div className={stackStyle}>
+            <Certifications data={Data.certifications}/>
+          </div>
         </motion.div>
         <motion.div
-          className="col-span-12 pt-8 flex w-full flex-col opacity-0"
+          className={`${stackStyle} col-span-12 pt-8 flex w-full flex-col opacity-0`}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3, delay: 0.7 }}
         >

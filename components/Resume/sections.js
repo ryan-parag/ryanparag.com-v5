@@ -1,9 +1,9 @@
 import { Misc, Role, Title, Subtitle } from "./components"
 import Link from "next/link"
-import Image from "next/image"
 import ProjectGallery from "../ProjectGallery"
 import BrowserVideo from "../BrowserVideo"
 import MobileVideo from "../MobileVideo"
+import HoverCard from "../HoverCard"
 
 const workGalleryImages = [
   { src: "/projects/trustlayer/5.png" },
@@ -14,33 +14,48 @@ const workGalleryImages = [
   { src: "/projects/tbd/1.png" },
 ]
 
-export const About = () => {
+const hoverCardItems = [
+  { src: "/projects/trustlayer/5.png", title: "TrustLayer", tagline: "An easy-to-use visual workflow builder to automate repetitive workflows", logo: '/projects/trustlayer.png' },
+  { src: "/projects/trustlayer/6.png", title: "TrustLayer", tagline: "A white-labeled experience for insurance carriers/brokers to provide their customers a way to view and share their insurance information", logo: '/projects/trustlayer.png' },
+  { src: "/projects/masonite/2.png", title: "Masonite", tagline: "A design system to help bridge our visual language across many web, mobile, and print", logo: '/projects/masonite.png' },
+  { src: "/projects/scorekeeper/2.png", title: "ScoreKeeper", tagline: "A simple way to track game scores with friends", logo: '/projects/scorekeeper-logo.svg' },
+  { src: "/projects/cbd/1.png", title: "Cutting Board Designer", tagline: "Design custom cutting boards with precision", logo: '/projects/cbd-logo.svg' },
+  { src: "/projects/tbd/1.png", title: "Tampa Bay Designers", tagline: "How to get involved in one of the many local design communities", logo: '/projects/tampa-bay-designers-logo.svg' },
+]
+
+export const About = ({stackStyle}) => {
   return(
-    <section id="about" className="col-span-1 md:col-span-2 mb-8">
-      <Title>About</Title>
-      <p>
-        I&apos;m a product designer with a penchant for code, based in <strong>Tampa, FL 🌴</strong>. Currently, I lead the direct customer experience and design systems at <a href="https://owenscorning.com" target="_blank" rel="noopener noreferrer" className="text-link--icon">Owens Corning</a>.
-      </p>
-      <Subtitle>In my spare time...</Subtitle>
-      <ul className="mb-4 list-disc list-outside pl-4">
-        <li>Building <Link href="/projects/scorekeeper"><span className="link-shadow transform active:scale-95 inline-flex items-center">ScoreKeeper</span></Link> - a simple way to track game scores with friends</li>
-        <li>Crafting things as an amateur <Link href="/projects/cutting-board-designer"><span className="link-shadow transform active:scale-95 inline-flex items-center">woodworker</span></Link></li>
-        <li>Cooking and <Link href="/projects/vanilla-extract-calculator"><span className="link-shadow transform active:scale-95 inline-flex items-center">baking</span></Link> my way through <Link href="/projects/buy-fresh-florida"><span className="link-shadow transform active:scale-95 inline-flex items-center">different ingredients</span></Link></li>
-      </ul>
-      <Subtitle>Snippets of work</Subtitle>
-      <ProjectGallery images={workGalleryImages} columns={3} />
-      <Link href="/">
-        <span className="button">
-          View More Work
-        </span>
-      </Link>
+    <section id="about" className={`col-span-1 md:col-span-2 mb-8`}>
+      <div className={stackStyle}>
+        <Title>About</Title>
+        <p>
+          I&apos;m a product designer with a penchant for code, based in <strong>Tampa, FL 🌴</strong>. Currently, I lead the direct customer experience and design systems at <a href="https://owenscorning.com" target="_blank" rel="noopener noreferrer" className="text-link--icon">Owens Corning</a>.
+        </p>
+        <Subtitle>In my spare time...</Subtitle>
+        <ul className="mb-4 list-disc list-outside pl-4">
+          <li>Building <Link href="/projects/scorekeeper"><span className="link-shadow transform active:scale-95 inline-flex items-center">ScoreKeeper</span></Link> - a simple way to track game scores with friends</li>
+          <li>Crafting things as an amateur <Link href="/projects/cutting-board-designer"><span className="link-shadow transform active:scale-95 inline-flex items-center">woodworker</span></Link></li>
+          <li>Cooking and <Link href="/projects/vanilla-extract-calculator"><span className="link-shadow transform active:scale-95 inline-flex items-center">baking</span></Link> my way through <Link href="/projects/buy-fresh-florida"><span className="link-shadow transform active:scale-95 inline-flex items-center">different ingredients</span></Link></li>
+        </ul>
+        <Subtitle>Snippets of work</Subtitle>
+      </div>
+      <div className="py-4">
+        <ProjectGallery images={hoverCardItems} columns={3} />
+      </div>
+      <div className={stackStyle}>
+        <Link href="/">
+          <span className="button">
+            View More Work
+          </span>
+        </Link>
+      </div>
     </section>
   )
 }
 
 export const Experience = ({ data }) => {
   return(
-    <section id="experience" className="col-span-1 md:col-span-2">
+    <section id="experience" className="col-span-1">
       <Title>Experience</Title>
       <ul className="pl-4 border-l border-themeOutlineVariant">
         {
@@ -55,7 +70,7 @@ export const Experience = ({ data }) => {
 
 export const Education = ({ data }) => {
   return(
-    <section id="education" className="col-span-1 md:col-span-2">
+    <section id="education" className="col-span-1">
       <Title>Education</Title>
       <ul className="pl-4 border-l border-themeOutlineVariant">
         {
@@ -70,7 +85,7 @@ export const Education = ({ data }) => {
 
 export const Certifications = ({ data }) => {
   return(
-    <section id="certifications" className="col-span-1 md:col-span-2">
+    <section id="certifications" className="col-span-1">
       <Title>Certifications</Title>
       <ul className="pl-4 border-l border-themeOutlineVariant">
         {

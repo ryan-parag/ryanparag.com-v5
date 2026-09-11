@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
+import HoverCard from '../HoverCard'
 
 const gridColsClasses = {
   1: 'grid-cols-1',
@@ -43,19 +44,14 @@ const ProjectGallery = ({ images, columns = 1 }) => {
       <div className={`grid ${gridColsClasses[columns] || gridColsClasses[1]} gap-4 md:gap-4 my-6`}>
         {images.map((image, i) => (
           <div className="flex flex-col gap-3" key={i}>
-            <button
-              key={i}
+            <HoverCard
+              image={image.src}
+              title={image.title}
+              tagline={image.tagline}
+              logo={image.logo}
               onClick={() => setLightboxIndex(i)}
-              className="group relative aspect-video rounded-xl border border-themeOutlineVariant overflow-hidden bg-themeSurfaceVariant focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-themePrimary"
-              aria-label={`View image ${i + 1}: ${image.caption || ''}`}
-            >
-              <Image
-                src={image.src}
-                alt={image.caption || ''}
-                fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </button>
+              className="aspect-video"
+            />
             {image.caption && (
               <span className="text-themeOnSurfaceVariant text-sm line-clamp-1">{image.caption}</span>
             )}
