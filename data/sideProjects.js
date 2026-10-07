@@ -117,30 +117,42 @@ export const sideProjects = [
     "longDescription": "As a hobbyist woodworker, I found it difficult to visualize how different wood species and grain patterns would look together before making the first cut. This project is a specialized CAD-lite tool for the browser. It allows makers to toggle between edge-grain and end-grain views and experiment with dimensions and species (like Walnut, Maple, and Cherry) to generate a precise visual blueprint before heading to the shop."
   },
   {
-    "slug": "vanilla-extract-calculator",
-    "link": "https://vanilla.ryanparag.com/",
-    "title": "Vanilla Extract Calculator",
+    "slug": "pantry-calculators",
+    "link": "https://pantry.ryanparag.com/",
+    "title": "Pantry Calculators",
     "published": "2026",
-    "description": "Precisely make vanilla extract",
-    "logo": "vanilla.svg",
+    "description": "Precisely make pantry staples at home",
+    "logo": "pantry-logo.svg",
     "color": "#EAC234",
     "images": [
       {
-        "src": "/projects/vanilla/1.png",
+        "src": "/projects/pantry/1.png",
+        "caption": "Select the type of vanilla extract and walk through the necessary components needed to make it"
+      },
+      {
+        "src": "/projects/pantry/2.png",
+        "caption": "Select the type of vanilla extract and walk through the necessary components needed to make it"
+      },
+      {
+        "src": "/projects/pantry/3.png",
+        "caption": "Select the type of vanilla extract and walk through the necessary components needed to make it"
+      },
+      {
+        "src": "/projects/pantry/4.png",
         "caption": "Select the type of vanilla extract and walk through the necessary components needed to make it"
       }
     ],
     "videos": [
       {
-        "src": "5D027iQCvoSIWQto01Y1RSJ7bM3tgzLn3k3qbMo3d2w01w",
+        "src": "W5pUKoxc5YUZnfPAStX00RnHDxiWjR9BbRIUGNcQxXQM",
         "format": "mobile"
       }
     ],
     "thumbnail": {
-      "src": "https://image.mux.com/5D027iQCvoSIWQto01Y1RSJ7bM3tgzLn3k3qbMo3d2w01w/thumbnail.png?time=1",
+      "src": "https://image.mux.com/W5pUKoxc5YUZnfPAStX00RnHDxiWjR9BbRIUGNcQxXQM/thumbnail.png?time=1",
       "format": "mobile"
     },
-    "longDescription": "I wanted to stop buying vanilla extract and begin calculating how much of each ingredient I would need to make better quality (and cheaper) vanilla extract for my own use. Depending on which formula I wanted to use, I could easily deduce how much vanilla bean and alcohol I would need to make the desired amount of extract to fit into a container. This project is a simple calculator that allows users to toggle between different formulas and adjust the desired output to get precise measurements for their homemade vanilla extract."
+    "longDescription": "I wanted to stop buying pantry staples like vanilla extract and begin calculating how much of each ingredient I would need to make better quality (and cheaper) versions at home for my own use. What started as a vanilla extract calculator grew into a collection of calculators for pantry staple recipes. Depending on which recipe and formula I wanted to use, I could easily deduce how much of each ingredient I would need to make the desired amount to fit into a container. Each calculator allows users to toggle between different formulas and adjust the desired output to get precise measurements for their homemade staples."
   },
   {
     "slug": "tampabay-design",

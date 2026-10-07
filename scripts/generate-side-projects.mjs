@@ -10,7 +10,7 @@ const ORDER = [
   'scorekeeper',
   'timezones',
   'cutting-board-designer',
-  'vanilla-extract-calculator',
+  'pantry-calculators',
   'tampabay-design',
   'donut-drums',
   'slack-themes',

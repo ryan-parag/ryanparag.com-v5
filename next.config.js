@@ -12,6 +12,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/projects/vanilla-extract-calculator',
+        destination: '/projects/pantry-calculators',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig
