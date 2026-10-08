@@ -127,32 +127,32 @@ export const sideProjects = [
     "images": [
       {
         "src": "/projects/pantry/1.png",
-        "caption": "Select the type of vanilla extract and walk through the necessary components needed to make it"
+        "caption": "Homepage for a list of recipes to make some basic pantry staples"
       },
       {
         "src": "/projects/pantry/2.png",
-        "caption": "Select the type of vanilla extract and walk through the necessary components needed to make it"
+        "caption": "An example of a recipe calculator. Shown is a basic recipe for creme fraiche, which can be used for a mutlitude of things (like Gordon Ramsey's scrambled eggs)."
       },
       {
         "src": "/projects/pantry/3.png",
-        "caption": "Select the type of vanilla extract and walk through the necessary components needed to make it"
+        "caption": "A breakdown of output for a given recipe calculation as well as the method site viewers can use to make it."
       },
       {
         "src": "/projects/pantry/4.png",
-        "caption": "Select the type of vanilla extract and walk through the necessary components needed to make it"
+        "caption": "Basic selections for a recipe for brown sugar."
       }
     ],
     "videos": [
       {
-        "src": "W5pUKoxc5YUZnfPAStX00RnHDxiWjR9BbRIUGNcQxXQM",
+        "src": "zLE8gP8NlzXU02sD6KQjqIK014EQlFFBAaAPRwVUeW3Bo",
         "format": "mobile"
       }
     ],
     "thumbnail": {
-      "src": "https://image.mux.com/W5pUKoxc5YUZnfPAStX00RnHDxiWjR9BbRIUGNcQxXQM/thumbnail.png?time=1",
+      "src": "https://image.mux.com/zLE8gP8NlzXU02sD6KQjqIK014EQlFFBAaAPRwVUeW3Bo/thumbnail.png?time=1",
       "format": "mobile"
     },
-    "longDescription": "I wanted to stop buying pantry staples like vanilla extract and begin calculating how much of each ingredient I would need to make better quality (and cheaper) versions at home for my own use. What started as a vanilla extract calculator grew into a collection of calculators for pantry staple recipes. Depending on which recipe and formula I wanted to use, I could easily deduce how much of each ingredient I would need to make the desired amount to fit into a container. Each calculator allows users to toggle between different formulas and adjust the desired output to get precise measurements for their homemade staples."
+    "longDescription": "I wanted to stop buying pantry staples like vanilla extract and begin calculating how much of each ingredient I would need to make better quality (and cheaper) versions at home for my own use. What started as a vanilla extract calculator grew into a collection of calculators for pantry staple recipes. Depending on which recipe and formula I wanted to use, I could easily deduce how much of each ingredient I would need to make the desired amount to fit into a container. Each calculator allows users to toggle between different formulas and adjust the desired output to get precise measurements for their homemade staples.\n\nSome initial recipes I wanted to track were:\n- vanilla extract\n- mascarpone cheese (for my addiction to tiramisu)\n- creme fraiche\n- ricotta cheese"
   },
   {
     "slug": "tampabay-design",
