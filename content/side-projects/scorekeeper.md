@@ -23,6 +23,8 @@ images:
     caption: Profile settings and customization options
   - src: /projects/scorekeeper/7.png
     caption: UI Kit for consistent design language and components across the app
+  - src: /projects/scorekeeper/8.png
+    caption: Email notifications for friends, seasons, and leagues
 videos:
   - src: GcBFtzu5WQQu4GveFZ2hyi49H5wGv1BXP3MCNufFiZg
     format: mobile
