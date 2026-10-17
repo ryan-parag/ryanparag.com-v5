@@ -53,70 +53,6 @@ export const sideProjects = [
     "longDescription": "I built ScoreKeeper to solve a very specific problem: tracking scores during high-stakes lunch-break card games with my coworkers. Tired of hunting for scraps of paper and doing mental math, I designed this \"stupidly-simple\" web app to handle the heavy lifting. It allows players to set up custom games, manage rounds, and track leaderboards in real-time with a clean, mobile-first interface.\n\nIf you'd like to keep up with some of the onoing changes, check out the [changelog](https://scorekeeper.ryanparag.com/changelog)!"
   },
   {
-    "slug": "timezones",
-    "link": "https://timezones.ryanparag.com/",
-    "title": "Timezones",
-    "published": "2025",
-    "description": "View and manage timezones across the world",
-    "logo": "timezones-logo.svg",
-    "color": "#5D0FDD",
-    "images": [
-      {
-        "src": "/projects/preview-timezones.png",
-        "caption": "Homepage where you can add, manage, and share a world clock of timezones"
-      },
-      {
-        "src": "/projects/timezones/1.png",
-        "caption": "Dark mode and dense view"
-      },
-      {
-        "src": "/projects/timezones/2.png",
-        "caption": "Searchable list of cities"
-      }
-    ],
-    "videos": [
-      {
-        "src": "qdHMp3bH4iii76FdAI7mVSKnhO6qxoyJLsACzhicdvQ",
-        "format": "browser"
-      }
-    ],
-    "thumbnail": {
-      "src": "https://image.mux.com/qdHMp3bH4iii76FdAI7mVSKnhO6qxoyJLsACzhicdvQ/thumbnail.png",
-      "format": "browser"
-    },
-    "longDescription": "Working in distributed teams often leads to the \"math tax\"—constantly calculating what 10:00 AM EST looks like for a colleague in London or Poland. I built Timezones to move beyond basic world clocks, creating a highly visual interface that makes scheduling across borders intuitive. It’s a utility-first tool designed to ensure no one gets invited to a meeting at 3:00 AM their time."
-  },
-  {
-    "slug": "cutting-board-designer",
-    "link": "https://cutting-board-designer.ryanparag.com/",
-    "title": "Cutting Board Designer",
-    "published": "2026",
-    "description": "Design custom cutting boards with precision",
-    "logo": "cbd-logo.svg",
-    "color": "#FF8A00",
-    "images": [
-      {
-        "src": "/projects/cbd/1.png",
-        "caption": "Design for the desired dimensions, wood species, and type of cutting board"
-      },
-      {
-        "src": "/projects/cbd/2.png",
-        "caption": "Walk through which cuts are needed for what was designed"
-      }
-    ],
-    "videos": [
-      {
-        "src": "eiFuSTfkfugRYQXsiu8GwwWwC5EHLZOEgw1ugtLyX9k",
-        "format": "browser"
-      }
-    ],
-    "thumbnail": {
-      "src": "https://image.mux.com/eiFuSTfkfugRYQXsiu8GwwWwC5EHLZOEgw1ugtLyX9k/thumbnail.png?time=1",
-      "format": "browser"
-    },
-    "longDescription": "As a hobbyist woodworker, I found it difficult to visualize how different wood species and grain patterns would look together before making the first cut. This project is a specialized CAD-lite tool for the browser. It allows makers to toggle between edge-grain and end-grain views and experiment with dimensions and species (like Walnut, Maple, and Cherry) to generate a precise visual blueprint before heading to the shop."
-  },
-  {
     "slug": "pantry-calculators",
     "link": "https://pantry.ryanparag.com/",
     "title": "Pantry Calculators",
@@ -153,6 +89,66 @@ export const sideProjects = [
       "format": "mobile"
     },
     "longDescription": "I wanted to stop buying pantry staples like vanilla extract and begin calculating how much of each ingredient I would need to make better quality (and cheaper) versions at home for my own use. What started as a vanilla extract calculator grew into a collection of calculators for pantry staple recipes. Depending on which recipe and formula I wanted to use, I could easily deduce how much of each ingredient I would need to make the desired amount to fit into a container. Each calculator allows users to toggle between different formulas and adjust the desired output to get precise measurements for their homemade staples.\n\nSome initial recipes I wanted to track were:\n- vanilla extract\n- mascarpone cheese (for my addiction to tiramisu)\n- creme fraiche\n- ricotta cheese"
+  },
+  {
+    "slug": "portfolio-timeline",
+    "link": "https://timeline.ryanparag.com/",
+    "title": "Portfolio Timeline",
+    "published": "2023",
+    "description": "A timeline viewer for past versions of my portfolio",
+    "logo": "timeline-logo.svg",
+    "color": "#00d1b2",
+    "images": [
+      {
+        "src": "/projects/timeline/1.png",
+        "caption": "Timeline viewer for all of the different iterations of my portfolio"
+      },
+      {
+        "src": "/projects/timeline/2.png",
+        "caption": "Portfolio iteration view with all of the major build materials"
+      }
+    ],
+    "videos": [
+      {
+        "src": "Hir5I8FriYH7roqWzyBUevd002NJh2h8T00PxeqxsxdpY",
+        "format": "browser"
+      }
+    ],
+    "thumbnail": {
+      "src": "https://image.mux.com/Hir5I8FriYH7roqWzyBUevd002NJh2h8T00PxeqxsxdpY/thumbnail.png?time=1",
+      "format": "browser"
+    },
+    "longDescription": "As designers, we often hide our old work, but I believe there is immense value in seeing the evolution of a craft. Portfolio Timeline is a \"meta\" project that archives and displays past versions of my personal site. It serves as a visual record of my growth in UI trends, front-end technology, and personal branding—turning my own archive into a case study on continuous improvement."
+  },
+  {
+    "slug": "cutting-board-designer",
+    "link": "https://cutting-board-designer.ryanparag.com/",
+    "title": "Cutting Board Designer",
+    "published": "2026",
+    "description": "Design custom cutting boards with precision",
+    "logo": "cbd-logo.svg",
+    "color": "#FF8A00",
+    "images": [
+      {
+        "src": "/projects/cbd/1.png",
+        "caption": "Design for the desired dimensions, wood species, and type of cutting board"
+      },
+      {
+        "src": "/projects/cbd/2.png",
+        "caption": "Walk through which cuts are needed for what was designed"
+      }
+    ],
+    "videos": [
+      {
+        "src": "eiFuSTfkfugRYQXsiu8GwwWwC5EHLZOEgw1ugtLyX9k",
+        "format": "browser"
+      }
+    ],
+    "thumbnail": {
+      "src": "https://image.mux.com/eiFuSTfkfugRYQXsiu8GwwWwC5EHLZOEgw1ugtLyX9k/thumbnail.png?time=1",
+      "format": "browser"
+    },
+    "longDescription": "As a hobbyist woodworker, I found it difficult to visualize how different wood species and grain patterns would look together before making the first cut. This project is a specialized CAD-lite tool for the browser. It allows makers to toggle between edge-grain and end-grain views and experiment with dimensions and species (like Walnut, Maple, and Cherry) to generate a precise visual blueprint before heading to the shop."
   },
   {
     "slug": "tampabay-design",
@@ -195,6 +191,40 @@ export const sideProjects = [
       "format": "browser"
     },
     "longDescription": "When I first entered the design industry in Tampa, I realized there wasn't a centralized hub to find local meetups, agencies, or community events. I launched TampaBay.design to act as a digital compass for the local creative community. By aggregating resources and highlighting local talent, the site serves as a jumping-off point for designers looking to get involved and grow the design culture in the Tampa Bay area."
+  },
+  {
+    "slug": "timezones",
+    "link": "https://timezones.ryanparag.com/",
+    "title": "Timezones",
+    "published": "2025",
+    "description": "View and manage timezones across the world",
+    "logo": "timezones-logo.svg",
+    "color": "#5D0FDD",
+    "images": [
+      {
+        "src": "/projects/preview-timezones.png",
+        "caption": "Homepage where you can add, manage, and share a world clock of timezones"
+      },
+      {
+        "src": "/projects/timezones/1.png",
+        "caption": "Dark mode and dense view"
+      },
+      {
+        "src": "/projects/timezones/2.png",
+        "caption": "Searchable list of cities"
+      }
+    ],
+    "videos": [
+      {
+        "src": "qdHMp3bH4iii76FdAI7mVSKnhO6qxoyJLsACzhicdvQ",
+        "format": "browser"
+      }
+    ],
+    "thumbnail": {
+      "src": "https://image.mux.com/qdHMp3bH4iii76FdAI7mVSKnhO6qxoyJLsACzhicdvQ/thumbnail.png",
+      "format": "browser"
+    },
+    "longDescription": "Working in distributed teams often leads to the \"math tax\"—constantly calculating what 10:00 AM EST looks like for a colleague in London or Poland. I built Timezones to move beyond basic world clocks, creating a highly visual interface that makes scheduling across borders intuitive. It’s a utility-first tool designed to ensure no one gets invited to a meeting at 3:00 AM their time."
   },
   {
     "slug": "donut-drums",
@@ -293,36 +323,6 @@ export const sideProjects = [
       }
     ],
     "longDescription": "Formula 1 is a global sport, but keeping track of practice, qualifying, and race start times across shifting timezones is a recurring headache for fans. I built Race Times to act as a dedicated, spoiler-free dashboard. It automatically translates the full race weekend schedule into the user's local time, ensuring you never miss a lights-out moment, regardless of where the Grand Prix is hosted."
-  },
-  {
-    "slug": "portfolio-timeline",
-    "link": "https://timeline.ryanparag.com/",
-    "title": "Portfolio Timeline",
-    "published": "2023",
-    "description": "A timeline viewer for past versions of my portfolio",
-    "logo": "timeline-logo.svg",
-    "color": "#00d1b2",
-    "images": [
-      {
-        "src": "/projects/timeline/1.png",
-        "caption": "Timeline viewer for all of the different iterations of my portfolio"
-      },
-      {
-        "src": "/projects/timeline/2.png",
-        "caption": "Portfolio iteration view with all of the major build materials"
-      }
-    ],
-    "videos": [
-      {
-        "src": "Hir5I8FriYH7roqWzyBUevd002NJh2h8T00PxeqxsxdpY",
-        "format": "browser"
-      }
-    ],
-    "thumbnail": {
-      "src": "https://image.mux.com/Hir5I8FriYH7roqWzyBUevd002NJh2h8T00PxeqxsxdpY/thumbnail.png?time=1",
-      "format": "browser"
-    },
-    "longDescription": "As designers, we often hide our old work, but I believe there is immense value in seeing the evolution of a craft. Portfolio Timeline is a \"meta\" project that archives and displays past versions of my personal site. It serves as a visual record of my growth in UI trends, front-end technology, and personal branding—turning my own archive into a case study on continuous improvement."
   },
   {
     "slug": "buy-fresh-florida",
