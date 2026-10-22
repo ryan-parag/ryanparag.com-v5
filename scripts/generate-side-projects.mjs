@@ -7,6 +7,7 @@ const outFile = path.join(process.cwd(), 'data/sideProjects.js')
 
 // Curated display order (not chronological)
 const ORDER = [
+  'doughbase',
   'scorekeeper',
   'timezones',
   'cutting-board-designer',
